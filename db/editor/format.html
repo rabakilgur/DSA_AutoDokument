@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zwischenablage formatieren</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="formatted" contenteditable="true"></div>
+	<div id="result" contenteditable="true"></div>
+</body>
+</html>
+
+<style>
+	body {
+		background: #242222;
+	}
+	#formatted,
+	#result {
+		padding: 6px 10px;
+		margin: 20px;
+		background:#F3F2F211;
+		color: white;
+		height: calc(50vh - 30px);
+		border: 2px solid #ced4da22;
+		border-radius: .25rem;
+		overflow: auto;
+		outline: none;
+	}
+</style>
+
+<script>
+$("#result").focus();
+
+document.addEventListener('paste', e => {
+	$("#formatted").empty();
+	$("#result").focus().empty();
+	setTimeout(() => {  // wait for the text to be pasted
+		let cleanText = "";
+		$(document.querySelectorAll("#result > span, #result > p > span")).each((index, span) => {
+			if ($(span).children("o\\:p").length === 0) cleanText += span.innerHTML;
+			else if ($(span).children("o\\:p").html() === "&nbsp;") cleanText += "<br/>";
+			const finalText = cleanText
+				.replace(/\r?\n|\r/g, " ")
+				.replace(/<b> <\/b>/g, " ")
+				.replace(/(?<=[a-zäöüß])-(?=[a-zäöüß])/g, "");
+			document.querySelector("#formatted").innerHTML = finalText;
+			document.querySelector("#result").innerHTML = escapeHtml(finalText);
+		});
+		setTimeout(() => {$("#result").selectText()}, 50);
+
+	}, 100);
+});
+
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
+
+jQuery.fn.selectText = function() {
+   var element = this[0];
+   if (document.body.createTextRange) {
+       var range = document.body.createTextRange();
+       range.moveToElementText(element);
+       range.select();
+   } else if (window.getSelection) {
+       var selection = window.getSelection();
+       var range = document.createRange();
+       range.selectNodeContents(element);
+       selection.removeAllRanges();
+       selection.addRange(range);
+   }
+};
+
+/*
+document.addEventListener('paste', e => {
+	setTimeout(() => {  // wait for the text to be pasted
+		const $spans = $(e.target.querySelectorAll(":scope > span, :scope > p > span"));
+		let cleanText = "";
+		$spans.each((index, span) => {
+			console.log( $(span).children("o\\:p") );
+			if ($(span).children("o\\:p").length === 0) cleanText += span.innerHTML;
+			else if ($(span).children("o\\:p").html() === "&nbsp;") cleanText += "<br/>";
+			console.log( cleanText );
+			e.target.innerHTML = cleanText
+				.replace(/\r?\n|\r/g, " ")
+				.replace(/<b> <\/b>/g, " ")
+				.replace(/(?<=[a-zäöüß])-(?=[a-zäöüß])/g, "");
+		});
+	}, 100);
+	// console.log( $("body > div > span, body > div > p > span") );
+});
+*/
+
+/*
+document.addEventListener('paste', (e) => {
+        e.preventDefault();
+		var pastedText = ''
+		navigator.clipboard.readText()
+			.then(text => {
+				pastedText = text;
+				console.log( pastedText );
+				document.querySelector('body > div').innerHTML = pastedText
+			});
+	});
+	*/
+</script>

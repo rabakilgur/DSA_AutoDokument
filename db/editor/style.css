@@ -1,0 +1,74 @@
+#result_container {
+	background: transparent;
+}
+button i,
+button svg {
+	margin-right: 0.5em;
+}
+.context-menu-list {
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+	border-color: #e6e6e6;
+}
+.context-menu-item.context-menu-hover {
+    background-color: #007bff;
+}
+.context-menu-icon.context-menu-icon--fa5 i,
+.context-menu-icon.context-menu-icon--fa5 svg {
+	color: #666;
+	transform: translateY(0.15em);
+}
+#input_container {
+	margin: 1em auto 0 auto;
+	max-width: 600px;
+}
+.select_box {
+	display: flex;
+}
+.select_box button {
+	flex-shrink: 0;
+	margin-left: 1em;
+}
+
+
+#Textarea1 {
+	display: none;
+}
+
+#json_table_1 {
+	position: relative;
+	table-layout: fixed;
+	font-size: 66.667%;
+}
+#json_table_1 th {
+	position: relative;
+}
+#json_table_1 th > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 0.9rem;
+	text-align: center;
+	white-space: nowrap;
+	transform-origin: 0.5em 50%;
+	transform: rotate(-91deg) translate(calc(1.2em - 50%), -50%);
+}
+#json_table_1 th:before {
+    content: '';
+    padding-top: 210px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#json_table_1 th,
+#json_table_1 td {
+	padding: 2px 0;
+}
+#json_table_1 th:first-child,
+#json_table_1 td:first-child {
+	width: 18px;
+}
+#json_table_1 td > div {
+	max-width: 400px;
+	white-space: nowrap;
+	overflow: hidden;
+	/*text-overflow: ellipsis;*/
+}
