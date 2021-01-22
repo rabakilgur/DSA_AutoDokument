@@ -26,65 +26,54 @@ function getbody($filename) {
 	return $body;
 }
 function changeTagName($node, $name) {
-    $childnodes = array();
-    foreach ($node->childNodes as $child){
-        $childnodes[] = $child;
-    }
-    $newnode = $node->ownerDocument->createElement($name);
-    foreach ($childnodes as $child){
-        $child2 = $node->ownerDocument->importNode($child, true);
-        $newnode->appendChild($child2);
-    }
-    foreach ($node->attributes as $attrName => $attrNode) {
+	$childnodes = array();
+	foreach ($node->childNodes as $child){
+		$childnodes[] = $child;
+	}
+	$newnode = $node->ownerDocument->createElement($name);
+	foreach ($childnodes as $child){
+		$child2 = $node->ownerDocument->importNode($child, true);
+		$newnode->appendChild($child2);
+	}
+	foreach ($node->attributes as $attrName => $attrNode) {
 		if (($attrName == "id") || ($attrName == "style")) {
 			$attrName = $attrNode->nodeName;
 			$attrValue = $attrNode->nodeValue;
 			$newnode->setAttribute($attrName, $attrValue);
 		}
 		$newnode->setAttribute("class", "doc-page");
-    }
-    $node->parentNode->replaceChild($newnode, $node);
-    return $newnode;
+	}
+	$node->parentNode->replaceChild($newnode, $node);
+	return $newnode;
 }
 */
 
-function fix_css($css) {
-	$css = preg_replace('/(..\/font\/DSA-Symbole)/', 'src/fonts/DSA-Symbole', $css);
-	$css = preg_replace('/(..\/font\/ElegantGaramondBT-Bold)/', 'src/fonts/Garamond-Bold', $css);
-	$css = preg_replace('/(..\/font\/ElegantGaramondBT-Roman)/', 'src/fonts/Garamond', $css);
-	$css = preg_replace('/(..\/font\/Mason-Bold)/', 'src/fonts/Mason-Bold', $css);
-	return $css;
-}
-
-function get_page($filename) {
+function getPage($filename) {
 	// Load the bpdy of the xhtml file:
-	$file = file_get_contents("./doc/" . $filename);
-	// Make changes to the HTML while it is still a string:
-	$file = preg_replace('/(src="image\/)/', 'src="./doc/image/', $file); // Fix the image-links
-	// Parse it as a document:
+	$file = file_get_contents($filename);
 	$dom = new DOMDocument;
 	$dom->loadHTML($file);
 	$bodies = $dom->getElementsByTagName('body');
 	$page = $bodies->item(0);
 	// Change its tag to 'section' and modify it a bit:
-    $childnodes = array();
-    foreach ($page->childNodes as $child) {
-        $childnodes[] = $child;
-    }
-    $newnode = $page->ownerDocument->createElement("section");
-    foreach ($childnodes as $child){
-        $child2 = $page->ownerDocument->importNode($child, true);
-        $newnode->appendChild($child2);
-    }
-    foreach ($page->attributes as $attrName => $attrNode) {
+	$childnodes = array();
+	foreach ($page->childNodes as $child){
+		$childnodes[] = $child;
+	}
+	$newnode = $page->ownerDocument->createElement("section");
+	foreach ($childnodes as $child){
+		$child2 = $page->ownerDocument->importNode($child, true);
+		$newnode->appendChild($child2);
+	}
+	foreach ($page->attributes as $attrName => $attrNode) {
 		if (($attrName == "id") || ($attrName == "style")) {
 			$attrName = $attrNode->nodeName;
 			$attrValue = $attrNode->nodeValue;
 			$newnode->setAttribute($attrName, $attrValue);
 		}
 		$newnode->setAttribute("class", "doc-page");
-    }
-    $page->parentNode->replaceChild($newnode, $page);
+	}
+	$page->parentNode->replaceChild($newnode, $page);
 	// Convert the new node to printable HTML:
 	$newdoc = new DOMDocument;
 	$newnode = $newdoc->importNode($newnode, true);
@@ -94,13 +83,22 @@ function get_page($filename) {
 }
 
 function sort_pages($a, $b) {
-    if ($a == $b) return 0;
+	if ($a == $b) return 0;
 	$a_nbr = (int)substr($a, 15, 2);
 	$b_nbr = (int)substr($b, 15, 2);
-    return ($a_nbr < $b_nbr) ? -1 : 1;
+	return ($a_nbr < $b_nbr) ? -1 : 1;
 }
 
 ?>
+
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!                                                    !!!
+!!!   Diese Datei wird (mithilfe von indem.php) kom-   !!!
+!!!   piliert und sollte daher nicht geändert werden!  !!!
+!!!                                                    !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-->
 
 <!DOCTYPE html>
 <html lang="de" xml:lang="de" dir="ltr">
@@ -118,35 +116,34 @@ function sort_pages($a, $b) {
 	<title>DSA 4.1 Heldendokument von Robin Garbe</title>
 
 	<!-- <link rel="stylesheet" href="./Heldendokument-web-resources/css/idGeneratedStyles.css" type="text/css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/click.css" type="text/css" />
-    <link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/design-variables.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+	<link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/click.css" type="text/css" />
+	<link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/design-variables.css" />
 	<link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/design.css" />
-	<!-- <link rel="stylesheet" href="./doc/css/idGeneratedStyles.css" type="text/css" /> -->
-	<style type="text/css"><?php echo fix_css(file_get_contents("./doc/css/idGeneratedStyles.css")) ?></style>
-    <link rel="stylesheet" href="./src/fonts/stylesheet.css" type="text/css" />
-    <link rel="stylesheet" href="./src/styles/doc_fixes.css" type="text/css" />
-    <link rel="stylesheet" href="./src/styles/main.css" type="text/css" />
+	<link rel="stylesheet" href="./css/idGeneratedStyles.css" type="text/css" />
+	<link rel="stylesheet" href="./font/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="./src/styles/doc_fixes.css" type="text/css" />
+	<link rel="stylesheet" href="./src/styles/main.css" type="text/css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js" integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE=" crossorigin="anonymous"></script>
-    <script src="https://robin-garbe.de/include/js_library/design.js"></script>
-    <script src="https://robin-garbe.de/include/js_library/click.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
-    <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+	<script src="https://robin-garbe.de/include/js_library/design.js"></script>
+	<script src="https://robin-garbe.de/include/js_library/click.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
+	<!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons/ionicons.dkb1z4hj.js"></script> -->
 	<script src="https://robin-garbe.de/include/js_library/element_queries/ResizeSensor.js"></script>
 	<script src="https://robin-garbe.de/include/js_library/element_queries/ElementQueries.js"></script>
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script> -->
-    <script src="./src/scripts/clientside-setup.js"></script>
-    <script src="./src/scripts/modified-dom-to-image.min.js"></script>
-    <script src="./src/scripts/main.js"></script>
-    <script src="./src/scripts/calculations.js"></script>
+	<script src="./src/scripts/clientside-setup.js"></script>
+	<script src="./src/scripts/modified-dom-to-image.min.js"></script>
+	<script src="./src/scripts/main.js"></script>
+	<script src="./src/scripts/calculations.js"></script>
 </head>
 <body>
 
 <?php
-$pages = array_diff(scandir("./doc/"), array('.', '..', 'css', 'font', 'image', 'src', 'index.php', '.htaccess'));
+$pages = array_diff(scandir("./"), array('.', '..', 'css', 'font', 'image', 'src', 'index.php', 'index.html', '.htaccess'));
 usort($pages, "sort_pages");
 ?>
 
@@ -155,14 +152,14 @@ usort($pages, "sort_pages");
 		<div id="thumbnail-innerbox">
 			<?php
 			$page_counter = 1;
-			foreach ($pages as $page) echo "<a id='thumbnail-" . $page_counter . "' onclick=scroll_to_page('#Heldendokument-" . $page_counter++ . "')></a>";
+			foreach ($pages as $page) echo "<a id='thumbnail-" . $page_counter . "' onclick=\"scroll_to_page('#Heldendokument-" . $page_counter++ . "')\"></a>";
 			?>
 		</div>
 	</div>
 	<div id="document-box">
 		<?php
 		$page_counter = 1;
-		foreach ($pages as $page) echo "<div id='doc-wrapper-" . $page_counter++ . "'>" . get_page($page) . "</div>";
+		foreach ($pages as $page) echo "<div id='doc-wrapper-" . $page_counter++ . "'>" . getPage($page) . "</div>";
 		?>
 	</div>
 	<div id="tool-box">
@@ -428,6 +425,8 @@ usort($pages, "sort_pages");
 			</div>
 			<div class="toolarea" id="toolarea-pageSettings">
 				<h3>Seiten Einstellungen</h3>
+
+
 				<?php
 				$page_counter = 1;
 				echo '<div id="toolarea-pageSelection" class="select-dropdown"><select>';
@@ -436,6 +435,8 @@ usort($pages, "sort_pages");
 				$page_counter = 1;
 				foreach ($pages as $page) echo "<div class='toolarea-page' id='toolarea-page_" . $page_counter++ . "'></div>";
 				?>
+
+
 			</div>
 			<div class="toolarea" id="toolarea-edit">
 				<h3>Bearbeiten</h3>
@@ -452,7 +453,6 @@ usort($pages, "sort_pages");
 		</div>
 	</div>
 </div>
-
 
 
 </body>

@@ -1,6 +1,6 @@
 $(document).ready(() => {
+
 	// create_thumbnail(Array.from(document.querySelectorAll(".doc-page")));
-	
 	/*$(".doc-page").each((index, page) => {
 		console.log("creating thumbnail");
 		domtoimage.toJpeg(page, { quality: 0.5 })
@@ -74,7 +74,6 @@ $(document).ready(() => {
 				event.preventDefault();
 				if (event.shiftKey) $edit_fields[Math.min(index + 1, $edit_fields.length - 1)].focus();
 				else 				$edit_fields[Math.max(index - 1, 0)].focus();
-				
 			}
 		});
 	});
@@ -86,7 +85,6 @@ $(document).ready(() => {
 		$mso.children("._idGenCurrentState").removeClass("_idGenCurrentState");
 		$mso.children(`[data-idgenobjectstate="${event.target.value}"]`).removeClass("_idGenStateHide").addClass("_idGenCurrentState");
 		console.log( event.target.value );
-		
 	});
 });
 

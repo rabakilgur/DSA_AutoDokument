@@ -1,7 +1,7 @@
 console.log( "inserting calculations" );
 
 function add_calc_dependency(target_name, calc_string) {
-	const  $target = $('.Edit-' + target_name);
+	const $target = $('.Edit-' + target_name);
 	calc = calc_string.replace(/{(\w|\d|[äöüß-])+}/g, item => {
 		let field = $('.Edit-' + item.substr(1, item.length - 2));
 		field.on('input', () => {
@@ -12,8 +12,6 @@ function add_calc_dependency(target_name, calc_string) {
 	});
 	const result = isNaN(eval(calc)) ? "X" : eval(calc);
 	$('.Edit-' + target_name).text(result);
-
-
 
 	console.log( 'target:', $target );
 	console.log( 'calc_string:', calc_string );
