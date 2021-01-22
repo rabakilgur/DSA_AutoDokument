@@ -1,6 +1,7 @@
 $(document).ready(() => {
 
 	// create_thumbnail(Array.from(document.querySelectorAll(".doc-page")));
+
 	/*$(".doc-page").each((index, page) => {
 		console.log("creating thumbnail");
 		domtoimage.toJpeg(page, { quality: 0.5 })
@@ -90,6 +91,7 @@ $(document).ready(() => {
 
 async function create_thumbnail(pages) {
 	console.log("creating thumbnail");
+	// ToDo: Make input field non-editable (transparent instead of yellow)
 	const page = pages.shift();
 	domtoimage.toJpeg(page, { quality: 0.5, bgcolor: "#6A5037", style: { "zoom": 1 } })
 		.then(function (dataUrl) {
