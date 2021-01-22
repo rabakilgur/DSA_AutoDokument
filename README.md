@@ -13,3 +13,9 @@ Ein Online-Heldendokument für DSA 4.1
 - Alles in src/
 - Alles in db/
 - index.php (Wenn diese Datei bearbeitet wird sollte auch eine neue index.html hochgeladen werden)
+
+## Wie kann man das Programm lokal testen?
+
+Einfach einen lokalen Webserver starten mit `ruby -run -ehttpd . -p8000`. Der Server startet dann auf dem Port :8000.
+
+Wenn man die PHP Datei aufrufen/kompilieren will, kann man einen XAMPP oder WAMP Server benutzen.
