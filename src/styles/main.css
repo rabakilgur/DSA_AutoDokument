@@ -95,7 +95,7 @@ body {
 #thumbnail-innerbox::-webkit-scrollbar-thumb {
 	background-color: transparent;
 }
-#thumbnail-box  a {
+#thumbnail-box a {
 	position: relative;
 	display: block;
 	--height: calc(0.7 * var(--thumbnailbox-width));
@@ -111,16 +111,16 @@ body {
 	cursor: pointer;
 	counter-increment: thumbnail-counter;
 }
-#thumbnail-box  a.thumbnail-rotated {
+#thumbnail-box a.thumbnail-rotated {
 	width: var(--height);
 	height: var(--width);
 	background-image: url("../assets/thumbnail_rotated.jpg");
 }
-#thumbnail-box  a:not(:last-child) {
+#thumbnail-box a:not(:last-child) {
 	margin-bottom: 8px;
 }
-#thumbnail-box  a::before,
-#thumbnail-box  a::after {
+#thumbnail-box a::before,
+#thumbnail-box a::after {
 	position: absolute;
 	display: block;
 	width: 100%;
@@ -138,7 +138,7 @@ body {
 				 0 0 2px #EFE9E0,
 				 0 0 1px #EFE9E0;
 }
-#thumbnail-box  a::before {
+#thumbnail-box a::before {
 	content: "Seite";
 	bottom: calc(50% - 2px);
 }
@@ -162,24 +162,6 @@ body {
 }
 .doc-page div:not([class^="Edit-"]) {
 	pointer-events: none;
-}
-div[class^="Edit-"] {
-	background: rgba(235, 194, 71, 0.2);
-	font-family: "Garamond";
-	font-size: calc(12px / 0.05);
-	font-size: 12px;
-    line-height: 1.5em;
-	text-align: left;
-	word-break: break-all;
-	color: black;
-	pointer-events: all;
-}
-div[class^="Edit-"]:hover,
-div[class^="Edit-"]:focus {
-	box-shadow: 0 0 0 2px rgba(235, 194, 71, 1);
-}
-div[class^="Edit-"]:focus {
-	background: rgba(235, 194, 71, 0.4);
 }
 #tool-box {
 	--toolbar-width: 80px;
@@ -225,8 +207,8 @@ div[class^="Edit-"]:focus {
 .toolbar-extra {
 	position: absolute;
 	top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.55) rotate(80deg);
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.55) rotate(80deg);
 }
 .toolbar-extra path {
 	stroke-width: 20px;
@@ -281,14 +263,14 @@ div[class^="Edit-"]:focus {
 #toolbar-highlight-text {
 	position: relative;
 	display: block;
-    width: max-content;
+	width: max-content;
 	z-index: 2;
 	color: #2A221B;
 	font-family: "Garamond";
 	font-size: 20px;
 	font-weight: bold;
 	padding-left: calc(var(--circle-box) / 2.5);
-    padding-right: calc(var(--circle-box) + 20px);
+	padding-right: calc(var(--circle-box) + 20px);
 }
 #toolbar-highlight::before,
 #toolbar-highlight-text {
