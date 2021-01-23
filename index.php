@@ -143,7 +143,7 @@ function sort_pages($a, $b) {
 <body>
 
 <?php
-$pages = array_diff(scandir("./"), array('.', '..', 'css', 'font', 'image', 'src', 'index.php', 'index.html', '.htaccess'));
+$pages = array_diff(scandir("./"), array('.', '..', '.git', 'css', 'db', 'font', 'image', 'src', '.gitignore', '.htaccess', 'index.html', 'index.php', 'README.md'));
 usort($pages, "sort_pages");
 ?>
 
