@@ -43,6 +43,8 @@ $(document).ready(() => {
 	/******** Basis-Werte Start ********/
 	add_calc_dependency('LeP-Start', '(2 * {Konstitution-Start} + {Körperkraft-Start}) / 2 + {LeP-Mod}');
 	add_calc_dependency('AuP-Start', '({Mut-Start} + {Konstitution-Start} + {Gewandheit-Start}) / 2 + {AuP-Mod}');
+	// add_calc_dependency('AsP-Start', '({Mut-Start} + {Intuition-Start} + {Charisma-Start}) / 2 + {AsP-Mod}'); // TODO: nur bei Zauberer
+	// add_calc_dependency('KaP-Start', 'TODO'); // TODO: nur bei Geweihten
 	add_calc_dependency('MR-Start', '({Mut-Start} + {Klugheit-Start} + {Konstitution-Start}) / 5 + {MR-Mod}');
 	add_calc_dependency('INI-Start', '(2 * {Mut-Start} + {Intuition-Start} + {Gewandheit-Start}) / 5 + {INI-Mod}');
 	add_calc_dependency('AT-Start', '({Mut-Start} + {Gewandheit-Start} + {Körperkraft-Start}) / 5 + {AT-Mod}');
@@ -52,6 +54,8 @@ $(document).ready(() => {
 	/******** Basis-Werte Aktuell ********/
 	add_calc_dependency('LeP-Aktuell', '(2 * {Konstitution-Aktuell} + {Körperkraft-Aktuell}) / 2 + {LeP-Mod}');
 	add_calc_dependency('AuP-Aktuell', '({Mut-Aktuell} + {Konstitution-Aktuell} + {Gewandheit-Aktuell}) / 2 + {AuP-Mod}');
+	// add_calc_dependency('AsP-Aktuell', '({Mut-Aktuell} + {Intuition-Aktuell} + {Charisma-Aktuell}) / 2 + {AsP-Mod}'); // TODO: nur bei Zauberer
+	// add_calc_dependency('KaP-Aktuell', 'TODO'); // TODO: nur bei Geweihten
 	add_calc_dependency('MR-Aktuell', '({Mut-Aktuell} + {Klugheit-Aktuell} + {Konstitution-Aktuell}) / 5 + {MR-Mod}');
 	add_calc_dependency('INI-Aktuell', '(2 * {Mut-Aktuell} + {Intuition-Aktuell} + {Gewandheit-Aktuell}) / 5 + {INI-Mod}');
 	add_calc_dependency('AT-Aktuell', '({Mut-Aktuell} + {Gewandheit-Aktuell} + {Körperkraft-Aktuell}) / 5 + {AT-Mod}');
