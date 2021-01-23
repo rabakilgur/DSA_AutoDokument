@@ -1,3 +1,11 @@
+/*
+*  This is the file where the calculation dependancies are defined and all
+*  the necessary event listeners are added.
+*
+*  Note: The custom event "recalc" is used to signal that a field was changed
+*  by the calc_dependency function.
+*/
+
 function add_calc_dependency(target_name, calc_string) {
 	calc_string.replace(/{(\w|\d|[äöüß-])+}/g, item => {
 		let field = $('.Edit-' + item.substr(1, item.length - 2));
@@ -28,10 +36,9 @@ function calc_dependency(target_name, calc_string) {
 }
 
 $(document).ready(() => {
+	// Page 1 calculations:
 	add_calc_dependency('LeP-Start', '({Konstitution-Start} + {Konstitution-Start} + {Körperkraft-Start}) / 2 + {LeP-Mod}');
 	add_calc_dependency('AuP-Start', '({Mut-Start} + {Konstitution-Start} + {Gewandheit-Start}) / 2 + {AuP-Mod}');
+	// ToDo: Add more calculations
 
-	$('.Edit-LeP-Start').on("recalc", () => {
-		console.log("test");
-	});
 });

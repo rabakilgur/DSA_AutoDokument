@@ -1,3 +1,12 @@
+/*
+*  This file is meant to contain CSS rules to fix the general document layout,
+*  so if probably isn't the file you're looking for if you just want to make
+*  some edits or make something look differently.
+*  Changes to the look of the document should generally only be done in InDesign
+*  and then ex- and imported into the repository. The changes here are only
+*  necessary because they can't be done in InDesign.
+*/
+
 .doc-page {
 	position: relative;
 	display: block;

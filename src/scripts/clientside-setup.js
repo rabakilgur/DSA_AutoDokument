@@ -1,3 +1,8 @@
+/*
+*  This file is used to change the documents DOM in preparation for all
+*  the other functions.
+*/
+
 $(document).ready(() => {
 	// Rotate the landscape pages:
 	$("#document-box > div > section").each((index, section) => {
