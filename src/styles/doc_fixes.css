@@ -12,3 +12,88 @@
 	display: block;
 	overflow: hidden;
 }
+
+div[class^="Edit-"] {
+	background: rgba(235, 194, 71, 0.2);
+	font-family: "Garamond";
+	font-size: calc(12px / 0.05);
+	font-size: 12px;
+	line-height: 1.5em;
+	text-align: left;
+	word-break: break-all;
+	color: black;
+	pointer-events: all;
+	overflow: hidden;
+}
+div[class^="Edit-"]:hover,
+div[class^="Edit-"]:focus {
+	box-shadow: 0 0 0 2px rgba(235, 194, 71, 1);
+}
+div[class^="Edit-"]:focus {
+	background: rgba(235, 194, 71, 0.4);
+}
+/* Eigenschaften: */
+.Edit-Mut-Mod,
+.Edit-Mut-Start,
+.Edit-Mut-Aktuell,
+.Edit-Klugheit-Mod,
+.Edit-Klugheit-Start,
+.Edit-Klugheit-Aktuell,
+.Edit-Intuition-Mod,
+.Edit-Intuition-Start,
+.Edit-Intuition-Aktuell,
+.Edit-Charisma-Mod,
+.Edit-Charisma-Start,
+.Edit-Charisma-Aktuell,
+.Edit-Fingerfertigkeit-Mod,
+.Edit-Fingerfertigkeit-Start,
+.Edit-Fingerfertigkeit-Aktuell,
+.Edit-Gewandheit-Mod,
+.Edit-Gewandheit-Start,
+.Edit-Gewandheit-Aktuell,
+.Edit-Konstitution-Mod,
+.Edit-Konstitution-Start,
+.Edit-Konstitution-Aktuell,
+.Edit-Körperkraft-Mod,
+.Edit-Körperkraft-Start,
+.Edit-Körperkraft-Aktuell,
+.Edit-Geschwindigkeit-Mod,
+.Edit-Geschwindigkeit-Start,
+.Edit-Geschwindigkeit-Aktuell,
+/* Basiswerte: */
+.Edit-LeP-Mod,
+.Edit-LeP-Start,
+.Edit-LeP-Aktuell,
+.Edit-LeP-Zugekauft,
+.Edit-AuP-Mod,
+.Edit-AuP-Start,
+.Edit-AuP-Aktuell,
+.Edit-AuP-Zugekauft,
+.Edit-AsP-Mod,
+.Edit-AsP-Start,
+.Edit-AsP-Aktuell,
+.Edit-AsP-Zugekauft,
+.Edit-KaP-Mod,
+.Edit-KaP-Start,
+.Edit-KaP-Aktuell,
+.Edit-KaP-Zugekauft,
+.Edit-MR-Mod,
+.Edit-MR-Start,
+.Edit-MR-Aktuell,
+.Edit-INI-Mod,
+.Edit-INI-Start,
+.Edit-INI-Aktuell,
+.Edit-AT-Mod,
+.Edit-AT-Start,
+.Edit-AT-Aktuell,
+.Edit-PA-Mod,
+.Edit-PA-Start,
+.Edit-PA-Aktuell,
+.Edit-FK-Mod,
+.Edit-FK-Start,
+.Edit-FK-Aktuell
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
