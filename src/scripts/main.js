@@ -1,3 +1,5 @@
+const export_version = "0.1";
+
 $(document).ready(() => {
 
 	// create_thumbnail(Array.from(document.querySelectorAll(".doc-page")));
@@ -92,14 +94,30 @@ $(document).ready(() => {
 
 
 	// Import / Export:
-	$("#toolarea-export").append('<button type="button" id="export_btn">Export</button><br><button type="button" id="import_btn">Import</button>');
-	$("#export_btn").on("click", () => {
-		// ToDo: Export
+	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br><button type="button" id="import_btn">Import</button>');
+	$("#export_btn").on("click",function () {
+		// set export version
+		let hero_json = {
+			"export_version": export_version
+		};
 
+		// generate json
+		$('div[class^="Edit-"]').each(function() {
+			hero_json[[...this.classList].find(el => el.startsWith("Edit-"))] = $(this).text();
+		});
+		let data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(hero_json));
+
+		// make it downloadable
+		this.setAttribute("href", "data:"+data);
+		this.setAttribute("download", "hero_"+ export_version +".json");
 	});
 	$("#import_btn").on("click", () => {
 		// ToDo: Import
 
+		// 1. version check
+		// 2. import JSON
+		// 2.1 change JSON to newer version
+		// 3. apply to document
 	});
 
 
