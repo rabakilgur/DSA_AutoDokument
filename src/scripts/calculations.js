@@ -23,7 +23,7 @@ function calc_dependency(target_name, calc_string) {
 		let field = $('.Edit-' + item.substr(1, item.length - 2));
 		return (field.text() === '') ? "0" : field.text();
 	});
-	const result = isNaN(eval(calc)) ? "X" : eval(calc);
+	const result = isNaN(eval(calc)) ? "X" : Math.round(eval(calc));
 	$target.text(result);
 	$target.trigger("recalc");
 
