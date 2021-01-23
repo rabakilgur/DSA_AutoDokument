@@ -87,6 +87,23 @@ $(document).ready(() => {
 		$mso.children(`[data-idgenobjectstate="${event.target.value}"]`).removeClass("_idGenStateHide").addClass("_idGenCurrentState");
 		console.log( event.target.value );
 	});
+
+
+
+
+	// Import / Export:
+	$("#toolarea-export").append('<button type="button" id="export_btn">Export</button><br><button type="button" id="import_btn">Import</button>');
+	$("#export_btn").on("click", () => {
+		// ToDo: Export
+
+	});
+	$("#import_btn").on("click", () => {
+		// ToDo: Import
+
+	});
+
+
+
 });
 
 async function create_thumbnail(pages) {
