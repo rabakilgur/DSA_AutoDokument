@@ -13,8 +13,8 @@
 	overflow: hidden;
 }
 
-div[class^="Edit-"] {
-	background: rgba(235, 194, 71, 0.2);
+div[class^="Edit-"],
+div[class^="Calc-"] {
 	font-family: "Garamond";
 	font-size: calc(12px / 0.05);
 	font-size: 12px;
@@ -25,12 +25,18 @@ div[class^="Edit-"] {
 	pointer-events: all;
 	overflow: hidden;
 }
+div[class^="Edit-"] {
+	background: rgba(235, 194, 71, 0.2);
+}
 div[class^="Edit-"]:hover,
 div[class^="Edit-"]:focus {
 	box-shadow: 0 0 0 2px rgba(235, 194, 71, 1);
 }
 div[class^="Edit-"]:focus {
 	background: rgba(235, 194, 71, 0.4);
+}
+div[class^="Calc-"] {
+	background: rgba(71, 137, 235, 0.2);
 }
 /* Eigenschaften: */
 .Edit-Mut-Mod,
