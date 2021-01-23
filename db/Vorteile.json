@@ -1,0 +1,52 @@
+[
+	{
+		"name": "Adlig",
+		"kosten": "5 / 7 / 13 GP",
+		"text": "Der Held ist von hervorgehobenem Stand, sei es, weil er einer ‘blaublütigen’ Familie entstammt, sei es, weil er für seine Taten oder in seiner Funktion als Amtsträger geadelt wurde. Der Vorteil ist wählbar für Helden aus Feudalgesellschaften, für Helden aus entsprechend strukturierten tulamidischen Kulturen und für süd-aventurische Grandensprösslinge, nicht jedoch für thorwalsche Hetleute oder Häuptlingskinder aus ‘barbarischen’ Stammesgesellschaften. Dieser Vorteil verbilligt den Vorteil Besonderer Besitz auf 3 GP, bringt beim Ausrüstungsvorteil SO x 3 Dukaten pro GP und erhöht das Startkapital (siehe S. 21) auf SO x SO x 2 Silbertaler."
+	},
+	{
+		"name": "Adlige Abstammung",
+		"kosten": "7 GP",
+		"text": "Der Held entstammt einer lokalen Herrscherfamilie; er hat Anspruch auf einen entsprechenden Titel (in der mittelländischen Regel auf den Titel als ‘Edler’ und auf ein korrektes ‘von und zu’, nicht jedoch z.B. auf den Baronstitel, den ja nur sein Vater oder seine Mutter tragen dürfen) und unterliegt in manchen Bereichen nicht mehr der gewöhnlichen Gerichtsbarkeit. Allerdings hat er keine Aussicht, das Lehen seiner Eltern zu erben, da er ältere Geschwister besitzt oder seine Familie aus irgendeinem Grund den Anspruch auf das Lehen verwirkt hat. Mögliche Adelstitel (der Eltern) sind im mittelländischen Umfeld die des Junkers, des Barons, des Grafen oder ihrer regionalen Entsprechungen, im tulamidischen Bereich die des Beys, Emirs oder Sultans (wobei die erstgenannten häufig Amtsadlige sind; s.u.). In den südlichen Stadtstaaten entspricht die Zugehörigkeit zu einer ausgewiesenen Granden-Familie einer adligen Abstammung. Voraussetzung für diesen Vorteil ist ein Sozialstatus von mindestens 8 für den Nachkommen eines Edlen oder Junkers, mindestens 10 für einen Baronsspross und 12 für ein Kind aus gräflicher Familie. Hierunter fallen auch anerkannte uneheliche Kinder von Adligen; diese müssen einen Mindest-Sozialstatus von einem Punkt weniger als oben genannt aufweisen. Bei den Tulamiden gilt SO 8 für das Kind eines Beys, SO 10 für einen Emirsspross und SO 12 für Sultanskinder; je nach Traditionsbewusstsein sind die SO-Schwellen für Töchter um 1 Punkt niedriger anzusetzen. In den südlichen Stadtstaaten reicht ein SO von 10 aus, um einem relevanten Zweig einer Grandenfamilie anzugehören. Ebenfalls als Adlige Abstammung gerechnet wird der ‘klassische’ Ritterschlag, auch wenn dieser Titel nicht übertragbar ist. Es gibt jedoch auch den Adelsrang des Ritters (unter dem des Junkers), der nicht zwangsläufig Knappschaft und Schwertleite erfordert, und von diesem auch erbliche Varianten."
+	},
+	{
+		"name": "Adliges Erbe",
+		"kosten": "+6 GP; erfordert als Voraussetzung Adlige Abstammung",
+		"text": "Der Held entstammt einer lokalen Herrscherfamilie und ist für das Erbe eines Titels und Lehens vorgesehen. Damit hat er ebenfalls Anspruch auf einen entsprechenden Titel und unterliegt in manchen Bereichen nicht der gewöhnlichen Gerichtsbarkeit. Wir raten davon ab, einen bereits amtierenden Adligen zu spielen, da ‘Regierungsgeschäfte’ eine sehr zeitraubende und verantwortungsvolle Aufgabe sind und keine Zeit für ein Abenteurerleben lassen. Diese Aussagen gelten im Großen und Ganzen auch für tulamidische und südaventurische Potentaten. Mögliche Adelstitel, auf die der Held Anspruch hat, sind die des Junkers/Beys, des Barons/Emirs, des Grafen/Sultans oder ihrer regionalen Entsprechungen; in den südlichen Stadtstaaten hat der Held Anspruch auf ein mit der eigenen Familie verbundenes – einträgliches – Amt. Ein Erbe hat automatisch einen Besonderen Besitz, sei es ein in der Familie vererbtes besonderes Schwert, ein ausgebildetes Ross oder dergleichen. Außerdem erhält er einen SO-Bonus von einem Punkt. Beachten Sie, dass im Mittelreich Zauberkundige und Geweihte zwar ein adliges Erbe annehmen, jedoch nicht über ihr Lehen regieren dürfen und einen Vogt für ihre Amtsgeschäfte einsetzen müssen."
+	},
+	{
+		"name": "Amtsadel",
+		"kosten": "5 GP",
+		"text": "Der Held stammt zwar nicht aus einer Herrscherfamilie, wird aber dennoch zum Adelsstand gezählt, da er ein Amt bekleidet oder ein Würdenträger ist, der ‘adlige’ Aufgaben wie die Verwaltung eines Lehens oder die Rechtspflege übernommen hat. Vögte verschiedenen Ranges (bis hinauf zum Verwalter einer grafschaftsgroßen Mark, verbunden mit einem SO von 12) sind typische Vertreter des Amtsadels, wenn sie nicht ohnehin von Stand sind. Im Kalifat sind Beys und Emire vom Kalifen eingesetzte Amtsadlige, auch Wesire (Berater) fallen in diese Kategorie. Da Amtsadlige üblicherweise mit ihren Aufgaben voll ausgelastet sind, eignen sie sich nur in Ausnahmefällen als Spielerhelden. Eine andere Variante ist der als Ehrung vergebene Titularadel, der aber zu Spielbeginn auch eher selten zur Verfügung steht. Ein solcher Adelstitel gilt auf Lebenszeit, wenn er nicht ausdrücklich wieder aufgehoben wird, und kann nicht vererbt werden. (es ist aber nicht unüblich, dass z.B. das Amt des Burgvogts über mehrere Generationen in derselben Familie verbleibt). Amtsadlige unterliegen der Adelsgerichtsbarkeit, haben in mittelländischen Kulturen Anspruch auf die Anrede als ‘Achtbarer Herr’ bzw. ‘Achtbare Dame’ und die oben genannten finanziellen Vorteile."
+	},
+	{
+		"name": "",
+		"kosten": "",
+		"text": ""
+	},
+	{
+		"name": "",
+		"kosten": "",
+		"text": ""
+	},
+	{
+		"name": "",
+		"kosten": "",
+		"text": ""
+	},
+	{
+		"name": "",
+		"kosten": "",
+		"text": ""
+	},
+	{
+		"name": "Ausdauernd",
+		"kosten": "je 1 GP für 2 AuP",
+		"text": "Der Held erhält einen Ausdauerbonus von 2 Punkten pro eingesetztem GP; maximal können auf diese Weise 6 Ausdauerpunkte hinzugewonnen werden. Diese Punkte zählen zur AU-Basis, werden also beim späteren Zukauf von weiteren Ausdauerpunkten nicht beachtet. Ein Held, der besonders ausdauernd ist (der mindestens 2 GP in diesen Vorteil investiert hat), wird langsamer erschöpft, d.h., seine Erschöpfungsschwelle beträgt nicht KO Punkte, sondern KO +1; wer Ausdauernd für 3 GP gewählt hat, dessen Erschöpfungsschwelle steigt sogar um 2 Punkte."
+	},
+	{
+		"name": "",
+		"kosten": "",
+		"text": ""
+	}
+]
