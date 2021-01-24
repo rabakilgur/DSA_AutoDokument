@@ -24,6 +24,10 @@ $(document).ready(() => {
 		.attr("autocapitalize", "off")
 		.attr("spellcheck", "false");
 
+	// Delete the useless images in the calc fields:
+	$('div[class^="Calc-"]')
+		.empty();
+
 	// Scan for MSO:
 	$(".doc-page").each((page_i, page) => {
 		const mso_wrapper = document.createElement("div");

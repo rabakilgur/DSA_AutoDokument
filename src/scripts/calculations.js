@@ -8,8 +8,8 @@
 
 function add_calc_dependency(target_name, calc_string) {
 	calc_string.replace(/{(\w|\d|[äöüß-])+}/g, item => {
-		let field = $('.Edit-' + item.substr(1, item.length - 2));
-		field.on("input recalc", () => {
+		const $field = $('.Edit-' + item.substr(1, item.length - 2));
+		$field.on("input recalc", () => {
 			// console.log( "input " + item.substr(1, item.length - 2) );
 			calc_dependency(target_name, calc_string);
 		});
@@ -17,11 +17,11 @@ function add_calc_dependency(target_name, calc_string) {
 }
 
 function calc_dependency(target_name, calc_string) {
-	const $target = $('.Edit-' + target_name);
+	const $target = $('.Calc-' + target_name);
 
 	calc = calc_string.replace(/{(\w|\d|[äöüß-])+}/g, item => {
-		let field = $('.Edit-' + item.substr(1, item.length - 2));
-		return (field.text() === '') ? "0" : field.text();
+		const $field = $('.Edit-' + item.substr(1, item.length - 2));
+		return ($field.text() === '') ? "0" : $field.text();
 	});
 	const result = isNaN(eval(calc)) ? "X" : Math.round(eval(calc));
 	$target.text(result);
@@ -52,9 +52,9 @@ $(document).ready(() => {
 	add_calc_dependency('FK-Start', '({Intuition-Start} + {Fingerfertigkeit-Start} + {Körperkraft-Start}) / 5 + {FK-Mod}');
 
 	/******** Basis-Werte Aktuell ********/
-	add_calc_dependency('LeP-Aktuell', '(2 * {Konstitution-Aktuell} + {Körperkraft-Aktuell}) / 2 + {LeP-Mod}');
-	add_calc_dependency('AuP-Aktuell', '({Mut-Aktuell} + {Konstitution-Aktuell} + {Gewandheit-Aktuell}) / 2 + {AuP-Mod}');
-	// add_calc_dependency('AsP-Aktuell', '({Mut-Aktuell} + {Intuition-Aktuell} + {Charisma-Aktuell}) / 2 + {AsP-Mod}'); // TODO: nur bei Zauberer
+	add_calc_dependency('LeP-Aktuell', '(2 * {Konstitution-Aktuell} + {Körperkraft-Aktuell}) / 2 + {LeP-Mod} + {LeP-Zugekauft}');
+	add_calc_dependency('AuP-Aktuell', '({Mut-Aktuell} + {Konstitution-Aktuell} + {Gewandheit-Aktuell}) / 2 + {AuP-Mod} + {AuP-Zugekauft}');
+	// add_calc_dependency('AsP-Aktuell', '({Mut-Aktuell} + {Intuition-Aktuell} + {Charisma-Aktuell}) / 2 + {AsP-Mod} + {AsP-Zugekauft}'); // TODO: nur bei Zauberer
 	// add_calc_dependency('KaP-Aktuell', 'TODO'); // TODO: nur bei Geweihten
 	add_calc_dependency('MR-Aktuell', '({Mut-Aktuell} + {Klugheit-Aktuell} + {Konstitution-Aktuell}) / 5 + {MR-Mod}');
 	add_calc_dependency('INI-Aktuell', '(2 * {Mut-Aktuell} + {Intuition-Aktuell} + {Gewandheit-Aktuell}) / 5 + {INI-Mod}');
