@@ -143,3 +143,14 @@ async function scroll_to_page(id) {
 		scrollTop: $("#document-box").scrollTop() + $(id).offset().top - 8
 	}, 600);
 }
+
+function fill_demo() {
+	$('div[class^="Edit-"]').each(function() {
+		if ($(this).height() < 20 || $(this).hasClass("Edit-WS")) {
+			$(this).text("10");
+		} else {
+			$(this).html("Lorem<div>Ipsum</div><div>dolor</div><div>sit</div><div>amet</div>");
+		}
+		$(this).trigger("input");
+	});
+}
