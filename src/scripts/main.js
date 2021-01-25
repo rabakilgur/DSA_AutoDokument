@@ -26,16 +26,27 @@ $(document).ready(() => {
 	*/
 
 	// Toolbar:
+
+	/*setInterval(() => {
+		console.log( document.getElementById("toolbar-highlight-text").textContent );
+	}, 100);*/
+
+	const tooltip_textbox = document.getElementById("toolbar-highlight-text");
 	$(".toolbar-item").on("mouseover", event => {
-		const textbox = document.getElementById("toolbar-highlight-text");
-		textbox.textContent = event.target.getAttribute("data-tool");
-		document.getElementById("toolbar-highlight").style.width = (textbox.offsetWidth + 1) + "px";
-		$(textbox).finish().animate({ color: "transparent" }, 150).animate({ color: "black" }, 200);
+		const old_text = tooltip_textbox.textContent;
+		const new_text = event.target.getAttribute("data-tool");
+		tooltip_textbox.textContent = new_text;
+		document.getElementById("toolbar-highlight").style.width = (tooltip_textbox.offsetWidth + 1) + "px";
+		tooltip_textbox.textContent = old_text;
+		setTimeout(() => {
+			tooltip_textbox.textContent = new_text;
+		}, 150);
+		$(tooltip_textbox).finish().animate({ color: "transparent" }, 150).animate({ color: "black" }, 200);
 	});
-	$("#toolbar").on("mouseout", () => {
-		const textbox = document.getElementById("toolbar-highlight-text");
-		textbox.textContent = document.querySelector(".toolbar-active").getAttribute("data-tool");
-		document.getElementById("toolbar-highlight").style.width = (textbox.offsetWidth + 1) + "px";
+	$("#toolbar").on("mouseleave", () => {
+		console.log("leave");
+		tooltip_textbox.textContent = document.querySelector(".toolbar-active").getAttribute("data-tool");
+		document.getElementById("toolbar-highlight").style.width = (tooltip_textbox.offsetWidth + 1) + "px";
 	});
 	$(".toolbar-item").on("click", event => {
 		$(".toolbar-active").removeClass("toolbar-active");

@@ -204,6 +204,7 @@ body {
 }
 .toolbar-item > * {
 	pointer-events: none;
+	opacity: 0.95;
 }
 .toolbar-icon > svg {
 	width: 40%;
