@@ -26,11 +26,6 @@ $(document).ready(() => {
 	*/
 
 	// Toolbar:
-
-	/*setInterval(() => {
-		console.log( document.getElementById("toolbar-highlight-text").textContent );
-	}, 100);*/
-
 	const tooltip_textbox = document.getElementById("toolbar-highlight-text");
 	$(".toolbar-item").on("mouseover", event => {
 		const old_text = tooltip_textbox.textContent;
@@ -44,7 +39,6 @@ $(document).ready(() => {
 		$(tooltip_textbox).finish().animate({ color: "transparent" }, 150).animate({ color: "black" }, 200);
 	});
 	$("#toolbar").on("mouseleave", () => {
-		console.log("leave");
 		tooltip_textbox.textContent = document.querySelector(".toolbar-active").getAttribute("data-tool");
 		document.getElementById("toolbar-highlight").style.width = (tooltip_textbox.offsetWidth + 1) + "px";
 	});
@@ -98,7 +92,6 @@ $(document).ready(() => {
 		const $mso = $(`._idGenMSO[data-mso_title="${mso_title}"]`);
 		$mso.children("._idGenCurrentState").removeClass("_idGenCurrentState");
 		$mso.children(`[data-idgenobjectstate="${event.target.value}"]`).removeClass("_idGenStateHide").addClass("_idGenCurrentState");
-		console.log( event.target.value );
 	});
 
 
@@ -130,8 +123,6 @@ $(document).ready(() => {
 		// 2.1 change JSON to newer version
 		// 3. apply to document
 	});
-
-
 
 });
 
