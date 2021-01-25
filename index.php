@@ -113,7 +113,7 @@ function sort_pages($a, $b) {
 	<meta property="og:title" content="DSA 4.1 Heldendokument von Robin Garbe">
 	<meta property="og:description" content="Interaktives DSA 4.1 Heldendokument">
 
-	<title>DSA 4.1 Heldendokument von Robin Garbe</title>
+	<title>DSA 4.1 AutoDokument</title>
 
 	<!-- <link rel="stylesheet" href="./Heldendokument-web-resources/css/idGeneratedStyles.css" type="text/css" /> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
