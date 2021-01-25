@@ -156,19 +156,19 @@ body {
 	grid-column: 2 / 2;
 	padding: 12px 0;
 }
-/*#document-box > div {
+#document-box > div {
 	text-align: center;
-}*/
+}
 #document-box > div:not(:last-child) {
 	margin-bottom: 12px;
 }
 #document-box > div > section {
 	display: inline-block;
 }
-.doc-page:not(.doc-page-rotated) {
+/*.doc-page:not(.doc-page-rotated) {
 	position: relative;
 	left: 123.5px;
-}
+}*/
 .doc-page div:not([class^="Edit-"]) {
 	pointer-events: none;
 }
