@@ -1,3 +1,7 @@
+:root {
+	--text-1: #000000;
+	--text-select: #2A221Bcc;
+}
 html,
 body {
 	width: 100%;
@@ -9,6 +13,7 @@ body {
 	background-size: cover;
 	background-position: 50% 50%;
 	font-family: "Garamond", Verdana, "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: var(--text-1);
 }
 ::-webkit-scrollbar {
 	width: 12px;
@@ -151,14 +156,18 @@ body {
 	grid-column: 2 / 2;
 	padding: 12px 0;
 }
-#document-box > div {
+/*#document-box > div {
 	text-align: center;
-}
+}*/
 #document-box > div:not(:last-child) {
 	margin-bottom: 12px;
 }
 #document-box > div > section {
 	display: inline-block;
+}
+.doc-page:not(.doc-page-rotated) {
+	position: relative;
+	left: 123.5px;
 }
 .doc-page div:not([class^="Edit-"]) {
 	pointer-events: none;
@@ -383,7 +392,7 @@ body {
 #toolarea-pageSelection select {
 	font-size: 150%;
 	font-weight: bold;
-	color: #2A221Bcc;
+	color: var(--text-select);
 }
 #toolarea-pageSelection:not(:hover) {
 	background-image: unset;

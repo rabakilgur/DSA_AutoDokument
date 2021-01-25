@@ -98,7 +98,14 @@ div[class^="Calc-"] {
 .Calc-PA-Aktuell,
 .Edit-FK-Mod,
 .Calc-FK-Start,
-.Calc-FK-Aktuell
+.Calc-FK-Aktuell,
+.Edit-WS,
+.Edit-WS-2,
+.Edit-WS-3,
+/* Abenteuerpunkte */
+.Edit-AP-Gesamt,
+.Calc-AP-Eingesetzt,
+.Edit-AP-Guthaben
 {
 	display: flex;
 	justify-content: center;
