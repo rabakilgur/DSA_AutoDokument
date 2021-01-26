@@ -1,0 +1,620 @@
+{
+    "name": "Aberglaube (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Aberglaube bezieht sich zumeist auf bestimmte Dinge, die dem Helden nach seiner Meinung Glück oder Pech bringen, vor denen er Angst hat. Wer diese Eigenschaft wählt, sollte die Details seines Aberglaubens näher festlegen. Bemerkenswert ist allerdings, dass einige Arten des Aberglaubens durchaus eine reale – wenn auch bisweilen völlig andere – Grundlage haben."
+},
+{
+    "name": "Albino",
+    "kosten": "-7 GP",
+    "text": "Bei einem Albino – einer Veränderung von Geburt an, die bei allen menschlichen und menschenähnlichen Rassen vorkommen kann, wenn auch sehr selten – sind in Haut, Haaren und Augen keine Farbpigmente vorhanden. Die Haut ist daher rein weiß und bekommt bei geringster Sonneneinstrahlung bereits einen Sonnenbrand (ca. 1 SP pro Stunde Aufenthalt im Sonnenlicht), die Haare sind weiß, die Augen rot oder (selten) violett. Deswegen sind viele Albinos gleichzeitig auch lichtscheu oder gar lichtempfindlich (siehe Seite 266) und haben bei Tageslicht häufig eingeschränkte Sicht. Dazu kommt, dass Albinos meist mit Misstrauen betrachtet und bisweilen sogar für unheilige Wesen gehalten werden, was leicht dazu führt, dass man einen Albino als Sündenbock hernimmt, die Garde ruft, wenn er die Stadt betritt, ihm Ämter und Würden verweigert etc.: Jeder zusätzlich gewählte Punkt SO über 7 kostet ihn 2 GP. Anderseits ist es für einen Albino leichter (um 3 Punkte), Personen einzuschüchtern, und in archaischen Kulturen mag ein Albino durchaus als göttlicher oder dämonischer Sendbote gelten. Üblicherweise ist für Zauberproben, bei denen jemand eingeschüchtert werden soll (wie der HORRIPHOBUS), der CH-Wert des Albinos um 1 erhöht, für Proben, mit denen jemand beruhigt oder freundlich gestimmt werden soll (wie der BANNBALADIN), jedoch um 1 vermindert – beides natürlich nur, wenn das Opfer den Albino sehen kann."
+},
+{
+    "name": "Angst vor [Insekten, Spinnen, Reptilien, Pelztiere, Feuer, Wasser, ...] (Schlechte Eigenschaft)",
+    "kosten": "Unterschiedliche Kosten",
+    "text": "Dies alles sind unterschiedliche Schlechte Eigenschaften, bei denen der Held mit übertriebener Angst auf bestimmte Situationen oder Begegnungen reagiert. Die Angst kann schnell in Panikzustände münden, bei denen der Held kaum noch zu vernünftigem Handeln in der Lage ist. Wovor der Held jeweils diese Phobie hat, hängt oft von seiner Kultur oder Herkunft ab, mitunter kann aber auch ein erschütterndes Schlüsselerlebnis zu einer solchen Angst führen. Auf jeden Fall kann dieser Nachteil nur wirklich als solcher gelten, wenn er den Helden im Spiel einschränkt und über das natürliche Maß der Selbsterhaltung hinausgeht. So etwas wie eine ‘Angst vor Albino-Löwen’ ist deutlich zu speziell, um gelten zu können, und auch eine Phobie wie ‘Angst vor aggressiven Giftschlangen’ ist kein Nachteil, da jeder vernunftbegabte Mensch sie besitzt. Phobien mit häufigem Auslöser (wie Angst vor Insekten und Angst vor Feuer) bringen 3 GP pro 2 Punkte der Schlechten Eigenschaft, eher selten aktivierte Phobien wie Angst von fließendem Wasser jedoch nur 1 GP pro Punkt der Schlechten Eigenschaft. Einige spezielle und bei etlichen Lebewesen anzutreffende Ängste wie Meeresangst oder Dunkelangst sind weiter unten separat aufgeführt."
+},
+{
+    "name": "Animalische Magie (Magischer Nachteil)",
+    "kosten": "-1 GP pro Punkt",
+    "text": "Alle astralen Dinge, die zu ‘kopflastig’ sind, verschließen sich dem Verständnis des Helden, er kann sich nur schlecht auf seine Zauberei konzentrieren und handelt eher ‘aus dem Bauch heraus’: Jede Zauberprobe oder Probe auf die Ritualkenntnis, bei der einmal auf die Eigenschaft Klugheit gewürfelt wird, ist um die Anzahl an Punkten in Animalischer Magie (max. 5) erschwert. Kommt Klugheit zweimal in der Probe vor, verdoppelt sich der Malus; solche Zauber (mit zweimal KL in der Probe) sind um eine Spalte schwieriger zu steigern. Dieser Nachteil kann nur von solchen Zauberkundigen gewählt werden, die Spruchzauberei beherrschen. Für Elfen und Kristallomanten (in der entsprechenden Tradition ausgebildete Zauberer), die ihre Proben anstatt auf KL teilweise auf IN ablegen dürfen, bringt der Nachteil nur 1 GP pro 2 Punkte in Animalischer Magie."
+},
+{
+    "name": "Arkanophobie (Schlechte Eigenschaft)",
+    "kosten": "je -3 GP pro 2 Punkte",
+    "text": "Der Held hat panische Angst davor, verzaubert zu werden, und fürchtet, dass alle magischen Gegenstände verflucht sind und ihm übel wollen. Der Held misstraut magisch begabten Kameraden und wird niemals einen Gegenstand verwenden, von dem er weiß, dass er verzaubert ist. Vor allem aber senkt die Arkanophobie die Magieresistenz des Charakters, wenn er weiß, dass er verzaubert werden soll. Der Nachteil sollte von Halb- und Vollzauberern nicht gewählt werden; er kann nicht gleichzeitig mit Vorurteile gegen Zauberer / gegen Magie genommen werden. Elfen können diesen Nachteil überhaupt nicht wählen. "
+},
+{
+    "name": "Arroganz (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Dieser Nachteil bringt den Helden dazu, sich allen anderen gegenüber hochnäsig zu benehmen und ihnen nichts oder fast nichts zuzutrauen, seine eigenen Fähigkeiten hingegen zu überschätzen. Ob dies als Standesdünkel, Besserwisserei oder als krankhaftes, übertriebenes Ehrgefühl daherkommt, ist dem Spieler überlassen, jedoch sollten speziell Proben auf passende Gesellschaftliche Talente hierdurch erschwert werden."
+},
+{
+    "name": "Artefaktgebunden (Magischer Nachteil)",
+    "kosten": "-7 GP",
+    "text": " Der Zauberer hat beim Binden eines Traditionsartefaktes (Zauberstab, Kristallkugel, Schale, Schwert, Goldsichel, Schamanenkeule, Druidendolch, iama) einen schweren Fehler begangen und ist nun beim Ausführen von Zaubern an das Artefakt gebunden. (In seltenen Fällen mag dies auch bei anderen Artefaktbindungen und -erstellungen geschehen, jedoch niemals freiwillig.) Alle Zauberproben, die er ausführt, ohne Hautkontakt mit dem Artefakt zu haben, unterliegen den Regeln einer Spontanen Modifikation der Zaubertechnik (siehe Wege der Zauberei), d.h., der Zauber muss 7 ZfP aufbringen (Zauber, in denen er eine ZfW von weniger als 7 hat, misslingen automatisch), die Zauberdauer verlängert sich um 3 Aktionen und er kann keine weiteren Spontanen Modifikationen durchführen. Wird das Artefakt zerstört, ist die Bindung gebrochen und der Zauberer kann wieder ungehindert zaubern; jedoch verliert er 3 permanente AsP und 1 Punkt seiner höchsten geistigen Eigenschaft (MU, KL, IN oder CH). Nur Zauberer, die über ein gebundenes Artefakt verfügen, können den Nachteil wählen: Magier, Elfen, Druiden, Geoden, Kristallomanten, Schamanen und Alchimisten. Hexen ist es möglich, dass statt eines gebundenen Artefakts (des Hexenkessels) der Vertraute einen Teil der Essenz der Hexe trägt."
+},
+{
+    "name": "Astraler Block (Magischer Nachteil)",
+    "kosten": "-5 / -10 GP",
+    "text": "Ein Charakter mit diesem Nachteil regeneriert pro Ruhephase nur 1W6–1 AsP; eventuelle Intuitions-Würfe zur Rückgewinnung verlorener Astralpunkte und bei Ritualen zum Erlangen eines höheren AsP-Grundwerts sind um 2 Punkte erschwert. Dieser Nachteil kann natürlich nur von Helden gewählt werden, die über Astralenergie verfügen; eine Kombination mit dem Vorteil Astrale Regeneration ist nicht möglich; der Erwerb der Sonderfertigkeiten Regeneration I und II sowie Meisterliche Regeneration kosten einen Helden mit Astralem Block das Doppelte der angegebenen Kosten. Voll- und Halbzauberer erhalten durch diesen Nachteil 10 GP, Viertelzauberer nur 5 GP"
+},
+{
+    "name": "Autoritätsgläubig (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP pro 2 Punkte",
+    "text": "Dieser Nachteil äußert sich in Buchgelehrsamkeit und Obrigkeitshörigkeit. Entscheidungen der Kirchenoberen oder weltlicher Herrscher werden von dem Helden nicht angezweifelt – es hat schließlich seinen Grund, dass diese Menschen über ihn gesetzt wurden. Ebenso wenig stellt er die Theorien hoch angesehener Gelehrter in Frage; selbst dann nicht, wenn das, was in den Büchern steht, der eigenen Erfahrung oder dem gesunden Menschenverstand widerspricht. Sobald der Held etwas tut, was der Anweisung eines Höhergestellten oder der Aussage eines anerkannten Gelehrten zuwiderläuft, kann der Meister eine Probe verlangen und beim Gelingen der Probe diese Aktivität verbieten. Oder aber er erschwert alle Talent- und Eigenschaftsproben, die während des Verstoßes abzulegen sind oder in irgendeinem Zusammenhang damit stehen, entsprechend der Regeln zu Schlechten Eigenschaften (Seite 268)."
+},
+{
+    "name": "Behäbig (Schlechte Eigenschaft)",
+    "kosten": "-5 GP",
+    "text": "Ein behäbiger Held bewegt sich langsamer und bedächtiger als andere Mitglieder seiner Rasse. Seine Basis-GS sinkt um 1 und er erhält einen Malus von 1 Punkt auf alle Ausweichen-Proben. Außerdem ist sein Grundwert zur Bestimmung von Sprungweiten und -höhen (üblicherweise (GE+KK– BE) um 1 Punkt vermindert. Dieser Nachteil kann nur einmal gewählt werden."
+},
+{
+    "name": "Blutdurst (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP pro 2 Punkte",
+    "text": "Der Charakter liebt es, seine Gegner langsam und blutig zu töten. Er empfindet Vergnügen daran, Opfer zu quälen und anderen Schmerzen zuzufügen. Dazu nutzt er jede sich bietende Gelegenheit, Ehre gilt ihm dabei nichts, und Unterlegene sind willkommene Opfer, solange sie sich nur wehren. Seine Obsession führt dazu, dass er länger als nötig auf Schlachtfeldern verweilt, um Verwundete zu töten, oder dass er wichtige Informanten ermordet. Ein solcher Charakter kann keinen Moralkodex annehmen, der Gewalttätigkeit ausschließt. (Und selbst in der Kor-Kirche haben Blutdürstige eigentlich keinen Platz.)"
+},
+{
+    "name": "Blutrausch",
+    "kosten": "-15 GP",
+    "text": "Der Held fällt in einen Blutrausch (bei den Thorwalern auch als Walwut oder Swafskari gefürchtet), sobald eines der drei folgend genannten Ereignisse eintritt: spontaner Zorn (z.B. eine deutlich gelungene Jähzorn-Probe), Erleiden einer Wunde durch einen Nahkampfangriff und Scheitern einer darauf folgenden Selbstbeherrschungs-Probe (erschwert um die Zahl der SP über der Wundschwelle) sowie die Einnahme bestimmter aggressionsfördernder Substanzen (allgemein: alle Rauschmittel, deren Genuss den MU-Wert anhebt, darunter auch Alkohol). Im Blutrausch setzt der Rasende seine gefährlichsten Waffen (auch Wurfwaffen oder Zauberei, nicht aber so komplexe Waffen wie Schusswaffen) gegen die missliebigste, wenn nicht vorhanden, dann die nächststehende Person ein. MU, AT und TP sind um 5 Punkte erhöht, der Rasende pariert nicht und nimmt keine Schmerzen wahr (der Meister notiert die erlittenen Schadenspunkte des Helden verdeckt). Talent- oder Zauberproben sind während des Blutrauschs um 7 Punkte erschwert, Kampfmanöver (inklusive Umwandeln von Aktionen) oder irgendwelche Aktivitäten, die einen ‘wachen Geist’ oder längere Vorbereitung verlangen, sind unter Blutrausch nicht möglich, ebenso wenig die Aktion Orientieren. Zu den verbotenen Aktionen zählen ausdrücklich auch Spontane Modifikationen von Zaubern, nicht jedoch der Einsatz von Varianten. Der Blutrausch dauert so lange, bis der Rasende keine Ausdauer mehr hat (er verliert für jede AT 2 AuP, kann aber Atem Holen) und entkräftet zusammenbricht. Blutrausch und der Vorteil Kampfrausch sind nicht miteinander kombinierbar."
+},
+{
+    "name": "Brünstigkeit (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP pro 2 Punkte",
+    "text": " Der Charakter zeigt ein unerschöpfliches sexuelles Verlangen, andere Lebewesen dienen ihm dabei nur zur Befriedigung seiner Gelüste, ob nun willig oder nicht. Dies führt allerdings auch oft dazu, dass er vor lauter Geilheit seine Umgebung völlig vernachlässigt – leicht bekleidete Amazonen haben im Kampf gegen einen brünstigen Mann z.B. leichtes Spiel und Betören-Versuche gegen ihn sind um seinen Wert in Brünstigkeit erleichtert."
+},
+{
+    "name": "Dunkelangst (Schlechte Eigenschaft)",
+    "kosten": "j2 -2 GP",
+    "text": "Der Held bekommt Beklemmungsgefühle durch Dunkelheit: Dies mögen dunkle Tunnel und Höhlen, aber auch finstere Wälder, vor allem aber einfach die Schwärze der Nacht sein. Schon das Hereinbrechen der Dämmerung ohne die Aussicht auf Beleuchtung macht den Helden nervös, das Erlöschen der letzten Fackel im dunklen Stollen treibt ihn an den Rand des Wahnsinns. Diese Phobie ist so schwerwiegend, dass der Held für einen Punkt der Schlechten Eigenschaft 2 Generierungspunkte erhält."
+},
+{
+    "name": "Einarmig",
+    "kosten": "-15 GP",
+    "text": "Der Held hat einen Arm verloren (den linken bei Rechtshändern bzw. umgekehrt). Bei allen Handlungen, die eigentlich beide Hände erfordern, sind entsprechende Eigenschaftsproben um 5 Punkte erschwert, Talentproben sogar um 10 Punkte. Bestimmte Handlungen (Bogenschießen, Führen zweihändiger Waffen) sind überhaupt nicht möglich; einarmige Helden können keine Sonderfertigkeiten erwerben oder anwenden, die mit dem links- oder beidhändigen Kampf verbunden sind, und keine Schilde oder Parierwaffen führen; bei bestimmten Balanceakten kann der Meister einem Einarmigen eine Probe um bis zu 3 Punkte erschweren. Als schwächere Form dieses Nachteils (–7 GP) könnte ein teilweise gelähmter oder verkrüppelter Arm gelten, der Eigenschaftsproben um 2, Talentproben um 5 Punkte behindert. Diese körperliche Behinderung ist so tiefgehend, dass sie im späteren Spielverlauf nicht durch eine auch noch so gute Prothese oder Zauberei wieder wettgemacht werden kann. Natürlich kann Einarmig nicht mit Einhändig kombiniert werden."
+},
+{
+    "name": "Einäugig",
+    "kosten": "-5 GP",
+    "text": "Der Held hat irgendwann im Verlauf seines bisherigen Lebens das Augenlicht eines Auges oder gar das Auge selbst verloren. Er erleidet einen Malus von 4 Punkten bei allen WurfwaffenProben und bei Schusswaffen-Proben unter 10 Schritt Entfernung. Außerdem ist sein Kontrollbereich (siehe Wege des Schwerts) um die Hälfte eingeschränkt. Einäugige Zauberer erleiden eine Erschwernis von 4 Punkten, wann immer sie einen Zauber besonders zielen müssen (wie bei einem Zauber, dessen Reichweite Horizont ist, wenn er den Nachteil Zielschwierigkeiten auf sich genommen hat oder in besonderen Situationen). Siehe auch den Nachteil Eingeschränkter Sinn auf Seite 262. Diese körperliche Behinderung ist so tiefgehend, dass sie im späteren Spielverlauf weder durch Magie noch auf andere Weise wettgemacht werden kann."
+},
+{
+    "name": "Einbeinig",
+    "kosten": "-25 GP",
+    "text": "Dem Held fehlt ein Bein, das er bei einem früheren Unfall, Kampf oder ähnlichem verloren hat. Er erleidet einen Verlust von 5 Punkten auf seine Gewandtheit (was sich auch auf seine KampfBasiswerte niederschlägt) und von 3 Punkten auf seine GS (die jedoch mindestens 1 bleibt). Diese körperliche Behinderung ist so tiefgehend, dass sie im späteren Spielverlauf nicht durch eine auch noch so gute Prothese oder durch Zauberei wieder wettgemacht werden kann. Einbeinig kann nicht mit Lahm kombiniert werden."
+},
+{
+    "name": "Einbildung",
+    "kosten": "-5 GP",
+    "text": "Der Held glaubt, aus einer übersteigerten Phantasie oder beginnendem Wahnsinn heraus, immer wieder Dinge wahrzunehmen, die in Wirklichkeit nicht existieren. Das können scheinbare Beobachter oder Verfolger sein, aber auch niemals so gemeinte Vorwürfe und Anschuldigungen von anderen Personen (z.B. wenn der Held glaubt, jegliche andere Meinung sei ein persönlicher Angriff). Einbildungen lässt sich nicht mit Wahnvorstellungen kombinieren."
+},
+{
+    "name": "Eingeschränkte Elementarnähe",
+    "kosten": "-3 GP",
+    "text": "Zu den Eigenheiten schamanistischer Magie gehört, dass jede Schamanen-Tradition nur Umgang mit dreien der sechs Elemente pflegt (diese sind jeweils bei der Profession angegeben). Diese drei beherrscht der Schamane alle gleich gut, also ohne Einbußen, selbst wenn sich zwei gegensätzliche darunter befinden. Wesen und Manifestationen der anderen Elemente dagegen kann er nicht rufen, weder mit dem Ritual Meister der Elemente noch auf anderem magischen Weg. Dieser Nachteil ist mit dem Vorteil Affinität zu Elementaren kombinierbar. Die Geoden der Brobim sind ebenfalls mit diesem Nachteil behaftet."
+},
+{
+    "name": "Eingeschränkter Sinn",
+    "kosten": "-5 GP",
+    "text": "Ein Sinn des Helden ist besonders schlecht ausgebildet: Alle Sinnenschärfe-Proben, die sich auf diesen Sinn beziehen, sind um 5 Punkte erschwert, und je nach Situation kann der Meister dem Helden auch Proben nicht zugestehen, die er anderen Helden erlaubt. Es gibt vier unterschiedliche Bereiche, auf die sich dieser Vorteil beziehen kann: Ein schwerhöriger Held nimmt zwar normal laute Geräusche wahr, aber zum Beispiel kein Flüstern. Verständigung in einer Sprache, die er nur unzureichend beherrscht, ist immer schwieriger als bei einem normal hörenden Helden. Kurzsichtig bezieht sich auf die Sicht des Helden: Alles, was mehr als zehn Schritt weit entfernt ist, wird immer verschwommener, und auf Strecken von 100 Schritt und mehr sind nur noch Konturen zu erkennen – was entsprechende Fernkampfproben und auch das Ausweichen vor einem Fernkampfangriff schwerer macht (nach Meistermaßgabe). Die Sicht auf kurze Entfernung ist nicht eingeschränkt. Gerade Kurzsichtigkeit schränkt (Spruch-) Zauberer deutlich ein, da dieser Nachteil alle Zauberproben auf Entfernung um je einen Punkt pro Entfernungskategorie (1 Schritt / 3 Schritt / 7 Schritt / 21 Schritt / 49 Schritt / Horizont) erschwert. Ein eingeschränkter Tastsinn lässt den Helden nur unter Schwierigkeiten Dinge ertasten, und je nach Situation kann der Meister auf Talentproben, in denen Fingerfertigkeit verlangt ist und bei denen der Tastsinn eine große Rolle spielt (wie Feinmechanik oder Schlösser Knacken, aber auch Heilkunde Wunden), einen Zuschlag in Höhe von 1 bis 3 Punkten verlangen. Der eingeschränkte Geruchssinn bezieht sich sowohl auf Gerüche als auch auf Geschmack, denn diese beiden Sinne sind schwer zu trennen. Ein Held mit diesem Nachteil nimmt Gerüche und Geschmack nur dann wahr, wenn sie wirklich penetrant sind (was ihn bei Speisen und Getränken auch nicht gerade wählerisch macht). In diesem Fall ist nicht nur die Sinnenschärfe betroffen, sondern auch alle Proben in Kochen sind ebenfalls um 5 Punkte erschwert; außerdem steigt die Gefahr, sich durch verdorbene Lebensmittel einen Flinken Difar oder gar eine Lebensmittelvergiftung zuzuziehen."
+},
+{
+    "name": "Einhändig",
+    "kosten": "-10 GP",
+    "text": "Der Held hat eine Hand verloren (die linke Hand bei Rechtshändern). Bei allen Handlungen, die eigentlich beide Hände erfordern, sind entsprechende Eigenschaftsproben um 3 Punkte erschwert, Talentproben sogar um 5 Punkte. Bestimmte Handlungen (Bogenschießen, das Führen zweihändiger Waffen) sind ohne besondere Prothesen überhaupt nicht möglich. Diese körperliche Behinderung ist so tiefgehend, dass sie im späteren Spielverlauf nicht durch eine auch noch so gute Prothese oder durch Magie wieder wettgemacht werden kann. Einhändig kann nicht mit Einarmig kombiniert werden und sollte nur in Ausnahmefällen bei Helden eingesetzt werden (wie überhaupt alle Verluste von Körperteilen), obwohl natürlich ein erfolgloser Dieb oder eine Piratin mit Hakenhand auch passende Heldenfiguren sind."
+},
+{
+    "name": "Eitelkeit (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Ein eitler Held versucht, in jeder beliebigen Situation gut auszusehen und Eindruck zu schinden. Das macht ihn leichter manipulierbar, da dieses Bedürfnis durchaus auch den ‘vernünftigen’ Rahmen sprengt. Zudem versucht er, Situationen zu meiden, in denen sein Aussehen leiden könnte, und er verbraucht einen guten Teil seiner Zeit mit Körperpflege."
+},
+{
+    "name": "Elfische Weltsicht",
+    "kosten": "-30 GP",
+    "text": "Elfen sind ‘nicht ganz von dieser Welt’ – eine Aussage, der auch die meisten Elfen zustimmen würden. Dies führt dazu, dass Elfen viele Dinge, Wesen und Handlungen in dieser Welt mit einem besonderen Gefühl für mögliche Zusammenhänge betrachten, auf sich wirken lassen und ihren Einfluss auf die Harmonie abwägen. Zusammen mit ihrem aus ihrer Alterslosigkeit resultierenden Zeitgefühl führt es dazu, dass Elfen eine große Zahl echter, möglicher und scheinbarer Zusammenhänge reflektieren und auf sich wirken lassen müssen, ehe sich dies in konkreten Änderungen ihrer Handlung niederschlägt. Außenstehenden erscheint dies oft als eine Lernunwilligkeit oder gar -unfähigkeit, doch ist dies eher der Vorsicht geschuldet, nicht unbeabsichtigt auf die Harmonien der Welt einzuwirken – in diesem Sinne steht den Elfen eine Form von Perfektionismus im Weg. Spieltechnisch bedeutet dies, dass Elfen – zusätzlich zu allen anderen Modifikatoren – all jene Talente und Zauber um eine Spalte erschwert erlernen, die nicht durch ihr bisheriges Leben bereits ‘ein integraler Teil ihres Selbst geworden sind’. Solche ‘verinnerlichten’ Talente und Zauber werden Leittalente genannt und sind in den Talentlisten mit (L) gekennzeichnet. Automatisch Leittalente sind diejenigen, die Teil der elfischen Natur sind: Athletik, Körperbeherrschung, Malen/Zeichnen, Musizieren, Orientierung, Schleichen, Singen, Sinnenschärfe, Tanzen und Wettervorhersage, dazu alle gewählten Gaben. Dazu kommen noch Leittalente je nach Kultur und Profession, die Sprachen Isdira und Asdharia sowie die dazugehörigen Schriften. An Zaubern (in elfischer Repräsentation) gelten all jene als L-Zauber, die eine Verbreitung von Elf5 oder höher haben sowie die durch Kultur und Profession aktivierten Zauber; ein Zauber kann nicht ‘zweimal L’ sein. Diese Regelung gilt sowohl bei der Generierung als auch bei späteren Steigerungen im Verlauf des Heldenlebens. Alle magischen, weltlichen und eventuell karmalen Sonderfertigkeiten, die nicht mit L gekennzeichnet sind, werden zu 150 % der üblichen Kosten gesteigert. L-Sonderfertigkeiten sind Ausweichen I/II/III, Elfenlieder, Gefäß der Sterne, Geländekunde (Haupt-Gelände der eigenen Kultur), Große Meditation (Erlernen wie auch Steigerungen), Kulturkunde (eigene), Meisterliche Regeneration, Ortskenntnis (Territorium der eigenen Kultur), Regeneration I/II, Repräsentation Elfenmagie, Salasandra, Simultanzaubern, Tierischer Begleiter, Zauberkontrolle, Zauber unterbrechen und Zauber vereinigen. Dazu kommen alle durch Kultur und Profession erworbenen oder verbilligten Sonderfertigkeiten. Optional 1: Bei der Charaktererschaffung ist es möglich, in Absprache mit dem Meister bis zu drei Leittalente umzuverteilen. Die o.g. ‘natürlichen’ Fertigkeiten können jedoch nicht abgewählt werden. Es sollten dabei keine ausgesprochen untypischen Talente als Leittalente gewählt werden (allgemein Götter/Kulte, Brauer, Metallguss und dergleichen oder regionsuntypische wie Lanzenreiten oder Seefahrt für Waldelfen). Optional 2: Erfahrene Elfen, die glauben, einen Pfad ihres Daseins bis zum Ende beschritten zu haben und dort der Harmonie nahe gekommen zu sein, können sich anderen Feldern der Erfahrung zuwenden (was diejenigen Elfen, die lange genug leben, auch ein- oder gar mehrmals tun). Dazu muss der Elf jedoch wirklich erfahren sein (dies sind keine Entscheidungen aus einer Laune oder der Notwendigkeit des Augenblicks heraus) und die Grundlagen des neuen Wissens im Einklang mit seiner Sippe vermittelt bekommen: Ein Elf, der mindestens 10.000 AP Erfahrung und in allen Leittalenten seiner bisherigen Profession und in allen Hauszaubern einen TaW von mindestens 12 erreicht hat, kann die Leittalente seiner bisherigen Profession gegen die einer anderen elfischen Profession austauschen. Dies erfordert keinen Einsatz von Abenteuerpunkten, jedoch muss sich der Elf dazu etwa ein Jahr lang bei seiner Sippe aufhalten und mit ihr ins salasandra gehen. (Wenn Sie also die Expertenregel zum badoc verwenden, steht diese Möglichkeit nur Elfen offen, die sich noch nicht zu weit von ihren Ursprüngen entfernt haben.) Optional 3: Wenn Sie mit den Regeln zu Lernen im Salasandra spielen (siehe Wege des Schwerts), gilt allgemein, dass bei der Sippe verfügbare Talente, Zauber und Sonderfertigkeiten nicht der Elfischen Weltsicht unterliegen, wenn sie im salasandra gelernt werden."
+},
+{
+    "name": "Farbenblind",
+    "kosten": "-5 GP",
+    "text": "Der Held sieht nur Grauschattierungen, was bestimmte Proben erschwert, bestimmte Professionen unmöglich macht und zudem bei Fernkampf-Proben mit langer Reichweite (über 50 Schritt Entfernung) einen Malus von 4 Punkten mit sich bringt. Diese Einschränkung gilt natürlich nicht, wenn die Sicht durch Nebel oder Dunkelheit sowieso schon stärker beeinträchtigt ist. Farbenblinde Zauberer erleiden eine Erschwernis von 4 Punkten, wann immer sie einen Zauber besonders zielen müssen (wie bei einem Zauber, dessen Reichweite Horizont ist, wenn er den Nachteil Zielschwierigkeiten auf sich genommen hat, oder in besonderen Situationen)."
+},
+{
+    "name": "Feind",
+    "kosten": "GP in Höhe des halben SO des Feindes",
+    "text": "Dies ist eine mögliche Variation des Nachteils Gesucht (siehe Seite 264): ein einzelner Feind, der den Helden mit Missgunst oder gar Hass verfolgt und ihm zumindest an Ruf und Leib, wenn nicht gar am Leben schaden will (also mehr als nur ein einfacher Konkurrent um einen Gildenposten oder die Gunst einer Person ist). Je nach Sozialstatus des Feindes kann dieser dem Helden durch seinen Einfluss oder gedungene Verfolger gefährlich werden, weswegen der Held auch GP in Höhe des halben SO für einen Feind erhält. Man kann nicht gleichzeitig von ein und derselben Person gesucht werden und sie zum Feind haben."
+},
+{
+    "name": "Feste Gewohnheit (Magischer Nachteil)",
+    "kosten": "-10 GP",
+    "text": "Zusätzlich zu den Bedingungen, die mit der Repräsentation eines Spruchs verbunden sind (Geste, Blickkontakt etc.), muss der Zauberer eine bestimmte Handlung vollführen, damit seine Zauber gelingen (Gebet, besondere, komplexe Geste etc.), oder er muss sich an bestimmte Randbedingungen (Zaubern nur bei Nacht, nur im Wald, nur nach einem Tag Abstinenz und Enthaltsamkeit, Erdgebundenheit, spezielle Gewandung und Schuhwerk, Barfüßigkeit, Nacktheit) halten, damit er Magie wirken kann. Die Randbedingungen durch eine Feste Gewohnheit zu ignorieren ist deutlich schwieriger als bei den Bedingungen durch Repräsentation. Dieser Nachteil kann nur von Zauberkundigen gewählt werden, die Spruchzauberei beherrschen. Feste Gewohnheit wirkt sich auch auf Rituale aus, jedoch ist dies hierbei meist von geringerer Wichtigkeit. (Ausnahmen bestätigen die Regel: Ein kurzes Gebet zu Hesinde kann bei einer Amazeroth-Anrufung durchaus störend wirken ...) Die Wahl dieses Nachteils erfordern die Zustimmung des Spielleiters."
+},
+{
+    "name": "Festgefügtes Denken (Magischer Nachteil)",
+    "kosten": "je -1 GP",
+    "text": "Der Zauberer ist ohne Ordnung und vorgegebene Formalismen verloren; Improvisation und spontan richtige Entscheidungen sind nicht sein Ding: Jede Zauber- oder Ritualkenntnis-Probe , bei der einmal auf die Eigenschaft Intuition gewürfelt wird, ist um die Anzahl an Punkten in Festgefügtem Denken (maximal 5) erschwert. Kommt IN zweimal in der Probe vor, verdoppelt sich der Malus; solche Zauber (mit zweimal IN in der Probe) sind um eine Spalte schwieriger zu steigern. Dieser Nachteil kann nur von Zauberkundigen gewählt werden, die Spruchzauberei beherrschen. "
+},
+{
+    "name": "Fettleibig",
+    "kosten": "-15 GP",
+    "text": "Der Held ist für seine Spezies deutlich zu schwer, ohne dass das Zusatzgewicht aus Muskeln besteht. Dies geht mit AU-Einbußen (auf die Hälfte) und Einschränkungen bei körperlichen Eigenschaften einher: Die Maximalwerte von GE und FF sind um 4 Punkte gesenkt (also auf anderthalbfachen Startwert –4 Punkte). Alle KK-Proben, die mit dem Eigengewicht zu tun haben, sollten um mindestens 2 Punkte erschwert werden, entsprechende Talentproben um 5 Punkte. Erhöhen Sie das Gewicht des Helden um mindestens 50 %. Ob Fettleibigkeit auch Einbußen bei Gesellschaftlichen Talenten nach sich zieht, hängt von der jeweiligen Kultur ab. Zudem mag es für Fettleibige deutlich schwierig sein, passende Kleidung, vor allem aber Rüstungen zu bekommen (die dann wiederum auch noch merklich schwerer sind)."
+},
+{
+    "name": "Fluch der Finsternis (Magischer Nachteil)",
+    "kosten": "-2, -4 oder -6 GP",
+    "text": "Der Held hat beigebracht bekommen, dass der Herr Praios die Zauberei hasst und dass er am Tag sein Auge über das Firmament wandern lässt, um nach Sündern Ausschau zu halten. Oder: Der Held glaubt, dass nur im Licht der Sterne (heißt es nicht ‘Sternenkraft’?) vernünftig gezaubert werden kann. Egal, welche (passende) Begründung hier zutrifft: Er zaubert bei Tag mit spürbaren Einschränkungen: einer Erschwernis von 1, 2 oder 3 Punkten auf alle Zauber- und Ritualproben, die zwischen Sonnenauf- und -untergang abgelegt werden. Dieser Nachteil ist kumulativ mit den Einschränkungen durch Lichtempfindlich oder Lichtscheu. Er kann als Beispiel für mehrere solcher Arten von negativen Umgebungseinflüssen gelten, die sich jedoch nicht so stark wie z.B. eine Feste Gewohnheit manifestieren. Der Einfluss sollte sich, damit er spieltechnische Auswirkungen hat, etwa auf die Hälfte des Lebensumfelds des Zauberers beziehen. Möglich sind z.B. Erschwernisse unter freiem Himmel, in Gesellschaft von Menschen etc. Ein solcher Nachteil ist immer stark vom Spielstil der Gruppe und der gespielten Kampagne abhängig, weswegen der Meister bei der Vergabe das letzte Wort hat. Ein Held sollte nicht mehr als eine solche Einschränkung auf sich nehmen (und es kann natürlich nicht eine gleiche oder ähnliche wie bei einer bereits gewählten Festen Gewohnheit sein)."
+},
+{
+    "name": "Geiz (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP pro 2 Punkte",
+    "text": "Der Charakter kann sich – schlimmstenfalls auch in Notsituationen – nicht von seinen Besitztümern trennen; er spart und knausert (auch bei Heilkräutern oder Bestechungsgeldern), trägt billige Kleidung, haust in heruntergekommenen Gaststuben, gibt keine Almosen und bewirtet Gäste bestenfalls mit Brot und Wasser – Hauptsache, sein Besitz wird nicht gemindert. Wenn er einmal zum ‘Verpulvern’ von Geld gezwungen ist, ärgert er sich so sehr darüber, dass er den Auswirkungen der Schlechten Eigenschaften in vollem Maße unterliegt."
+},
+{
+    "name": "Gerechtigkeitswahn (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP pro 2 Punkte",
+    "text": "Der Charakter ist der Auffassung, dass Gesetze und Regeln eingehalten und Verstöße streng bestraft werden müssen. Auch kleinste Vergehen erfordern harte Strafen, mildernde Umstände gibt es nicht. Dies geht so weit, dass der Charakter nicht nur Richter und Henker, sondern schließlich sogar den Gesetzgeber in einer Person sein will und nur noch seine eigenen Überzeugungen als Maßstab gelten lässt."
+},
+{
+    "name": "Gesucht I, II oder III",
+    "kosten": "-5 / -10 / -15 GP",
+    "text": "Der Held wird steckbrieflich gesucht, es ist ein Kopfgeld auf ihn ausgesetzt und er muss mit empfindlichen Strafen rechnen, wenn er gefasst wird. Der Grund dafür ist in der Regel ein Verbrechen, das er begangen hat oder dessen man ihn fälschlicherweise bezichtigt. Im einfachsten Falle (Gesucht I) gilt dieser Nachteil nur für eine Region (etwa von der Größe und dem Einfluss des Bornlands oder einer mittelreichischen Provinz), und falls er jemals gefasst werden sollte, muss er mit langjähriger Haft rechnen (für Verbrechen wie wiederholte Räuberei, Wegelagerei und Diebstahl – in der Regel kamen Opfer nicht oder nur geringfügig zu Schaden –, leichte Fälle von Ketzerei, aber auch verbrecherische Verstöße gegen Ordens- und Gildenregeln, vor allem Betrugsdelikte). Auch außerhalb der betreffenden Region kann er sich niemals sicher sein, nicht irgendwann von einem Kopfgeldjäger aufgespürt zu werden – vor allem, wenn er im Lauf seines Heldenlebens nach und nach immer bekannter wird. Eine Variante, die ebenfalls 5 GP wert ist, ist eine Organisation (ein Geheimbund, ein Orden...) wie die Tsa-Kirche oder ein horasisches Bankhaus von nicht allzu großem Einfluss, aber großer räumlicher Verbreitung, die mit dem Helden noch eine Rechnung offen hat. Auch in diesem Fall muss der Held weniger um sein Leben als um seine Freiheit fürchten. Sollte ein Held bereits auf Stufe II gesucht werden, dann kann er sich sicher sein, dass nicht nur in einer Provinz, sondern auch in den benachbarten (verbündeten) Ländern sein Steckbrief rundgegangen ist. Das Verbrechen ist so schwerwiegend (Raub bzw. Diebstahl bei mächtigen Opfern, Verbrechen gegen den Hochadel, Verbrechen mit Todesfolge, Entführung, unlizenzierte Schadenszauberei mit Todesfolge, Ketzerei) und das ausgesetzte Kopfgeld ist so hoch, dass es sich für Kopfgeldjäger auch lohnt, ihn über längere Zeit zu verfolgen. Sobald der Held Kontakt mit Gardisten hat oder in irgendeiner Weise ins Interesse der Öffentlichkeit rückt, kann es jederzeit geschehen, dass ihn irgend jemand erkennt. Auf keinen Fall kann der Held die Provinz oder das Land betreten, in dem er gesucht wird, ohne ständig in der Angst leben zu müssen, eingekerkert zu werden oder sogar eine Verstümmelung zu erleiden. Hier ist die Alternative eine kleine, aber fanatische Gruppe, die auch selbst vor Bluttaten nicht zurückschreckt, um den Helden endlich in die Finger zu bekommen. Im extremen Fall (Gesucht III) ist das Verbrechen, dessen er beschuldigt wird, von so großer Bedeutung, dass es in den relevanten Kreisen aller zivilisierten Länder bekannt ist (Dämonenbündlerei, schwere Ketzerei – oft werden die Täter in Abwesenheit exkommuniziert –, Verbrechen gegen Monarchen oder Kirchenpatriarchen, mehrfache Morde). Sein Steckbrief liegt in jeder Gardistenstube, und das Durchqueren jedes Stadttores ist mit einem Risiko verbunden. Die Belohnung ist auf seinen Kopf ausgesetzt – ob der Körper noch daran hängt, ist nicht relevant. Daher muss er auch jederzeit damit rechnen, dass ein Kopfgeldjäger ihn hinterrücks umzubringen versucht. Ein Held, der mit Stufe III gesucht wird, sollte diesen Nachteil zu jeder Zeit zu spüren bekommen – außer wenn er zum Beispiel in der tiefsten Einöde des Ewigen Eises unterwegs ist, und selbst dorthin werden ihn vielleicht fanatische Kopfgeldjäger verfolgen. Wenn er irgendwann dem Aussteller des Steckbriefes übergeben wird, dann muss er mit seinem Tod rechnen – im günstigeren Fall vielleicht einem Leben als Galeerensklave. Natürlich kann jeder Held versuchen, seine Identität auf Dauer zu verschleiern, aber je intensiver er gesucht wird, desto mehr Mühe muss er sich geben. Er muss Aussehen und Namen, möglichst sein ganzes Auftreten ändern – aber es ist nicht einfach, eine schlüssige Geschichte zu erfinden. Und gute Kopfgeldjäger sind wie Bluthunde: Man kann sie aufhalten, aber niemals abhängen. Und wenn einer aufgegeben hat, ist bestimmt schon der nächste unterwegs."
+},
+{
+    "name": "Glasknochen",
+    "kosten": "-7 GP",
+    "text": "Der Held ist besonders empfindlich gegen äußeren (mechanischen) Schaden, wie er aus Kampfschaden oder ähnlichen Verletzungen resultiert: Die Wundschwellen eines Helden (üblicherweise KO/2 – KO – 3/2 KO; siehe auch den Vorteil Eisern auf Seite 250) sind um jeweils 2 Punkte gesenkt. Dies ist nicht explizit die gleichnamige irdische Krankheit, sondern eine allgemeine Unfähigkeit des Körpers, schwerere Verletzungen abzuwehren. Ein Held mit Glasknochen kann nicht gleichzeitig den Vorteil Eisern haben."
+},
+{
+    "name": "Goldgier (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Durch diesen Nachteil tut der Held durch seine Gier nach Reichtum und Schätzen manchmal Dinge, die nicht unbedingt vernünftig sind. Dieser Nachteil bezieht sich nicht nur auf Gold und Schätze, sondern auch auf wertvolle und seltene Zaubergegenstände, Tränke und Artefakte."
+},
+{
+    "name": "Größenwahn (Schlechte Eigenschaft)",
+    "kosten": "je -2 GP pro 2 Punkte",
+    "text": "Der Held fühlt sich zu Großem ausersehen, sein Wille ist die einzige Grenze. Häufig richtet dies sich auf megalomagische Forschungen, aber auch die Erlangung große Macht, ja gar die Herrschaft über Dere ist als Ziel möglich. Dies ist oft mit Einbildungen oder Wahnvorstellungen gekoppelt."
+},
+{
+    "name": "Heimwehkrank",
+    "kosten": "-10 GP",
+    "text": "Der Held ist chronisch an Heimweh erkrankt, wechselt in seinen Stimmungen zwischen Melancholie und Depression und versucht, so oft es irgend geht, seine Sippe zu besuchen. Diese Heimwehkrankheit macht ihn außerhalb seiner Heimat anfälliger für Krankheiten, als er dies eigentlich sein sollte. Besitzt er den Vorteil Resistenz gegen Krankheiten, verliert er ihn, andernfalls erhält den Nachteil Krankheitsanfällig. Zudem wird seine AsP-Regeneration um 1 gemindert. Dieser Nachteil ist nur für Elfen wählbar."
+},
+{
+    "name": "Hitzeempfindlichkeit",
+    "kosten": "-7 GP",
+    "text": " Der Held fühlt sich ab Temperaturen von etwa 25 °C in jeglicher Kleidung unwohl, ab 30 °C auch nackt. Alle Talent- und Zauberproben sind unter solchen Bedingungen um 3 Punkte erschwert; von seiner Regeneration muss er jeweils 1 Punkt abziehen. Außerdem erleidet er doppelt so schnell Erschöpfung, und alle Ausdauer-Verluste, die er (etwa im Kampf) erleiden würde, sind um 1 AuP erhöht."
+},
+{
+    "name": "Höhenangst (Schlechte Eigenschaft)",
+    "kosten": "je -3 GP pro 2 Punkte",
+    "text": "Bei diesem Nachteil reagiert ein Held panisch auf Situationen, in denen er in die Tiefe stürzen könnte. In Extremsituationen kann es zum ‘Sog der Tiefe’ kommen, bei dem der Held das Gefühl bekommt, dass der Abgrund ihn geradezu in sich hineinzieht."
+},
+{
+    "name": "Impulsiv",
+    "kosten": "-5 GP",
+    "text": "Auch und gerade unter Anspannung neigt der Charakter dazu, kein zweites Mal nachzudenken, sondern sofort zu handeln; sämtliche KL- oder IN-Proben, die eine solche direkte Aktion verhindern würden, sind um 5 Punkte erschwert. Im Kampf sind alle Manöver, die in irgendeiner Weise auf den Sonderfertigkeiten Finte oder Meisterparade aufbauen, um 2 Punkte erschwert."
+},
+{
+    "name": "Jähzorn (Schlechte Eigenschaft)",
+    "kosten": "je -3 GP pro 2 Punkte",
+    "text": "Der Held überreagiert sehr schnell, sobald er sich in irgendeiner Weise in seiner Ehre beschnitten sieht, wenn seine Seite in einer Debatte zu unterliegen droht oder wenn ihm ein Missgeschick widerfährt. Dies kann und sollte durchaus zu Situationen führen, in denen er sich (und vermutlich auch seine Gefährten) in Gefahr bringt. Gelingt eine Jähzorn-Probe im Kampf (z.B. weil das Gegenüber den Helden geschickt provoziert), sind alle Manöver, die in irgendeiner Weise auf den Sonderfertigkeiten Finte oder Meisterparade aufbauen, um 2 Punkte erschwert."
+},
+{
+    "name": "Kälteempfindlichkeit",
+    "kosten": "-7 GP",
+    "text": " Der Held fühlt sich bei Temperaturen von weniger etwa 10 °C deutlich unwohl und ist gezwungen, in dicker (behindernder) Kleidung herumzulaufen; bei Temperaturen von weniger als 0 °C fühlt er sich auch trotz Kleidung stets unterkühlt. Alle Talent- und Zauberproben sind unter solchen Bedingungen um 3 Punkte erschwert; von seiner Regeneration muss er jeweils 1 Punkt abziehen. Außerdem erleidet er bei allen Würfen auf Kälteschaden (siehe die Kälteregeln in Wege des Schwerts) 2 kTP mehr als Helden, die nicht von diesem Nachteil betroffen sind. "
+},
+{
+    "name": "Kältestarre",
+    "kosten": "-7 GP",
+    "text": "Ein Wesen, das unter Kältestarre leidet, muss bei niedrigen Temperaturen (unter ca. 10 °C) mit KK-, FF- und GE-Einbußen von 2 bis 5 Punkten rechnen; unter dem Nullpunkt ist es sogar vollkommen handlungsunfähig und fällt üblicherweise in Kälteschlaf. Dies ist ein typisches Kennzeichen fast aller derischen Echsenvölker, speziell der Achaz."
+},
+{
+    "name": "Kein Vertrauter (Magischer Nachteil)",
+    "kosten": "-3 GP",
+    "text": "Dieser Nachteil bestimmt, dass die Hexe niemals einen Vertrauten finden wird. Oft werden Hexen, die diese ‘traute Zweisamkeit’ missen müssen, verbittert und einsam, stets neidvoll auf ihre Schwestern. Diese betrachten die vertrautenlose Hexe gerne mit leichter Herablassung, und mit zunehmendem Alter muss ja ‘irgendetwas falsch’ sein an der Hexe. Nach Maßgabe des Spielleiters kann auf Hexennächten oder bei der Interaktion mit anderen Hexen ein Malus von 1 bis 3 Punkten auf soziale Proben und Talente anfallen."
+},
+{
+    "name": "Kleinwüchsig",
+    "kosten": "-5 GP",
+    "text": "Der Held ist recht klein gewachsen – üblicherweise unter anderthalb Schritt groß –, hat aber für seine Rasse normale Proportionen. Dieser Nachteil verringert die GS um 1 Punkt und schränkt den Helden bei der Wahl von Waffen und Rüstungen ein. Sollte er Waffen benutzen, die länger als 1,5 Schritt und keine Speere sind, so muss er 3 Punkte Abzug auf AT, PA und 2 Punkte auf TP hinnehmen. Waffen, die von normal großen Lebewesen in mehreren Distanzklassen geführt werden können, müssen von Kleinwüchsigen in der jeweils niedrigeren Distanzklasse geführt werden. Die Behinderung nicht angepasster Rüstungen steigt um 1. Das Kampfmanöver Gegenhalten ist um 1 Punkt erleichtert. Beim Kampf mit dem Trefferzonensystem (zu finden bei den Kampfregeln in Wege des Schwerts) ist es für Kleinwüchsige um 1 Punkt erschwert, den Kopf eines menschengroßen Gegners zu treffen, ein Schlag gegen die Beine ist allerdings um 1 Punkt erleichtert."
+},
+{
+    "name": "Körpergebundene Kraft (Magischer Nachteil)",
+    "kosten": "-7 GP",
+    "text": "Dies ist gewissermaßen die ‘dunkle Seite’ von Zauberhaar (siehe S. 259). Auch im Haar eines Helden mit diesem Nachteil sitzt ein beträchtlicher Teil seiner Astralkraft: Ein Fünftel seiner BasisAE ist ihm nur dann zugänglich, wenn sein Haar mindestens zweieinhalb Spann (50 cm) Länge hat und er als Mann einen auffälligen Vollbart trägt (wenn dies von der Rasse her möglich ist). Ist sein Haar kürzer oder gar vollständig geschoren, regeneriert er demzufolge nur bis zu einem Wert von 4/5 seiner möglichen AsP. Zauberkundige mit diesem Nachteil haben meist eine sehr auffällige, geradezu ‘magische’ Haarfarbe, und auch ihr langes Haar behindert sie bisweilen (und ein Zopf stört sie ebenso sehr wie Träger von Zauberhaar). Das astralspeichernde Haar kann durch einen Haarschnitt / eine Rasur entfernt werden und wächst üblicherweise mit einer Geschwindigkeit von einem halben Spann pro Monat nach (ist also nach einer Glatze nach 5 Monaten wieder verfügbar). Auch hier gilt, dass sich solche Haare weitaus besser (Erleichterung von 7 Punkten) in magischen Ritualen wie den druidischen Herrschaftsritualen gegen den vormaligen Haarträger anwenden lässt. Zudem soll solches Haar wichtiger Bestandteil von verschiedenen Tränken und Artefakten sein. Der Nachteil ist nicht mit dem Vorteil Zauberhaar kombinierbar und erfordert die Zustimmung des Spielleiters. Das Haar ist mit dem Zauber PECTETONDO nur um 7 Punkte erschwert zu verwandeln."
+},
+{
+    "name": "Krankhafte Reinlichkeit (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Der Held fühlt sich extrem unwohl, wenn er selbst oder etwas in seiner Umgebung verschmutzt ist. Die Ablenkung führt so weit, dass er sich kaum noch auf andere Dinge konzentrieren kann und der Wunsch nach einer Reinigung die meisten anderen Ziele überdeckt."
+},
+{
+    "name": "Krankheitsanfällig",
+    "kosten": "-7 GP",
+    "text": "Der Held ist anfällig für Krankheiten; KO-Proben zum Widerstand gegen Ansteckung oder zur Schadensreduktion sind um 5 Punkte erschwert. Dieser Nachteil kann nicht mit den Vorteilen Resistenz bzw. Immunität gegen Krankheiten kombiniert werden"
+},
+{
+    "name": "Kristallgebunden (Magischer Nachteil)",
+    "kosten": "-10 GP",
+    "text": "Auf dieser essentiellen Einschränkung beruht die gesamte Zaubertradition der Kristallomanten, und sie sind auch die einzigen, die diesen Nachteil wählen können und müssen. (Er kann jedoch im Rahmen einer Großen Modifikation in der Zauberwerkstatt verwendet werden, siehe Wege der Zauberei.) Jede Zauberhandlung ist dadurch an die Verwendung von Edelsteinen gebunden, was die Zaubervorbereitung um mindestens 1 Aktion pro verwendetem Edelstein verlängert (wenn bereits in der Hand gehalten; plus 3 Aktionen, wenn sie vorher noch aus einem entsprechend präparierten Schuppenbeutel gefischt werden müssen, bzw. plus 10 Aktionen, wenn sie ungeordnet in einem Beutel oder anderem Behältnis vorliegen). Zudem werden die Zuschläge für Spontane Modifikationen und Varianten verdoppelt, wenn sie nicht von entsprechend geschliffenen Kristallen unterstützt werden (siehe das Kapitel zur Kristallomantie im Band Wege der Zauberei). Ein Bruch mit dieser Gewohnheit bedeutet, dass der Kristallomant die gesamte Zaubermatrix aus eigener Kraft weben muss, was sich in einem Zuschlag von 12 Punkten auf die Zauberprobe ausdrückt (der nicht durch die SF Matrixverständnis gemildert werden kann). Außerdem können kristallgebundene Zauberer nur solche Artefakte und Matrixgeber erschaffen, deren Zauberwirkung durch die physische Anwesenheit passender Edelsteine gestützt wird, andernfalls ist auch die Probe auf ARCANOVI (oder APPLICATUS) um 12 Punkte erschwert."
+},
+{
+    "name": "Kurzatmig",
+    "kosten": "je -1 GP pro 2 AuP",
+    "text": "Der Held gerät schneller außer Atem, als es einer vergleichbaren Person geschieht. Das heißt, dass er pro GP, den er erhalten will, 2 Punkte seiner Ausdauer (maximal 6) verliert. Ein Held, der besonders kurzatmig ist (der mindestens 2 GP aus diesem Vorteil erhalten hat), ist schneller erschöpft, d.h., seine Erschöpfungsschwelle beträgt nicht KO Punkte, sondern KO –1; wer Kurzatmig für 3 GP gewählt hat, dessen Erschöpfungsschwelle sinkt sogar um 2 Punkte."
+},
+{
+    "name": "Lahm",
+    "kosten": "-15 GP",
+    "text": "Der Charakter hat ein lahmes Bein, ein zerschmettertes und steifes Kniegelenk oder dergleichen. Er erleidet einen Verlust von 2 Punkten auf seine Gewandtheit (dieser Abzug beeinflusst eventuell die Kampfwerte) und 1 Punkt auf seine GS (die jedoch immer mindestens 1 bleibt). Er muss bei Proben auf alle körperlichen Talente, bei denen es auf Beinarbeit ankommt, 3 Punkte Erschwernis hinnehmen. Diese körperliche Behinderung ist so tiefgehend, dass sie im späteren Spielverlauf nicht durch eine auch noch so gute Prothese oder durch Magie wieder wettgemacht werden kann."
+},
+{
+    "name": "Lästige Mindergeister (Magischer Nachteil)",
+    "kosten": "-3 GP",
+    "text": "Mindergeister, die üblicherweise nur dort entstehen, wo starke elementare Kräfte ineinander übergehen, scheinen vom Helden geradezu angezogen werden: Windbeutel nisten sich in Haar und Hosentaschen ein, Tränlinge kullern ihm übers Gesicht, Krautwichte kitzeln ihn und Flammenbolde drohen ihn zu versengen. Entsprechend ihrer Natur sind die Mindergeister kaum gefährlich, aber lästig: Sie können Ruhe und Konzentration des Helden stören (Probenerschwernisse im Rahmen von 1 Punkt), Beobachter irritieren, aber vielleicht auch mal vor einer Gefahr warnen. Sie sollten immer dann entstehen, wenn ein Zauber oder Ritual misslingt, bei dem mehr als 10 AsP verbraucht werden, prinzipiell jedoch bei einem Zauberpatzer, und bleiben so lange, bis sie mittels ELEMENTARBANN (der der Lieblingszauber solcherart geplagter Helden werden könnte) verscheucht werden oder sich nach 1W6+3 Tagen von selbst trollen."
+},
+{
+    "name": "Lichtempfindlich",
+    "kosten": "-15 GP",
+    "text": "Ein lichtempfindlicher Charakter empfindet die Berührung von Sonnenlicht als schmerzhaft und wird in allen Handlungen eingeschränkt: Alle Eigenschaftsproben sind um 2 Punkte erschwert, Talent- und Zauberproben um 5 Punkte. Zudem ist es wirklich schwierig, sich komplett vom Sonnenlicht abzuschirmen, und wenn dies gelingt, so hat ein vermummter Mensch sicherlich mit Vorurteilen zu kämpfen. (Er könnte z.B. für einen Geweihten des Namenlosen gehalten werden, der zu tarnen versucht, dass er seinen Schatten geopfert hat.)"
+},
+{
+    "name": "Lichtscheu",
+    "kosten": "-10 GP",
+    "text": " Ein lichtscheuer Charakter verabscheut direktes Sonnenlicht und
+    erleidet daher Nachteile bei allen Handlungen, die er im direkten Sonnenlicht ausführt: Eigenschaftsproben sind um 1 Punkt
+    erschwert, Talent- und Zauberproben um 3
+    Punkte. Ein solcherart betroffener Held vermeidet es meist, tagsüber aus dem Haus zu
+    gehen, und hat häufig sein Leben auf einen
+    Nachtrhythmus eingestellt."
+},
+{
+    "name": "Loyalität",
+    "kosten": "-",
+    "text": "Loyalität (zu Familienmitgliedern, einer militärischen Einheit etc.) ist eine mögliche Ausprägung von Prinzipientreue (siehe Seite 267)."
+},
+{
+    "name": "Madas Fluch (Magischer Nachteil)",
+    "kosten": "-1, -2 oder -3 GP",
+    "text": "Das Madamal erinnert die Nivesen an Madas Frevel. Sie glauben, dass die Himmelswölfe ihr Missfallen zum Ausdruck bringen, wenn der Mond hell und groß ist. Daher zaubern die meisten NivesenSchamanen während dieser Zeit ungern und mit Mühe: An den drei Tagen vor Vollmond, an Vollmond und an den drei Tagen nach Vollmond sind alle Zauber- und Ritual-Proben erschwert: je nach Stärke des Nachteils um 1, 2 oder 3 Punkte (und zwar sowohl bei Tag als auch in der Nacht). Es ist selten, dass andere Zauberer unter diesem Nachteil leiden (nur mit ausdrücklicher Erlaubnis des Spielleiters) oder dass er sich auch auf weltliche Talente erstreckt. In letzterem Fall werden die dreifachen GP verrechnet."
+},
+{
+    "name": "Medium",
+    "kosten": "-7 GP",
+    "text": "Der Geist des Charakters ist sehr anfällig dafür, von Geistern übernommen zu werden. Bisweilen hört er – mehr oder weniger verständliche – Einflüsterungen und Stimmen. Es kommt sogar vor, dass für eine kurze Zeit ein Geist von ihm Besitz ergreift, sich seines Körpers bedient oder durch ihn spricht; gegen alle Beeinflussungen, Beherrschungen, Hellsichten und Verständigungen (was sich also im Rahmen solcher Zauber oder zauberähnlicher Effekte erklären lässt – inklusive der eigentlichen Besessenheit selbst; siehe Wege der Zauberei) von Geistern hat er eine um 5 Punkte gesenkte Magieresistenz. Dies führt auch dazu, dass der Held an Orten, an denen er mit der Präsenz von Geistern rechnen muss (und sich dessen bewusst ist), deutlich nervös ist, was sich in Proben-Erschwernissen von 1 bis 7 Punkten (bei Talent- und Zauberproben) äußert, wobei eine +1 für den Ort eines tragischen Todesfalls und +7 für das Schlachtfeld einer der Dämonenschlachten angemessen ist."
+},
+{
+    "name": "Meeresangst (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Der Held mit diesem Nachteil hat Angst davor, sich an Bord eines Schiffes oder Bootes (oder gar ohne!) auf eine Wasserfläche zu begeben. Je weiter das ‘rettende’ Ufer entfernt ist, desto heftiger wird die Meeresangst. Dieser Nachteil gilt für alle größeren Wasserflächen wie die Aventurien umgebenden Ozeane, aber auch den Neunaugen- oder den Blauen See."
+},
+{
+    "name": "Miserable Eigenschaft",
+    "kosten": "-10 GP",
+    "text": "Eine Eigenschaft, die der Held bei der Generierung auf einen Wert von 8 gesetzt hat (vor Einrechnung der Modifikatoren aus Rasse, Kultur, Profession und eventuellen anderen Vor- und Nachteilen), wird auf 7 gesenkt. Diese Eigenschaft kann in der späteren Laufbahn des Helden nur zu den doppelten Steigerungskosten angehoben werden. Dieser Nachteil kann mehrfach gewählt werden, allerdings für jede Eigenschaft nur einmal."
+},
+{
+    "name": "Mondsüchtig",
+    "kosten": "-5 GP",
+    "text": "Der Mond versetzt den Helden in einen entrückungsähnlichen Zustand. Pro Stunde, die er sich im Mondlicht aufhält (egal ob schlafend oder wach), erhält er bei abnehmendem Mond einen Punkt Verzücktheit (sehr ähnlich der karmalen Entrücktheit und genauso geregelt wie diese, siehe Wege der Götter), in der Woche nach Neumond zwei, in der darauf folgenden Woche drei und in der Vollmondnacht vier. ‘Im Mondlicht’ heißt dabei im Freien oder am offenen Fenster, während der Mond am Himmel steht; Bewölkung oder ein Zelt helfen nicht. Im Zustand starker Verzückung neigen Mondsüchtige zu Visionen (zutreffenden wie auch unzutreffenden) und zum Schlafwandeln. Verzückung addiert sich in ihrer Wirkung mit Entrückung. Sie wird mit KL/2 Punkten pro Stunde, jedoch nicht im Mondlicht abgebaut."
+},
+{
+    "name": "Moralkodex [Kirche]",
+    "kosten": "-3 bis -12 GP",
+    "text": "Alle Formen von Moralkodex beinhalten, wenn nicht ausdrücklich anders erwähnt, die Pflicht, den Glauben an die eigene Religion in der Bevölkerung zu festigen, das Lob der Gottheit zu predigen, Frevel gegen die Gottheit und ihre Prinzipien zu verhindern, Ratsuchende zu beraten, Frevler zur Umkehr zu bewegen und, wenn sie Reue zeigen, ihnen die Beichte abzunehmen. Weiterhin ist jedem Geweihten und jedem Akoluthen bewusst, dass er durch sein Verhalten das Ansehen seiner Kirche mehren und nicht mindern sollte. Auch die Bekämpfung von Wesenheiten, die die göttliche Ordnung massiv stören (vor allem Dämonen), gehört zu den Pflichten eines jeden Kirchenangehörigen (auch wenn als ‘Bekämpfung’ durchaus ausreicht, schnellstens den nächstgelegenen Exorzisten zu verständigen). Verstößt der Held gegen diese moralischen Prinzipien, so ist er durch Gewissensbisse für die nächste Zeit in all seinen Handlungen so eingeschränkt, als wirke eine Schlechte Eigenschaft (siehe S. 268). Stärke dieser Eigenschaft und Dauer, bis die Wirkung abgeklungen ist, entscheidet der Meister je nach Art der Verfehlung und anschließender Reue. Weitergehende Ausführungen zu Auflagen, Pflichten, Aufgaben und moralischen Werten finden Sie bei den entsprechenden Geweihten-Professionen angegeben. Moralkodex ist ein Beispiel für Prinzipientreue (siehe Seite 267); daher kann auch nicht gleichzeitig eine Prinzipientreue (oder eine Unterart davon) mit denselben Ge- und Verboten gewählt werden. "
+},
+{
+    "name": "Nachtblind",
+    "kosten": "-10 GP",
+    "text": "Der Held erleidet doppelte Abzüge bei allen Modifikatoren, die aus mangelnder Beleuchtung herrühren, jedoch nur bis zu Maximalabzügen entsprechend völliger Finsternis (AT/PA je –8 im Nahkampf, vier Größenklassen Verkleinerung des Ziels im Fernkampf, bis zu 16 Punkten Abzug bei Talentproben). Dieser Nachteil ist nicht mit Dämmerungssicht oder Nachtsicht kombinierbar."
+},
+{
+    "name": "Nahrungsrestriktion",
+    "kosten": "-5 GP",
+    "text": " Der Held ist in der Auswahl seiner Nahrung eingeschränkt. Wenigstens die Hälfte dessen, was er täglich zu sich nimmt, muss einer bestimmten, enggefassten Kategorie zuzurechnen sein, zum Beispiel ‘rohes Fleisch’ oder ‘Milch und Milchprodukte’. Hält er sich nicht an diese Vorgabe, so kann er nachts deutlich schlechter regenerieren (je –2 Punkte auf LeP- und AsPRegeneration). Erhält er mehr als drei Tage keine geeignete Nahrung, so regeneriert er nicht mehr und seine KO sinkt jeden Tag um 1 Punkt, bis auf die Hälfte des KO-Werts. "
+},
+{
+    "name": "Neid (Schlechte Eigenschaft)",
+    "kosten": "je 1 GP pro 2 Punkte",
+    "text": "Der Charakter mit diesem Nachteil glaubt, dass andere von höheren Mächten oder dem Schicksal stets besser behandelt werden. Was auch immer eine andere Person an Wertvollem oder Interessantem besitzt, an Fähigkeiten oder Status – der Held will es auch; vorzugsweise, indem er es dem anderen abnimmt. Er missgönnt anderen auch kleine Erfolge und hintertreibt deren Bemühungen."
+},
+{
+    "name": "Neugier (Schlechte Eigenschaft)",
+    "kosten": "je 1 GP",
+    "text": "Dieser Nachteil bringt den Helden dazu, alles, was irgendwie interessant wirkt, näher untersuchen zu wollen – und zwar unabhängig von eventuellen Risiken, die das mit sich bringen könnte. Neugier ist ein typischer Fall für eine Schlechte Eigenschaft, die weniger Nachteile bei anderen Handlungen mit sich bringt, als dass sie den Helden zu einer bestimmten Aktion zwingt."
+},
+{
+    "name": "Niedrige Astralkraft (Magischer Nachteil)",
+    "kosten": "je -1 GP",
+    "text": "Der Held hat Schwierigkeiten damit, Verbindung mit dem umgebenden astralen Fluidum aufzunehmen. Er erhält zu Spielbeginn einen Astralpunkt weniger, als sich durch die normale Berechnung ergäbe. Dieser Nachteil kann bis zu sechsmal gewählt werden (also –6 AsP für –6 GP)."
+},
+{
+    "name": "Niedrige Lebenskraft",
+    "kosten": "je -2 GP",
+    "text": "Der Held erhält einen Lebenspunkt weniger, als sich durch die normale Berechnung ergäbe. Dieser Nachteil kann bis zu sechsmal gewählt werden (also LE –6 für –12 GP). Dies kann aus einer durchlittenen schweren Krankheit, allgemein schwächlicher Konstitution oder ähnlichem herrühren."
+},
+{
+    "name": "Niedrige Magieresistenz",
+    "kosten": "je -2 GP",
+    "text": "Der Held ist leichter durch Magie zu beeinflussen als andere. Seine Magieresistenz kann durch diesen Nachteil um bis zu 3 Punkte gesenkt werden. Durch Niedrige Magieresistenz darf der MR-Wert nie unter 0 sinken."
+},
+{
+    "name": "Pechmagnet",
+    "kosten": "-10 GP",
+    "text": "Der Meister hat das Recht, den Helden bei jedem Zufallswurf (Wer wird vom irregeleiteten Pfeil, vom herabfallenden Nachttopf getroffen? Wer hat die Nachtwache an der Grenze zur Warunkei? Wessen Pferd verliert ein Hufeisen?) deutlich zu benachteiligen (seine Pechwahrscheinlichkeit also heraufzusetzen). Außerdem darf der Meister pro Spielabend einen Wurf des Spielers zum Misserfolg erklären. (Dies ist in erster Linie ein dramaturgischer Nachteil, der schnell aus dem Ruder laufen kann. Daher wollen wir ihn auch nur erfahrenen Spielern und Meistern ans Herz legen.)"
+},
+{
+    "name": "Platzangst (Schlechte Eigenschaft)",
+    "kosten": "je -3 GP pro 2 Punkte",
+    "text": " Der Held bekommt Beklemmung durch besonders große offene Flächen. Vor allem mag dies auf dem Meer, im Ewigen Eis oder in weiten, unbewaldeten Steppengebieten zur Wirkung kommen. (Dieser Begriff wird übrigens recht häufig mit der Raumangst verwechselt, die das genaue Gegenteil beschreibt.)"
+},
+{
+    "name": "Prinzipientreue",
+    "kosten": "-3 bis -12 GP",
+    "text": "Dieser Nachteil bedeutet, dass der Held entweder aus eigenen Überlegungen oder im Rahmen seiner Ausbildung moralische Grundsätze akzeptiert hat, die sein Leben formen und von denen er nur in allergrößter Not abweicht. Bricht der Charakter diese Prinzipien, um zum Beispiel sein eigenes Leben zu retten, so ist er durch Gewissensbisse für die nächste Zeit (Meisterentscheid) in all seinen Handlungen so eingeschränkt, als wirke eine Schlechte Eigenschaft (siehe dort). Typische bindende Prinzipien sind : religiöse Lebensregeln wie die 99 Gesetze Rastullahs (in strenger Ausprägung 12 GP wert, in der Art des – noch vernünftig spielbaren – üblichen Volksglaubens eher 6 GP), die bei streng Tsa-Gläubigen oft vorkommende Kombination aus Pazifismus und dem Streben nach stetiger Veränderung (in der Summe sicherlich 10 GP; dazu kommen meist noch Speisegebote), Ordensvorschriften wie die rondrianischen Vorschriften zur korrekten Kampfführung (7 GP), boronische Schweigegebote (2 bis 6 GP, je nachdem, ob es darum geht, unnötiges Geschwätz zu vermeiden, oder ob es sich um ein echtes Schweigegelübde handelt), eine Pflicht zur Bekämpfung bestimmter Gruppen wie Orks oder Untoter (3 bis 5 GP) oder aber der Ehrenkodex eines traditionellen Ritters (Schutz der Schwachen und Unbewaffneten, Höflichkeit und Wahrung der Etikette, Verteidigung von Gesetz und Ordnung für insgesamt 10 GP). Ebenfalls als Ausprägungen von Prinzipientreue gelten Loyalitäten (zu Familienmitgliedern, Geliebten o.ä.) und die komplexen Moralkodizes der verschiedenen Kirchen. Prinzipientreue gehört auch für fast alle magischen Gemeinschaften zum festen Kanon der Ausbildungsgrundlagen, und üblicherweise umfassen die Prinzipien der magischen Gemeinschaften ebenfalls mehr als nur drei Lippenbekenntnisse. Die Moralvorstellungen der Schelme (Zaubern nur zum Spaß, Kampfvermeidung wo immer möglich ...) werden als Feste Gewohnheit (s. S. 263) abgerechnet."
+},
+{
+    "name": "Rachsucht (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Dieser Nachteil veranlasst den Helden in jeder Situation, in der er sich schlecht behandelt oder in seiner Ehre beschnitten fühlt, unbedingt und ohne Rücksicht auf Verluste Rache zu wollen. Im Gegensatz zum Jähzorn, der sofortiges Handeln erfordert, erlaubt die ‘kalte Rache’ jedoch Überlegung, Planung, Hege und Pflege der Rachsucht – was einen Helden in gefährliche Nähe zu Blakharaz, dem Erzdämon der Rache, bringen kann."
+},
+{
+    "name": "Randgruppe",
+    "kosten": "-5 GP",
+    "text": "Der Held wird misstrauisch beäugt, weil er einer kleinen Kultur angehört, die für die Mehrzahl der Bewohner der Umgebung suspekt ist (wie z.B. die Zahori), weil sie eine unbekannte Sprache spricht (die Festumer Goblins), unbekannte religiöse Riten praktiziert (Novadis im Horasreich) oder weil man ihren Angehörigen Verwicklungen in kriminelle / namenlose / aufrührerische Angelegenheiten unterstellt (Maraskaner in festländischen Ghettos) oder weil sie zweifelhafte Zauberei betreiben (offen erkenntliche Nekromanten und Dämonologen, Hexen in verschiedenen Gebieten). Üblicherweise heißt dies, dass die entsprechenden Helden keinen SO über 8 erreichen können, dass Proben auf gesellschaftliche Talente erschwert sein können und das schlimmstenfalls eine aufgehetzte Meute dem Helden nach Besitz und Leben trachtet."
+},
+{
+    "name": "Raubtiergeruch",
+    "kosten": "-5 GP",
+    "text": "Ein Wesen mit diesem Nachteil verströmt einen typischen Geruch, der bei einigen Tieren Aggressions-, bei anderen Tieren Fluchtreaktionen auslöst. Dies bedeutet vor allem, dass bestimmte Talentproben, die mit dem Umgang mit Tieren zu tun haben (in erster Linie Abrichten und Reiten), um 5 Punkte erschwert sind. Der Geruch lässt sich nicht abwaschen, kommt aber bei strömendem Regen oder unter Wasser nicht zum Tragen."
+},
+{
+    "name": "Raumangst (Schlechte Eigenschaft)",
+    "kosten": "je -3 GP pro 2 Punkte",
+    "text": "Bei diesem Nachteil bekommt ein Held Beklemmungsgefühle durch enge Räume, niedrige Decken, schmale Tunnel und dergleichen und will solch enge Räumlichkeiten so schnell wie möglich verlassen."
+},
+{
+    "name": "Rückschlag",
+    "kosten": "-10 GP",
+    "text": "Der Zauberer ist nicht in der Lage, die Wirkung eines Spruches von seinem Körper fernzuhalten, wenn dieser nicht ‘an eine fremde Matrix ankoppeln’ oder ein gültiges Ziel finden kann – will heißen: Misslungene Sprüche (negativer wie positiver Natur) fallen – wenn die Natur des Spruches dies irgendwie zulässt – mit halber Stärke auf den Anwender zurück (also üblicherweise mit der Hälfte der GrundAuswirkung von 1 ZfP* ungeachtet der eigenen Magieresistenz); bei einem Patzer sogar mit voller Wirkung. In beiden Fällen gilt der Spruch als gelungen und kostet die volle AsP-Zahl. Dies gilt nur für Spruchzauberei, nicht jedoch für die Wirkung ritueller Zauber, weswegen auch nur solche Zauberer den Nachteil wählen dürfen, die Spruchzauberei betreiben. Rückschlag ist nicht mit dem Vorteil Feste Matrix kombinierbar"
+},
+{
+    "name": "Schlafstörungen I / II",
+    "kosten": "-7 / -10 GP",
+    "text": "Held hat offensichtlich kein besonders gutes Verhältnis zu Boron – aus dem ein oder anderen Grund will es ihm nicht gelingen, einoder durchzuschlafen. Schlafstörungen I beruhen entweder auf Alpträumen der einen oder anderen Art, die dazu führen, dass der Held nicht durchschlafen kann, oder auf Einschlafstörungen, so dass er von vornherein weniger Schlaf zur Verfügung hat. In beiden Fällen ist die Regeneration spürbar vermindert (LeP und AsP je 1W6–1, für Zwecke der Regeneration von Erschöpfung und Überanstrengung wird die normale Schlafperiode nur als 4 Stunden gerechnet). Am Morgen und in den folgenden 4 Stunden ist der Held immer noch gereizt und unkonzentriert (AU steigt nur auf drei Viertel des Maximalwerts, alle vorhandenen Schlechten Eigenschaften +2, alle Talent- und Zauberproben um 3 Punkte erschwert). Zu allem Übel bezeichnen ihn die Gefährten meist auch noch als faul. Solche Schlafstörungen betreffen etwa ein Viertel aller Nächte des Helden – häufig übrigens immer zu bestimmten Phasen des Madamals. Bei Schlafstörungen II betreffen die o.g. Auswirkungen die Hälfte aller Nächte – und während der anderen Nächte kann er nur dann einschlafen, wenn ihm eine Selbstbeherrschungs-Probe+7 gelingt. Bei entsprechend verkürzter Schlafdauer kommt es wieder zu obigen Problemen. Ein Held mit so schweren Schlafstörungen ist anfällig dafür, diese mit (meist suchterzeugenden und teuren) Tinkturen und Pülverchen zu bekämpfen"
+},
+{
+    "name": "Schlafwandler",
+    "kosten": "-3 GP",
+    "text": "Der Held neigt dazu, im Schlaf aufzustehen, herumzuwandern und sogar alltägliche Tätigkeiten zu verrichten, alles ohne Bewusstsein oder spätere Erinnerung. Dies kann zu gefährlichen (Kletterpartien, Wanderungen in der Wildnis etc.) oder peinlichen Aktionen (wie leer- oder angefressene Reisevorräte) führen. Wird der Held dabei geweckt, so ist er desorientiert (KL und IN je –3), manchmal sogar aggressiv. (Falls er den Nachteil Jähzorn hat, ist eine Probe fällig.) Er kann jedoch dazu gebracht werden, sich wieder schlafen zu legen. Neben möglichen Verletzungen sind längere Wanderungen anstrengend (um einen Punkt verringerte Regeneration in dieser Nacht) und so manche Menschen reagieren abergläubisch auf den Schlafwandler. Dieser Nachteil tritt im Schnitt jede vierte Nacht (bei 1–5 auf dem W20) auf. Der Held kann vorsorglich festgebunden werden, aber die Fesseln verringern ebenfalls die Regeneration; zu leicht angelegte Fesseln können zu Stürzen führen."
+},
+{
+    "name": "Schlechte Eigenschaft",
+    "kosten": "GP variabel",
+    "text": "Schlechte Eigenschaften repräsentieren die kleinen oder größeren Probleme, die ein Held damit hat, die Realität seiner Gedankenwelt anzupassen. Da in den meisten Fällen die Realität stärker ist, treten beim Charakter entsprechende Ängste, Zwangsvorstellungen und dergleichen auf, die sich von ihm nicht bewusst kontrollieren lassen (im Gegensatz etwa zu Prinzipientreue). Typische schlechte Eigenschaften sind: Raumangst, Höhenangst, Totenangst, Platzangst, Meeresangst, Dunkelangst, Angst vor (Insekten, Spinnen, Reptilien, Nagetieren, Feuer, Wasser ...), Goldgier, Jähzorn, Neugier, Eitelkeit, Aberglaube, Arroganz, Rachsucht, Vorurteile (gegen ein bestimmtes Ziel wie eine Rasse, ein Geschlecht, eine Kultur) oder Krankhafte Reinlichkeit. Es gibt zwei Möglichkeiten, wie im Spiel auf die Schlechten Eigenschaften eingegangen werden kann: Entweder werden alle Talentproben, die der Held unter dem Einfluss der Schlechten Eigenschaft ablegen muss, um den Wert der Schlechten Eigenschaft erschwert und Eigenschaftsproben um die Hälfte des Wertes. Oder der Held muss eine Probe auf diese Eigenschaft ablegen. Gelingt sie, dann unterliegt der Held den Auswirkungen dieser Eigenschaft. Was das genau zur Folge hat, hängt von Situation und Eigenschaft ab. Beide Möglichkeiten lassen sich kombinieren: Ein Held mit großer Höhenangst mag sich vielleicht gar nicht an eine Kletterpartie heranwagen (gelungene Höhenangst-Probe); tut er es nach einigem Überreden doch, so erleidet er Abzüge auf seine Proben. Die verschiedenen Schlechten Eigenschaften sind unterschiedlich schwerwiegend, je nachdem, wie sehr sie das Verhalten des Helden einschränken und wie häufig man dem Auslöser für die entsprechende Eigenschaft begegnet. Die konkreten Zahlen (zwischen einem halben und zwei GP pro Punkt der Schlechten Eigenschaft) finden Sie bei den einzelnen Nachteilen separat angegeben. Der Startwert einer Schlechten Eigenschaft beträgt mindestens 5 (bei einigen Schlechten Eigenschaften 6), höchstens 12 Punkte. Es können mehrere Schlechte Eigenschaften gewählt werden, jedoch darf die Gesamtsumme der durch sie erhaltenen Generierungspunkte niemals 30 übersteigen (wobei durch Rasse, Kultur und/oder Profession erhaltene Punkte nicht mitgezählt werden – wenn Sie den Wert einer solchen Eigenschaft jedoch noch erhöhen wollen, bekommen Sie für diese zusätzlichen Punkte in der Eigenschaft natürlich auch die entsprechenden Generierungspunkte). Schlechte Eigenschaften können im Lauf des Heldenlebens Schritt für Schritt durch Erfahrung abgebaut werden"
+},
+{
+    "name": "Schlechte Regeneration",
+    "kosten": "-10 GP",
+    "text": " Ein Charakter mit diesem Nachteil regeneriert pro Ruhephase nur 1W6–1 LeP; eventuelle Konstitutions-Würfe zur Rückgewinnung verlorener Lebenspunkte oder zur Heilung von Wunden sind um 2 Punkte erschwert."
+},
+{
+    "name": "Schlechter Ruf",
+    "kosten": "-1 bis -10 GP",
+    "text": "Der Held ist berüchtigt für seine Herrschsucht, Rastlosigkeit, Sturheit, Ungerechtigkeit, Eidbrüchigkeit und was dergleichen unerwünschte Eigenschaften mehr sind. Dies führt dazu, dass andere Menschen ihm reserviert, wenn nicht gar offen feindlich gegenüber stehen. Je zwei Punkte, die der Held aus Schlechtem Ruf gewinnt, erschweren (passende) Talentproben in gesellschaftlichen Talenten um einen Punkt. Unter Umständen können ihn Meisterfiguren auch als von niedrigerem Stand ansehen, als er tatsächlich ist (SO je nach Situation um ein Drittel der GP für Schlechten Ruf gemindert). Der Nachteil gilt auf jeden Fall in der eigenen Kultur, je nach Meisterentscheid auch in benachbarten oder verwandten Kulturen. Ein Schlechter Ruf in einer Kultur, die nicht die heimatliche ist, erfordert ebenso die Zustimmung des Spielleiters wie das Erwerben eines Schlechten Rufs in mehreren Kulturen."
+},
+{
+    "name": "Schneller Alternd",
+    "kosten": "-3 GP",
+    "text": " Der Held altert schneller als andere Angehörige seiner Rasse, er bekommt früh Altersflecken und Falten, sein Haar ergraut bald oder fällt aus. Spieltechnisch bedeutet dies: Er erreicht die Altersschwellen (siehe WdS 192) bereits bei zwei Dritteln der angegebenen Jahreszahl. Üblicherweise hängt eine solche schnelle Alterung mit einem Fluch oder einem Zauberpatzer zusammen. Dieser Nachteil kann nicht von Elfen oder Zwergen gewählt werden; für Halbelfen gelten allgemein die Altersschwellen von Menschen. Der Nachteil kann natürlich nicht gleichzeitig mit dem Vorteil Altersresistenz gewählt werden"
+},
+{
+    "name": "Schulden",
+    "kosten": "-1 GP pro 100 Dukaten Schulden, mindestens -5 GP, höchstens -20 GP",
+    "text": " Eine durchaus häufige Variante der Verpflichtungen (siehe Seite 273) sind Schulden in großer Höhe, üblicherweise für die genossene Ausbildung, die Erstausstattung des Handwerksbetriebs oder dergleichen. Der Held ist dem Gläubiger (der Ausbilder, ein Handelsherr, ein Adliger oder ein Bankhaus) nicht nur Wohlgefallen und eventuell den einen oder anderen Dienst schuldig, sondern vor allem auch das vorgestreckte Geld (mit Zinsen, wenn bei einem Handelshaus geliehen, mit Zins und Zinseszins, wenn bei einem Bankhaus geliehen). Die übliche Rückzahlung beträgt 1/10 der Kreditsumme pro Jahr. Stiehlt sich der Held davon, um seine Schulden nicht begleichen zu müssen, verwandelt sich dieser Nachteil unabhängig von der (Rest-)Schuldenhöhe in Gesucht II (siehe Seite 264). Zudem wird der Held nirgendwo mehr Kredit erhalten (also keine Handelsunternehmung finanzieren oder einen Betrieb gründen können), sobald sich herumgesprochen hat, dass er seine ‘Kreditwürdigkeit’ verloren hat. Bei steigender Bekanntheit könnte auch ein Gläubiger auf ihn aufmerksam werden und versuchen, sein Geld doch noch einmal wiederzubekommen – auch unter Einsatz recht gewalttätiger Mittel. Nur Helden mit einem SO von mindestens 7 können Schulden machen. Feste (bei einer Profession angegebene) Schulden können bei der Charaktererschaffung für 1 GP pro 100 Dukaten weggekauft werden."
+},
+{
+    "name": "Schwache Ausstrahlung (Magischer Nachteil)",
+    "kosten": "-1 GP",
+    "text": "Die magische Aura des Helden ist wenig ‘leuchtkräftig’, koppelt schlecht an andere Auren an und erweckt keine Sympathie bei magischen Wesenheiten: Jede Zauberprobe oder Probe auf die Ritualkenntnis, bei der einmal auf die Eigenschaft Charisma gewürfelt wird, ist um die Anzahl an Punkten in Schwacher Ausstrahlung (maximal 5) erschwert. Kommt Charisma zweimal in der Probe vor, verdoppelt sich der Malus; solche Zauber (mit zweimal CH in der Probe) sind um eine Spalte schwieriger zu steigern. Ist gegenüber beschworenen Wesenheiten oder Artefaktseelen eine CharismaProbe nötig, so ist diese um die Punktanzahl erschwert. Andererseits verflüchtigt sich eine vom Helden erzeugte ‘Reststrahlung’ schneller und seine Aura ist leichter zu tarnen: Der Zauber SCHLEIER ist um die Punktzahl in Schwacher Ausstrahlung erleichtert. Dieser Nachteil kann nur von solchen Zauberkundigen gewählt werden, die Spruchzauberei beherrschen."
+},
+{
+    "name": "Schwacher Astralkörper (Magischer Nachteil)",
+    "kosten": "-7 GP",
+    "text": "Der Astralkörper des Zaubernden, also jener Teil seiner Lebensseele, der die Astralenergie trägt, ist instabil. Wann immer der Zaubernde willentlich Astralenergie fließen lässt, verliert er auch zusätzlich unwillentlich AsP. Pro 12 angefangener AsP, die der Zauberer in einen Spruch fließen lässt, verliert er 1W3 weitere Punkte, die sich meist in zusätzlichem Funkeln und Glitzern, in bunten Nebeln oder Astralemanationen manifestieren. Hat er diese nicht mehr zur Verfügung, so misslingt der geplante Zauber oder das Ritual. Dieser Effekt gilt auch für astrale Wirkungen in direkter Nähe zum Zauberer (Meisterentscheid; z.B. Kraftfluss in Nodices, Nähe zu einer mächtigen Beschwörung), vor allem aber auch, wenn er von einem Zauber profitiert oder wenn ihm mit einem Zauber geschadet wird: In den letzten beiden Fällen lösen 12 umgesetzte AsP ebenfalls diese ‘astrale Inkontinenz’ aus, die vielen Gildenmagiern sehr peinlich ist"
+},
+{
+    "name": "Schwanzlos",
+    "kosten": "-7 GP, nur für von Natur aus beschwänzte Rassen",
+    "text": "Der (Achaz-)Held hat durch Unfall oder Amputation seinen von Natur aus vorhandenen Schwanz verloren. Alle GE-Proben sowie die GE-Teilprobe bei körperlichen Talenten sind um einen Punkt erschwert, zudem ist natürlich kein Schwanzangriff mehr möglich. Des Weiteren kommt es gegebenenfalls zum Balanceverlust: Herausragende Balance mindert sich zu Balance, normale Balance entfällt. Dies bedeutet auch, dass ein Held mit diesem Nachteil Herausragende Balance wählen müsste, um Balance zu erhalten."
+},
+{
+    "name": "Seffer Manich",
+    "kosten": "-7 GP",
+    "text": "Eine charakteristische Beschränkung aller Zibiljas, die in ihren Ritualen an die Verwendung der heiligen Sippenchronik (des Seffer Manich) und des Rollsiegels der Sippe (des Neroth) gebunden sind. Diese ist ein fester Ritualbestandteil; ein Zaubern ohne Seffer Manich und ohne Neroth ist daher (entsprechend der Regelung für Feste Gewohnheit, siehe Seite 263) um 12 Punkte erschwert; fehlt eine Komponente, beträgt die Erschwernis 6 Punkte. Eine reisende Zibilja besitzt meistens jedoch nur ihr eigens ‘kleines’ Neroth und nur Auszüge aus dem Seffer Manich, die sie bei ihren Ritualen auch beide verwenden muss; ihre Proben sind prinzipiell um 4 Punkte erschwert; fehlt eine der Komponenten, so steigt die Erschwernis auf 8 Punkte, beim Fehlen beider Komponenten auf 12 Punkte. Sollte die Zibilja eine eigene Sippe gründen und deren Chronik neu zu schreiben beginnen, gilt für die Verwendung eines so jungfräulichen Seffer Manich immer noch ein Malus von 4 Punkten. Dieser kann erst abgebaut werden, sobald die Sippe auf eine eigene Geschichte zurückblicken kann (im Falle eines bewegten Abenteurerlebens um etwa einen Punkt pro Jahr)."
+},
+{
+    "name": "Selbstgespräche",
+    "kosten": "-3 GP",
+    "text": "Der Held murmelt oder redet häufig vor sich hin, wenn er über etwas nachdenkt, ohne sich dessen bewusst zu sein. Es kann passieren, dass er so Geheimnisse, Pläne oder seine Meinung über Mit-Helden und Meisterpersonen, die besser unausgesprochen geblieben wäre, ausplaudert."
+},
+{
+    "name": "Sensibler Geruchssinn (Schlechte Eigenschaft)",
+    "kosten": "je -3 GP pro 2 Punkte",
+    "text": "Jeder belästigende Gestank, insbesondere der von Verfaultem, Vergorenem und Verschimmeltem, selbst wenn es ‘kunstvoll verdorbene’ Nahrungsmittel (Wein, Bier, Käse ...) sind, verlangt dem Elfen (diese sind üblicherweise von diesem Nachteil betroffen) eine starke Selbstbeherrschungs-Probe ab (erschwert um den Wert in Sensiblem Geruchssinn), um dem Geruch nicht sofort zu entfliehen oder sich zu übergeben. Dieser Nachteil gilt natürlich auch gegenüber dem Gestank von Ogern, Tatzelwürmern und städtischen Kloaken und bedeutet nicht, dass der Held automatisch einen Herausragenden Geruchssinn hat (was aber oft der Fall ist). Größere Entfernung von der Quelle des Geruchs oder ein vorbereiteter Atemschutz (Meisterentscheid) können die Probenerschwernis auf die Hälfte reduzieren. Wie bereits erwähnt, ist dieser Nachteil bei Elfen verbreitet, aber auch andere Lebewesen können entsprechend behindert sein."
+},
+{
+    "name": "Sippenlosigkeit",
+    "kosten": "-5 GP",
+    "text": "Der Elf hat seine Sippe durch Schicksalsschläge verloren oder ist aus ihr ausgeschlossen worden, weil er ‘Disharmonie in die Melodie der Sippe bringt’. Dadurch ist ihm die Magie des Sippensalasandra – und damit auch die Große Meditation – verschlossen. Um in das salasandra mit einer anderen Sippe oder auch nur mit einem anderen Elfen zu gehen, muss er die Sonderfertigkeit Salasandra (siehe Seite 289) neu erwerben. Will er ein ihm unbekanntes Elfenlied erlernen, ohne in ein Sippensalasandra eingebunden zu sein, muss er die doppelten Kosten dafür aufwenden.  "
+},
+{
+    "name": "Sonnensucht (Schlechte Eigenschaft)",
+    "kosten": "je -3 GP pro 2 Punkte",
+    "text": "Dieser Nachteil kann nur von Wesen mit dem Nachteil Kältestarre gewählt werden. Die Abzüge kommen zum Tragen, sobald sich der Sonnensüchtige tagsüber nicht mindestens zwei Stunden dem direkten Sonnenlicht aussetzen kann."
+},
+{
+    "name": "Speisegebote",
+    "kosten": "-5 GP",
+    "text": "Aufgrund religiöser oder kultureller Vorbehalte wird der Held keine Nahrung zu sich nehmen, die entgegen seiner Grundsätze gefangen, geschlachtet oder zubereitet wurde. Beispiele hierfür sind: keine über dem Feuer zubereitete Nahrung (Efferd-Geweihte), kein Fleisch oder Fisch (Tsa-Geweihte), keine von Ungläubigen zubereitete Nahrung (strenggläubige Novadis). Ist der Held nicht in der Lage, passende Nahrung zu finden, fastet er eben (mit allen entsprechenden Nachteilen); ist er gezwungen, seine Speisegebote zu brechen, ist er von Schuldgefühlen so abgelenkt, als würde eine Schlechte Eigenschaft mit Wert 5 wirken (siehe Seite 268). Speisegebote sind eine Variante von Prinzipientreue (siehe Seite 267)."
+},
+{
+    "name": "Spielsucht (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Der Held hat das Verlangen nach Amüsement und Lust auf Risiko. Er wettet gerne, wagt Würfel-, Karten- und andere Spiele, selbst wenn er die Regeln nicht kennt. Aufzuhören erfordert von ihm eine Selbstbeherrschungs-Probe, die um die Höhe der Schlechten Eigenschaft erschwert ist"
+},
+{
+    "name": "Sprachfehler",
+    "kosten": "-10 / -15 GP",
+    "text": "Der Held hat Schwierigkeiten, sich zu artikulieren; möglicherweise äußert sich dies durch Stottern oder heftiges Lispeln oder durch extremes Nuscheln. Demzufolge erleidet er bei allen Proben auf Gesellschaftliche Talente, die mit aktivem Einsatz der Sprache zu tun haben (Überreden, Überzeugen, Betören, Lehren) und bei Zaubern, die eine verbale Komponente haben, eine Erschwernis von 3 Punkten. Hinzu kommt, dass ein Held mit Sprachfehler im Kampf keine Freie Aktion Rufen und keine Aktion Taktik ausführen kann (siehe die Kampfregeln in Wege des Schwerts). Magier und Scharlatane, die diesen Nachteil wählen, erhalten aufgrund der starken Einschränkung beim Zaubern –15 GP statt der üblichen –10 GP"
+},
+{
+    "name": "Spruchhemmung (Magischer Nachteil)",
+    "kosten": "-10 GP",
+    "text": "Die Zauberei des Helden versagt gelegentlich (und nicht einmal selten: etwa jedes siebte Mal). Zeigen bei einer Zauberprobe zwei (oder drei) der drei beteiligten W20 dieselbe Zahl, so ist die entsprechende Zauberhandlung gehemmt: Sie verpufft wirkungslos, selbst wenn die Probe gelungen ist, und kostet dann sogar die vollen AsP. Der Zauber gilt als misslungen und kann demzufolge nur mit einer Erschwernis von 3 Punkten wiederholt werden (siehe die Zauberregeln in Wege der Zauberei). Auch für Helden mit diesem Nachteil gilt weiterhin: Bei einer Mehrfach-1 gilt der Zauber als besonders gut gelungen, bei einer Mehrfach-20 als gepatzt. Dieser Nachteil kann nicht gleichzeitig mit dem Vorteil Feste Matrix genommen werden und natürlich nur von solchen Zauberern, die Spruchzauberei beherrschen. "
+},
+{
+    "name": "Stigma",
+    "kosten": "ab -1 GP",
+    "text": "Der Charakter trägt schwer an einer dauerhaften Bürde, die durch eine Laune der Natur oder ein magisches Ereignis entstanden ist: Ein wütender Kobold hat ihm grünes Haar angehext, ein Zauberpatzer hat dazu geführt, dass der Held nun mit Katzenaugen in die Welt blickt, oder ein Dämon hat ihm eine schrecklich anzuschauende Wunde geschlagen, die für Uneingeweihte wie das Mal eines Paktierers wirken muss. Das Stigma sollte den Charakter in vielen Situationen einschränken (üblicherweise sollten Proben auf gesellschaftliche Talente um ca. 3 Punkte erschwert werden, wenn das Stigma bemerkbar ist), nur sehr schwer loszuwerden sein und mit dem Spielleiter ausführlich abgesprochen werden (auch und speziell, was die GP angeht, da dies natürlich immer abhängig von der gespielten Kampagne ist). Ebenso sollte ein Stigma auf jeden Fall als über- oder widernatürlich erkennbar sein: Brandnarben aus einem IGNISPHAERO-Unfall zählen also nicht als Stigmata, es sei denn, sie hätten ein gut erkennbares Muster (Zhayad-Glyphen, Pentagramm) hinterlassen. Ein fehlender Schatten wäre sicherlich (als eines der stärksten Stigmata) 12 GP wert, eine dauerhaft mit Schlangenschuppen bedeckter menschlicher Arm sicherlich noch 8 GP, die klassische Hexensträhne (weiße oder bunte Haarsträhne im ansonsten andersfarbigen Haar) oder verschiedenfarbige Augen allerhöchstens ein oder zwei GP. "
+},
+{
+    "name": "Streitsucht (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP pro 2 Punkte",
+    "text": "Für den Helden ist der Streit ein Mittel zum Machtbeweis und zur Durchsetzung der eigenen Meinung. Er ist oft anderer Meinung und diskutiert diese mit seinen Gefährten oder anderen Personen in der Regel aus. Teilweise vertritt er sogar bewusst Gegenpositionen, um einen Streit herbeizuführen."
+},
+{
+    "name": "Stubenhocker",
+    "kosten": "-20 GP",
+    "text": "Der Held hat seine Jugend fast vollständig in staubigen Bibliotheken und muffigen Studierzimmern verbracht, so dass er im Vergleich zu anderen Heranwachsenden keine Gelegenheit hatte, körperliche Fähigkeiten auszubilden. Dies hat zur Folge, dass er bei der Generierung kein einziges körperliches und kein Kampftalent um mehr als 2 Punkte über den Wert hinaus steigern kann, den er durch Rasse, Kultur und Profession erhält. Insgesamt darf er auch nur höchstens 5 körperliche und Kampftalente bei der Generierung überhaupt durch Abenteuerpunkte anheben. Auch in seiner späteren Laufbahn sind alle körperlichen und Kampftalente für ihn um eine Kategorie schwerer zu erlernen. Die Eigenschaften GE, KK und KO dürfen zu Spielbeginn einen Wert von 11 nicht überschreiten und können nicht gesteigert werden, so lange der Held nicht aktiv am Abbau dieses Nachteils arbeitet (s.u.). Dieser Nachteil kann im Laufe des Heldenlebens langsam abgebaut werden. Pro Woche, die der Held entweder mit körperlich fordernden Tätigkeiten verbringt (Überlandmärsche mit Rucksack, Klettertouren o.ä.) oder sich im Tanz der Mada (siehe Seite 290) übt, kann er von seinen gewonnenen Abenteuerpunkten jeweils 10 AP ansparen und in den Abbau von Stubenhocker investieren: Je 300 AP heben die Steigerungsbeschränkung bei einer der Eigenschaften auf, je 500 AP die Verteuerung der Steigerungskosten bei den körperlichen und Kampftalenten."
+},
+{
+    "name": "Sucht",
+    "kosten": "-GP je nach doppelter Stufe des Suchtmittels",
+    "text": " Der Held ist von einer Droge körperlich abhängig, von der er regelmäßig ausreichende Dosen zu sich nehmen muss, um nicht schwerwiegende Nachteile zu erleiden. Da wir hier nicht alle bekannten aventurischen Drogen und Heilmittel aufführen können, gilt folgende Faustregel: Muss der Held (15 minus Giftstufe) Tage lang ohne seine Droge auskommen, regeneriert er nicht nur nicht mehr, sondern erleidet pro Tag Erschöpfung in Höhe eines Drittels der Drogenstufe. Zudem sind alle Talentproben um ein Drittel der Drogenstufe erschwert, Schlechte Eigenschaften um eben dieses Drittel erhöht. Hält der Entzug den doppelten oben genannten Zeitraum an, steigen die erlittene Erschöpfung, die erhöhten Schlechten Eigenschaften und die ProbenMali sogar auf die Hälfte der Drogenstufe. Sinkt die KO durch Erschöpfung / Überanstrengung auf 0 oder darunter, erleidet der Süchtige täglich Schaden in Höhe der halben Drogenstufe. Eine einzige Dosis beendet den Verfall und lässt es zu, dass der Held wieder normal regeneriert. Nicht in diesen Rahmen fallen primär psychische Abhängigkeiten von verschiedenen Substanzen und Tätigkeiten, namentlich der in Aventurien noch nicht sehr weit verbreitete Tabakkonsum oder der Genuss von Cheriacha oder Zithabar. Diese Süchte sind am besten als Schlechte Eigenschaften zu behandeln. Alkoholabhängigkeit, bei der täglich etwa ein halbes Maß Hochprozentiges, zwei Maß Wein oder vier Maß Bier verkonsumiert werden müssen, kann als Sucht der Stufe 6 betrachtet werden, bringt jedoch wegen der hohen Verfügbarkeit von Alkohol auch nur 6 GP. Von einem Suchtmittel loszukommen ist eine für Heiler und Patient aufwendige Prozedur, die Sie in den Bänden Wege des Schwerts und Zoo-Botanica Aventurica beschrieben finden."
+},
+{
+    "name": "Thesisgebunden (Magischer Nachteil)",
+    "kosten": "je -1 GP",
+    "text": "Der Held kann nur ‘vom Blatt zaubern’ – jedes Mal, wenn er einen Zauber, in dem er diesen Nachteil hat, anwenden will, muss er ein Objekt in der Hand halten und ansehen, in dem die Thesis des Zaubers gespeichert ist. Das heißt, dass er stets vor dem Zaubern seine Erinnerung an die Ausformung der magischen Muster auffrischen muss. Will der Zauberer diese Bedingung ignorieren, gilt dies als eine Spontane Modifikation der Zaubertechnik, so dass der Zauberer 7 ZfP aufbringen muss (Zauber, in denen er eine ZfW von weniger als 7 hat, misslingen automatisch), sich die Zauberdauer um 3 Aktionen verlängert und er keine weiteren Spontanen Modifikationen durchführen kann. Je Zauber, der mit diesem Nachteil gewählt wird, erhält der Held 1 GP, wobei nur Sprüche ausgewählt werden dürfen, die zu den Grundkenntnissen des Zauberers gehören. (Es ist möglich, später Sprüche thesisgebunden zu erlernen; siehe Wege der Zauberei.) Dieser Nachteil kann nur von Gildenmagiern (Thesisblätter), Hexen der Schwesternschaft des Wissens (Zauberrezepte), Kristallomanten (Thesiskristalle) und Scharlatanen (ebenfalls Thesisblätter) verwendet werden. (Von den Hochelfen ist ein solcher Nachteil bekannt; heutige Elfen haben darauf jedoch keinen Zugriff. Die Bindung der Zibiljas an den Seffer Manich ist ähnlich, aber in einem separaten Nachteil abgehandelt, siehe Seite 269.) Der Nachteil ist nicht mit den Vorteilen Gutes/Eidetisches Gedächtnis vereinbar"
+},
+{
+    "name": "Tollpatsch",
+    "kosten": "-10 GP",
+    "text": " Unabhängig von seiner eigentlichen Geschicklichkeit und Intelligenz unterlaufen diesem Helden häufiger Unfälle und Irrtümer als anderen: Talentproben sind bereits dann Patzer, wenn zwei der Würfel eine 19 oder mehr zeigen; und bei allen Proben, die mit einem einzigen W20 gewürfelt werden (Eigenschaftsproben und AT- oder PAWürfe im Kampf), gilt eine 19 oder 20 als Patzer, wobei der Held wie üblich versuchen kann, den Patzer auszugleichen. Dieser Nachteil gilt nicht für den Bereich der Zauberei – siehe hierzu Wilde Magie auf Seite 274. "
+},
+{
+    "name": "Totenangst (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Hierbei hat der Held besondere Angst vor allem, was mit dem Tod zu tun hat. Besonders trifft dies auf Begegnungen mit Untoten und Gräbern zu, aber selbst die Anwesenheit eines Boron-Geweihten kann schon Beklemmungsgefühle auslösen."
+},
+{
+    "name": "Übler Geruch",
+    "kosten": "-5 GP",
+    "text": "Der Held riecht schlecht. Wirklich schlecht. Ob aus dem Mund oder den Poren, sei dahingestellt, aber der Geruch ist so intensiv, dass andere Wesen von diesem Geruch abgestoßen werden: Alle Proben auf Gesellschaftliche Talente und alle Proben, die mit dem Umgang mit Personen zu tun haben und in denen CH als Eigenschaft vorkommt, sind um 2 Punkte erschwert, wenn der Held sich dazu einem Gegenüber auf Riechreichweite nähern muss. Im Umgang mit Wesen mit ausgeprägtem Geruchssinn wie z.B. durch eine Spezialisierung wie Sinnenschärfe (Geruch) oder gar Sensibler Geruchssinn gilt dieser Nachteil in doppelter Höhe. Ob er sich auf das Verhalten von Tieren (und damit auf Abrichten- oder Reiten-Proben) auswirkt, hängt von der Art des Geruchs ab und ist Meisterentscheid. Übler Geruch lässt sich auch durch ein Bad nicht beseitigen – spätestens nach einer halben Stunde riecht der Held schon wieder; einzig Duft- und Mundwässerchen in wirklich hoher (und demzufolge teurer) Dosierung schaffen Abhilfe."
+},
+{
+    "name": "Unangenehme Stimme",
+    "kosten": "-5 GP",
+    "text": "Es ist anstrengend, die Stimme des Helden zu ertragen. Entweder sie ist schrill und durchSuchtmittel Stufe Preis / Portion Alkohol 6 ab 5 Heller Boronwein 12 um 5 Dukaten Marbos Odem 8 um 10 Dukaten Moarana 6 um 3 Silbertaler Samthauch 5 um 2 Dukaten Schwarzer Wein 10 um 7 Dukaten dringend oder auf andere Weise wirklich unangenehm. Wie beim Üblen Geruch sind alle Proben auf Gesellschaftliche Talente und alle Proben, die mit dem Umgang mit Personen zu tun haben und in denen CH als Eigenschaft vorkommt, um 2 Punkte erschwert, wenn der Held dabei irgendetwas sagen muss. Im Umgang mit Wesen, die einen ausgesprochen hohen musikalischen Anspruch haben, also vor allem Barden und Elfen, gilt dieser Nachteil in doppelter Höhe. Die Stimme ist so unangenehm, dass sich sogar Tiere davon irritieren lassen: Bei allen Proben auf Abrichten, Fahrzeug Lenken und vergleichbaren Talenten, bei denen die Stimme zum Einsatz kommt, gilt ebenfalls ein Abzug von einem Punkt. Zauber sind durch diesen Nachteil jedoch nicht betroffen."
+},
+{
+    "name": "Unansehnlich",
+    "kosten": "-5 GP",
+    "text": "Dies ist das Gegenstück zu dem Vorteil Gut Aussehend (siehe Seite 252): Das Äußere des unansehnlichen Helden ist im Vergleich zum ‘aventurischen Durchschnittsgeschmack’ unangenehm und abstoßend, was natürlich entsprechende Auswirkungen auf die Reaktionen seiner Mitmenschen (oder Mit-Elfen oder Mit-Zwerge ...) hat. Alle Proben auf (passende) gesellschaftliche Talente und alle Proben, die mit dem Umgang mit Personen zu tun haben und in denen CH als Eigenschaft vorkommt, sind um 2 Punkte erschwert. Inwieweit andere Rassen auf dieses von der Norm abweichende Aussehen reagieren und ob Gewöhnung an den Helden diese Einbußen abmildert, bleibt Meisterentscheid. Üblicherweise ist für Zauberproben, bei denen jemand eingeschüchtert werden soll, der CH-Wert einer unansehnlichen Person um 1 erhöht, für Proben, mit denen jemand beruhigt oder freundlich gestimmt werden soll, jedoch um 1 vermindert. Dies gilt natürlich nur, wenn das Opfer den Zauberer sehen kann. Eine verstärkte Version dieses Nachteils ist Widerwärtiges Aussehen. Diese beiden Nachteile können nicht kombiniert werden, und eine Kombination mit den Vorteilen Gut Aussehend oder Herausragendes Aussehen ist natürlich auch nicht möglich."
+},
+{
+    "name": "Unfähigkeit für [Merkmal]",
+    "kosten": "-2 / -3 /-4 GP je nach Merkmal",
+    "text": "Der Held findet einfach keinen Zugang zu bestimmten Arten der Zauberei; so sehr er sich auch müht, die Prinzipien wollen ihm einfach nicht einleuchten: Wann immer er einen Zauber mit solch einem Merkmal aktivieren oder erlernen will, ist dies pro Merkmal, in dem er eine Unfähigkeit aufweist, um eine Spalte erschwert. Außerdem kann er in Zaubern mit diesen Merkmalen keine Spontanen Modifikationen ausführen, sie nur in eigener Repräsentation erlernen und ist zudem auf einen maximalen ZfW in Höhe der schlechtesten beteiligten Eigenschaft beschränkt. Er muss sich die entsprechenden Zauber also durch stures Auswendiglernen zugänglich machen. Folgende Merkmale geben je 2 GP: Geisterwesen, Heilung, Herbeirufung, Illusion, Schaden, Telekinese und Verständigung; die Merkmale Antimagie, Beschwörung, Eigenschaften, Einfluss, Herrschaft, Form, Hellsicht, Kraft, Objekt und Umwelt geben je 3 GP; Unfähigkeit in allen Zaubern mit beliebigem dämonischen Merkmal (also sowohl Dämonisch [allgemein] als auch Dämonisch [Domäne]; das beinhaltet übrigens auch die meisten Bannungen und Entschwörungen) ebenso wie Unfähigkeit für alle Elementar-Zauber bringt je 4 GP. Unkenntnis in anderen Merkmalen ist nicht wählbar. Ein Held kann maximal in zwei Merkmalen unfähig sein; es gibt übrigens keine Unfähigkeit für einzelne Zauber. Zauber, die Merkmale aufweisen, in denen der Held unfähig ist, können vor Spielbeginn nicht gesteigert werden. Dieser Nachteil nur von solchen Zauberkundigen gewählt"
+},
+{
+    "name": "Unfähigkeit für [Talentgruppe]",
+    "kosten": "-GP je nach Talentgruppe",
+    "text": "Der Held ist für eine bestimmte Talentgruppe besonders unbegabt; das heißt, dass er zum Steigern eines Talents der gewählten Kategorie mehr Abenteuerpunkte investieren muss: Es gilt jeweils die teurere (rechte) Kostenspalte. Talente, in denen ein Held unfähig ist, können vor Spielbeginn nicht gesteigert werden. Dieser Nachteil kann freiwillig nur einmal pro Held erworben werden. Eine Unfähigkeit benötigt die Zustimmung des Meisters. Die Generierungspunkte, die Sie durch diesen Nachteil erhalten, hängen von der jeweiligen Talentgruppe ab: Gesellschaftliche, Natur-, Wissens- oder handwerkliche Talente bringen –10 GP; Sprachen und Schriften –7 GP, Kampf- und körperliche Talente –15 GP. Es ist auch möglich, bei den Kampffertigkeiten nur für diejenigen unfähig zu sein, die sich auf Nahkampf (bewaffnet wie waffenlos) oder Fernkampf beziehen. Dies bringt –5 (Fernkampf) bzw. –10 GP (Nahkampf). Anmerkung: Ein Sonderfall ist die Unfähigkeit in einem einzelnen Talent, die stets fest mit einer Rasse, Kultur oder Profession verbunden ist. Es ist nicht möglich, solche Unfähigkeiten für einzelne Talente frei zu wählen. Diese Unfähigkeiten können im Lauf des Spiels auch nicht abgewählt (also durch Einsatz von AP beseitigt) werden, und sie können nicht mit einer Unfähigkeit der gleichen Talentgruppe kombiniert werden. Sehr wohl kann eine Talentunfähigkeit jedoch zur Unfähigkeit der ganzen Gruppe ausgeweitet werden. Eine Unfähigkeit in einem körperlichen oder Kampf-Talent (mit Ausnahme der Talente Schwimmen, Sich Verstecken, Singen, Tanzen und Zechen) wird dabei mit –2 GP gewertet, eine in einem anderen Talent (inklusive der gerade genannten AusnahmeTalente) mit –1 GP."
+},
+{
+    "name": "Unfrei",
+    "kosten": "-5 GP",
+    "text": "Der Held ist erkennbar unfrei, d.h. ein an seine Scholle gebundener Leibeigener (im Mittelreich, Bornland, Nostria und Andergast, teilweise im Horasreich) oder der Besitz einer Person oder Institution (sprich: ein Sklave; in den Südlichen Stadtstaaten bzw. im Tulamidenland). Da ein Unfreier nicht ohne Geleitbrief oder Begleitung seines Herrn reisen darf, empfiehlt sich dieser Nachteil eher für speziell zusammengestellte Heldengruppen wie einen Adligen und sein Gefolge. Auch sind Unfreie nicht rechtsfähig und können daher z.B. gegen ungerechte Behandlung durch ihren Herrn selbst keine Klage erhaben. Unfreien ist es untersagt, Waffen zu führen (außer Dolchen, Knüppeln und waffenfähigen Arbeitsgeräten). Sie dürfen eine Reihe von Berufen nicht ausüben; außerdem ist ihr Sozialstatus auf 7 begrenzt (und meist noch niedriger). Ein Unfreier, der gegen die oben genannten Reise- und Waffenauflagen verstößt, wird als entflohen betrachtet und erhält Gesucht I. Für klassische mittelländische Leibeigene ist es möglich, im späteren Spielverlauf diesen Nachteil durch den Aufenthalt in einer Stadt (‘ein Jahr und einen Tag’) und Investition von 500 AP abzubauen, bei tulamidischen oder alanfanischen Sklaven kann man das Wegkaufen evtl. als besondere Dienste an seiner Herrschaft interpretieren."
+},
+{
+    "name": "Ungebildet",
+    "kosten": "je -1 GP",
+    "text": " Ein ungebildeter Held hat die Ausbildung seiner Fertigkeiten vernachlässigt: Für je 40 Start-AP, die er opfert (siehe Seite 17), erhält er einen GP. Maximal können auf diese Weise 5 GP erworben werden. Ungebildet lässt sich natürlich nicht mit dem Vorteil Gebildet verbinden. "
+},
+{
+    "name": "Unstet",
+    "kosten": "-25 GP",
+    "text": "Ein Charakter mit diesem Nachteil kann sich nur schwer längerfristig konzentrieren, ist verspielt und launisch. Alle Talentproben, die mehr als sechs Stunden Zeit erfordern (also vor allem verschiedene handwerkliche Tätigkeiten), sind für den Helden um 3 Punkte erschwert. Da sich ein unsteter Held auch nicht aufs Lernen konzentrieren kann oder will, muss er für alle Steigerungen von Wissens- und Handwerkstalenten erhöhte Steigerungskosten bezahlen: Er verwendet die Spalte C zur Bestimmung der Steigerungskosten. Diese Lerneinschränkung gilt nicht für die Ermittlung der Start-Talentwerte. Unstet kann nicht mit Begabung Handwerkstalente oder Begabung Wissenstalente und auch nicht mit den entsprechenden Unfähigkeiten kombiniert werden. Die Lernschwierigkeiten von Unstet machen sich auch bei allen Zaubern bemerkbar, die eine Komplexität von C oder höher aufweisen. Außerdem sind alle Proben bei Ritualen von mehr als einer Stunde Dauer um 3 Punkte erschwert und der Zauberer kann keine ZfP für einen größeren Effekt ansammeln (siehe Wege der Zauberei)."
+},
+{
+    "name": "Unverträglichkeit mit verarbeitetem Metall (Magischer Nachteil)",
+    "kosten": "-10 GP",
+    "text": "Neben den Druiden und Geoden, die diesen Nachteil durch ihr Welt- und Astralverständnis mit sich tragen, findet man bisweilen auch Zauberkundige anderer Traditionen, die die Nähe von Eisen und anderen verarbeiteten Metallen mehr in ihrem Kraftfluss stört, als dies bei fast allen Zauberkundigen ohnehin schon der Fall ist (siehe Bann des Eisens in Wege der Zauberei). Sie müssen die dort genannten schweren Auswirkungen tragen, was bedeutet, dass sie kaum jemals metallene Gegenstände benutzen werden."
+},
+{
+    "name": "Vergesslichkeit",
+    "kosten": "-5 GP",
+    "text": "Der Held hat ein Gedächtnis wie ein Sieb: Ständig lässt er Ausrüstungsgegenstände irgendwo liegen, vergisst wichtige Informationen und die Namen seiner Kameraden. KL-Proben, um sich an bestimmte Details zu erinnern, sind bis zu 5 Punkte erschwert. Magier und Geweihte mit diesem Nachteil sprechen ihre Zauber bzw. zelebrieren ihre Liturgien meist, indem sie aus einem Buch ablesen. Vergesslichkeit kann nicht mit dem ähnlich wirkenden Nachteil Thesisgebunden kombiniert werden."
+},
+{
+    "name": "Verpflichtungen",
+    "kosten": "-12 GP",
+    "text": "Der Held ist gegenüber einer sozialen, magischen oder religiösen Gruppe oder gegenüber einer Einzelperson besondere Verpflichtungen eingegangen, die er einfach nicht brechen kann und auch nicht will. Dies entspricht teilweise den Auswirkungen von Prinzipientreue (siehe Seite 267), jedoch ist meist nur eine konkrete Verpflichtung gemeint, bei deren Übertreten (was der Charakter auch nur unwissentlich oder gezwungenermaßen tun kann) die Auswirkungen allerdings noch heftiger sind und vor allem auch eine konkrete Bestrafung durch oben genannte Gruppe nach sich ziehen. Typischerweise gehört zu Verpflichtungen auch, dass der Held Befehlsempfänger dieser Gemeinschaft ist und in deren Auftrag reist, um eine bestimmte Aufgabe zu erledigen, was ihm wiederum wenig Entscheidungsspielraum in seinem Heldenleben lässt. Die meisten Geweihten und Ordenskrieger fallen in diese Kategorie, häufig auch Zauberkundige, die ihren Lehrmeistern oder Akademien zu Diensten verpflichtet sind. Schulden (siehe Seite 269) sind eine besondere Form von Verpflichtungen, die sich jedoch mit diesen kombinieren lässt."
+},
+{
+    "name": "Verschwendungssucht (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": " Der Held hat kein Gespür für Geld und Werte. Wenn er etwas sieht, das ihm gefällt, kauft er es, ohne auf den Preis zu achten. Er gibt mit vollen Händen aus, was er hat, und sorgt sich nicht um Morgen – oder um die Gruppenkasse. Helden mit einem hohen SO neigen dazu, großzügig Schuldscheine auszustellen – was häufig im Nachteil Schulden endet. Verschwendungssucht ist nicht mit Geiz kombinierbar. "
+},
+{
+    "name": "Verwöhnt (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Der Held ist ein angenehmes Leben gewohnt und kann viele Unannehmlichkeiten des Abenteurerlebens nicht ohne weiteres ertragen: Er ist weinerlich, wenn es um Schlafplätze in der freien Natur geht. Wenn er nicht in einem Bett unter einem Dach schlafen kann, ist seine KO-Probe bei der Regeneration um seinen Wert in Verwöhnt erschwert; bei Misslingen der Probe gewinnt er nicht nur keinen LeP hinzu, sondern seine Regeneration ist sogar um einen Punkt vermindert (analog für die Regeneration von AE). Seine Schwelle, ab der er bei ungewohnt hoher Traglast zusätzlich behindert ist, liegt bei KK–2 Stein. Außerdem isst er nicht alles, was ihm vorgesetzt wird, und kann dadurch häufig schlechter regenerieren. Besonders geeignet ist dieser Nachteil natürlich für städtische Helden mit einem hohen SO, die die Annehmlichkeiten der Zivilisation nicht missen möchten; Kombinationen mit Stubenhocker, Krankhafte Reinlichkeit, Vorurteile und Arroganz bieten sich an."
+},
+{
+    "name": "Vorurteile (Schlechte Eigenschaft)",
+    "kosten": "in der Regel je -1 GP pro 2 Punkte",
+    "text": "Der Held hat gegenüber einer bestimmten Gruppe (Angehörigen eines Volkes oder einer Rasse, eines Geschlechts, bestimmter Herkunft und dergleichen; auf jeden Fall eine relevant große Gruppe, die dem Helden auch bekannt sein muss) feste (Fehl-)Meinungen, von der er sich auch durch vernünftige Argumente und selbst durch Erlebnisse kaum abbringen lässt. Auch diese Schlechte Eigenschaft bewirkt eher, dass der Held zu bestimmten Handlungen und Entscheidungen gezwungen wird, als dass sie seine anderen Aktionen einschränken würde. Im Umgang mit Mitgliedern der betreffenden Gruppe sind alle Talentproben auf gesellschaftliche Talente um den Wert der Vorurteile erschwert. Wenn die Gruppe, gegen die der Held seine Vorurteile hat, von häufiger spielrelevanter Bedeutung ist oder sich die Vorurteile gegen etwa die Hälfte (oder mehr) der aventurischen Bevölkerung richten (Männer, Frauen, Menschen, Zwölfgöttergläubige ...), ist der Nachteil 1 GP pro Punkt Vorurteile wert."
+},
+{
+    "name": "Wahnvorstellungen",
+    "kosten": "-10 GP",
+    "text": "Der Held lebt in einer Welt, die mit der Realität, wie sie von seinen Kameraden wahrgenommen wird, wenig zu tun hat – er glaubt, dass das horasische Herrscherhaus komplett von Dämonen besessen sei, dass eine Weltverschwörung es speziell auf ihn, den wahren Sohn Tar Honaks, abgesehen habe, dass der Himmel grün oder Milch ein tödliches Einnahmegift sei. Während Einbildungen (siehe Seite 262) noch als Schnurren und Marotten durchgehen mögen, können Außenstehende bei einem Helden mit Wahnvorstellungen durchaus feststellen, dass dieser nur noch losen Kontakt zur Wirklichkeit hat. Wahnvorstellungen kann nicht mit Einbildungen kombiniert werden."
+},
+{
+    "name": "Wahrer Name (Magischer Nachteil)",
+    "kosten": "-10 GP",
+    "text": "Von Drachen und Kobolden heißt es, sie besitzen einen Zaubernamen, den sie niemandem nennen, da er ihr innerstes Selbst kennzeichnet. Die Wahren Namen von Dämonen ermöglichen Beschwörern die vollständige Herrschaft über diese Ausgeburten der Niederhöllen. Auch von vielen Zauberkundigen und anderen seltsamen Gestalten sagt man, sie besäßen neben ihrem Geburtsnamen noch einen geheimen Namen, der ihnen in einem mystischen Moment ihres Lebens gewiesen wurde (oder der ihnen noch offenbar wird). Wer diesen Nachteil besitzt, ist sehr stark mit seinem Wahren Namen verbunden und sollte ihn hüten wie seinen größten Schatz. Wer den Wahren Namen eines solchen Charakters kennt, kann ihn leicht unter seinen Willen zwingen. Siehe hierzu auch das Kapitel Die Magie der Namen im Band Wege der Zauberei. Dieser Nachteil ist vor allem für Elfen, Schelme und generische Magiedilettanten geeignet"
+},
+{
+    "name": "Weltfremd (Schlechte Eigenschaft)",
+    "kosten": "je -1 GP",
+    "text": "Der Held begegnet gewissen Konzepten des Alltagslebens einer großen Zivilisation mit Naivität, Unkenntnis und Unverständnis. Viele ausschließlich in ihre Forschungen vertiefte Gelehrte, von ihrer Arbeit besessene Handwerksmeister, in ihren Studierstuben hockende Magier, hinterwäldlerische Jäger und Kundschafter oder verträumte Elfen sind weltfremd. Weltfremde Helden müssen sich einen Bereich wählen (etwa Religion, Währung und Geld, Besitz, Adelsherrschaft, Geselligkeit, städtisches Treiben ...), in dem sie weltfremd sind und bei dem sie Erschwernisse in Höhe ihres Weltfremd-Werts bei passenden Eigenschafts- oder Talentproben (beispielsweise Gassenwissen, Etikette, Überreden für Weltfremd: städtisches Treiben) hinnehmen müssen. Es ist möglich, in mehreren Bereichen weltfremd zu sein."
+},
+{
+    "name": "Wiederwärtiges Aussehen",
+    "kosten": "-15 GP",
+    "text": "Dieser Nachteil ist eine Steigerung von Unansehnlich (siehe Seite 272). Alles dort Gesagte gilt auch hier, abgesehen davon, dass die genannten Proben um 5 Punkte erschwert sind statt um 2. Bei Zauberproben, bei denen jemand eingeschüchtert werden soll, ist der CH-Wert einer widerwärtigen Person um 2 erhöht, für Proben, mit denen jemand beruhigt oder freundlich gestimmt werden soll, jedoch um 2 vermindert. Dies gilt jedoch natürlich nur, wenn das Opfer den Zauberer sehen kann. Außerdem ist ein Held mit widerwärtigem Aussehen so auffällig, dass er sich nur schwer in einer Volksmasse verbergen kann und Passanten sich noch länger an ihn erinnern. Dieser Nachteil ist nicht mit Unansehnlich oder Gut Aussehend zu kombinieren (und natürlich genauso wenig mit Herausragendem Aussehen). "
+},
+{
+    "name": "Wilde Magie (Schlechte Eigenschaft)",
+    "kosten": "-7 GP",
+    "text": "Der Zauberer hat keinen festen Zugriff auf die Fäden der Kraft; ihm unterlaufen Zauberpatzer deutlich häufiger (etwa jedes 30. Mal) als anderen Zauberkundigen: bereits dann, wenn zweimal die 19 oder 19 und 20 in einer Probe fallen (und natürlich auch bei einer Doppel-20). Dies gilt sowohl für Zaubersprüche als auch für Ritualhandlungen; kann nicht von Gildenmagiern genommen werden und ist nicht mit dem Vorteil Feste Matrix oder dem Nachteil Tollpatsch kombinierbar."
+},
+{
+    "name": "Zielschwierigkeit (Magischer Nachteil)",
+    "kosten": "-7 GP",
+    "text": "Üblicherweise muss man bei einem Zauber, der gegen eine Einzelperson, gegen ein einzelnes Objekt oder auf das Zentrum einer zu schaffenden Wirkungszone gerichtet ist, nicht zielen, um zu treffen (es sei denn, es befindet sich in der Reichweite Horizont); es reicht, einen kleinen Teil der Person/des Objekts zu sehen, um das Ziel zu erfassen und den Zauber unfehlbar ins Ziel zu bringen. (Ob er dort wirkt, ist eine andere Sache.) Ein Zauberer mit Zielschwierigkeiten hat es nicht so einfach: Er muss seine Zauber quasi wie eine Fernwaffe handhaben, so dass für ihn die Zauberprobe nach der Entfernung und Größe des Ziels, unter Umständen sogar noch nach dessen Bewegung erschwert ist: Für jede der Entfernungsstufen 1 Schritt / 3 Schritt / 7 Schritt / 21 Schritt / 49 Schritt / Horizont um je 2 Punkte erschwert ist, ebenso um die Zielgröße, Sicht-, Bewegungs- und Deckungs-Modifikatoren gemäß Wege des Schwerts und auch um eventuelle Modifikatoren aus Eingeschränkte Sicht. Diese Erschwernisse sind keine Modifikatoren, die durch die gildenmagische Repräsentation oder Matrixverständnis vermindert werden können. Ein Zauberer mit Zielschwierigkeiten muss zwei Proben für jeden Zauber würfeln: Es wird zuerst geprüft, ob er das Ziel überhaupt so anvisieren kann, dass er eine magische Verbindung aufbauen kann. Dazu wird eine Fernkampf-Probe auf den besten FernwaffenWert gewürfelt, wobei die o.g. Modifikatoren berücksichtigt werden. Misslingt diese Probe, verbraucht der Zauberer zwei Aktionen und einen AsP, ohne dass etwas geschieht. Gelingt die Probe, darf er nun eine reguläre Zauberprobe würfeln. Dieser Nachteil kann nur von Zauberkundigen gewählt werden, die Spruchzauberei beherrschen."
+},
+{
+    "name": "Zögerlicher Zauberer (Magischer Nachteil)",
+    "kosten": "je -2 GP",
+    "text": "Willenskraft ist nicht die Stärke eines Zauberers mit diesem Nachteil: Jede Zauberprobe oder Probe auf die Ritualkenntnis, bei der einmal auf die Eigenschaft Mut gewürfelt wird, ist um die Anzahl an Punkten in Zögerlicher Zauberer (maximal 5) erschwert. Kommt Mut zweimal in der Probe vor, verdoppelt sich der Malus; solche Zauber (mit zweimal MU in der Probe) sind um eine Spalte schwieriger zu steigern. Die Kontrolle oder Austreibung bestimmter jenseitiger Wesen (vor allem Dämonen) ist ebenfalls um den Wert der Schlechten Eigenschaft erschwert – ein solcherart eingeschränkter Zauberer sollte den Umgang mit Dämonen tunlichst meiden. Der Nachteil kann nur von Zauberkundigen gewählt werden, die Spruchzauberei beherrschen."
+},
+{
+    "name": "Zwergenwuchs",
+    "kosten": "-7 GP",
+    "text": "Zwergenwüchsige Personen sind klein und kompakt gebaut, was sich in einer Reihe von Veränderungen niederschlägt, die in ihrer Summe einen Nachteil ergeben. Die wichtigste Einschränkung ist sicherlich, dass die Geschwindigkeit (GS; siehe Seite 21) von Zwergenwüchsigen um 2 Punkte GS niedriger liegt als bei den ‘Langbeinern’ (durchschnittlich also bei GS 6). Damit verbunden ist eine reduzierte Sprungweite und -höhe, nämlich (GE+KK –BE –2) Spann weit und (GE+KK –BE –4)/4 Spann hoch. Getragene Lasten behindern Zwergwüchsige jedoch deutlich geringer als andere: Sie können die aus Rüstung und Last resultierende BE halbieren, bevor sie sie von der GS abziehen. Die Marschgeschwindigkeit eines Zwergwüchsigen beträgt ebenfalls die reduzierten 6 Meilen pro Stunde, jedoch wird dieses Tempo durch Behinderung (in normalem Rahmen, also bis zu einer Gesamt-BE von 6 Punkten aus Rüstung und Last) nicht weiter reduziert. Ebenfalls durch den Zwergenwuchs beeinträchtigt ist das Führen von Waffen: Alle Waffen, die nicht speziell für Zwerg(wüchsig)e gefertigt sind, werden von ihnen mit einem Malus von je 1 Punkt auf AT, PA und TP geführt; Ausnahmen hiervon sind Dolche und Speere. Sollte ein Zwergwüchsiger nichtzwergische Waffen benutzen, die länger als 1,30 Schritt und keine Speere sind, so muss er 3 Punkte Abzug auf AT, PA und 2 Punkte auf TP hinnehmen. Waffen, die von normal großen Lebewesen in mehreren Distanzklassen geführt werden können, müssen von Zwergwüchsigen in der jeweils niedrigeren Distanzklasse geführt werden. Zudem haben es Zwergwüchsige schwieriger, in den Landen der Menschen für sie passende Kleidungsstücke und Rüstungen zu finden bzw. sie müssen für Maßanfertigungen mehr zahlen. Die Behinderung nicht angepasster Rüstungen steigt um 1. Die Kampfmanöver Ausweichen / Meisterliches Ausweichen sind für Zwergwüchsige um 1 Punkt erleichtert. Das Kampfmanöver Umreißen ist um 2 Punkte erleichtert, die erste Attacke eine Ausfalls ist um 2 Punkte erschwert. Im Waffenlosen Kampf sind die Manöver Hoher Tritt, Sprung und Sprungtritt nur zu fünffachen Kosten zu erlernen, außer wenn sie im Rahmen eines Kampfstils erlernt werden; das Manöver Fußfeger kostet nur die Hälfte der Kosten. Das Kampfmanöver Gegenhalten ist um 2 Punkte erleichtert. Beim Kampf mit dem Trefferzonensystem (siehe Wege des Schwerts) ist es für Zwergenwüchsige um 2 Punkte erschwert, den Kopf eines menschengroßen Gegners zu treffen, ein Schlag gegen die Beine ist allerdings um 2 Punkte erleichtert."
+}
