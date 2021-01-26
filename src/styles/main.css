@@ -1,3 +1,4 @@
+/* ---------- General: ---------- */
 :root {
 	--text-1: #000000;
 	--text-select: #2A221Bcc;
@@ -37,17 +38,35 @@ body {
 ::-webkit-scrollbar-thumb:active {
 	background-position: 100% 50%;
 }
+
+/* ---------- Main Frame: ---------- */
 #main-frame {
 	--thumbnailbox-width: 200px;
 	--toolbox-width: 400px;
+	--toolbar-width: 80px;
 	display: grid;
 	grid-template-columns: var(--thumbnailbox-width) calc(calc(100% - var(--thumbnailbox-width)) - var(--toolbox-width)) var(--toolbox-width);
+}
+#main-frame.no-tools {
+	--toolbox-width: 0px;
+}
+#main-frame.no-tools #toolbar,
+#main-frame.no-tools #toolarea-box {
+	display: none;
+}
+#main-frame.no-thumbnails {
+	--thumbnailbox-width: 0px;
+}
+#main-frame.no-thumbnails  #thumbnail-innerbox {
+	display: none;
 }
 #main-frame > div {
 	height: 100%;
 	max-height: 100vh;
 	overflow: auto;
 }
+
+/* ---------- Thumbnails: ---------- */
 #thumbnail-box {
 	position: relative;
 	grid-column: 1 / 1;
@@ -153,6 +172,7 @@ body {
 	font-size: 200%;
 }
 #document-box {
+	position: relative;
 	grid-column: 2 / 2;
 	padding: 12px 0;
 }
@@ -172,8 +192,9 @@ body {
 .doc-page div:not([class^="Edit-"]) {
 	pointer-events: none;
 }
+
+/* ---------- Tools: ---------- */
 #tool-box {
-	--toolbar-width: 80px;
 	position: relative;
 	grid-column: 3 / 3;
 	overflow: hidden !important;
@@ -411,4 +432,70 @@ body {
 }
 .toolarea-page:not([style="opacity: 1;"]) {
 	pointer-events: none;
+}
+
+/* ---------- Toggles: ---------- */
+.toggle-left,
+.toggle-right {
+	--toggle-size: 40px;
+	--toggle-width: var(--toggle-size);
+	--toggle-height: calc(1.4 * var(--toggle-size));
+	position: fixed;
+	z-index: 10;
+	width: var(--toggle-width);
+	height: var(--toggle-height);
+	border-radius: var(--toggle-size);
+	cursor: pointer;
+	background-image: url("../assets/Rauten-Pfeil_rechts_grau.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+.toggle-left:hover,
+.toggle-right:hover {
+	background-image: url("../assets/Rauten-Pfeil_rechts_rot.png");
+}
+.toggle-left {
+	transform: scaleX(-1);
+}
+#toggle-thumbnails,
+#toggle-tools {
+	top: calc(50% - calc(var(--toggle-height) / 2));
+}
+#toggle-thumbnails {
+	left: calc(4px + var(--thumbnailbox-width));
+}
+#toggle-thumbnails.toggle-left {
+	left: calc(-12px + var(--thumbnailbox-width));
+}
+#toggle-tools {
+	right: calc(10px + var(--toolbox-width));
+}
+
+/* ---------- Dark Mode: ---------- */
+body.dark-mode {
+	--text-1: #FFFFFF;
+	--text-select: #ccbcaecc;
+	color: #FFFFFF;
+}
+body.dark-mode #main-frame::before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	backdrop-filter: brightness(0.3) contrast(1.5);
+}
+body.dark-mode .toolbar-icon path {
+	stroke-width: 8px;
+	stroke: #f7d5b7;
+	fill: #f7d5b7;
+}
+body.dark-mode .select-dropdown select {
+	color: white;
+}
+body.dark-mode .select-dropdown option {
+	color: black;
 }

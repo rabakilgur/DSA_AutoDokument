@@ -267,7 +267,7 @@ usort($pages, "sort_pages");
 					</svg>
 				</div>
 			</div>
-			<div class="toolbar-item" data-tool="Exportieren" data-tool-short="export">
+			<div class="toolbar-item" data-tool="Importieren / Exportieren" data-tool-short="export">
 				<div class="toolbar-icon">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 481.679 481.679" xml:space="preserve">
 						<path d="M100.936,229.042c0.015,0.016,0.021,0.036,0.036,0.051c34.626,49.394,80.973,86.448,129.539,121.491
@@ -442,7 +442,7 @@ usort($pages, "sort_pages");
 				<h3>Bearbeiten</h3>
 			</div>
 			<div class="toolarea" id="toolarea-export">
-				<h3>Exportieren</h3>
+				<h3>Importieren / Exportieren</h3>
 			</div>
 			<div class="toolarea" id="toolarea-generalSettings">
 				<h3>Generelle Einstellungen</h3>

@@ -25,6 +25,8 @@ $(document).ready(() => {
 		.catch(error => { console.error("Error while creating image!", error); });
 	*/
 
+	// ============================== ALGEMEINES SETUP: ==============================
+
 	// Toolbar:
 	const tooltip_textbox = document.getElementById("toolbar-highlight-text");
 	$(".toolbar-item").on("mouseover", event => {
@@ -86,6 +88,29 @@ $(document).ready(() => {
 		});
 	});
 
+	// ============================== TOOLBAR: ==============================
+
+	// Add functionality to the toggle/hide buttons:
+	$('#document-box').prepend('<div id="toggle-thumbnails-hoverbox"></div><div id="toggle-thumbnails" class="toggle-left"></div><div id="toggle-tools-hoverbox"></div><div id="toggle-tools" class="toggle-right"></div>');
+	$('#toggle-thumbnails').on("click", function() {
+		console.log("toggle thumbnails");
+		$(this).toggleClass("toggle-right").toggleClass("toggle-left");
+		$('#main-frame').toggleClass("no-thumbnails");
+		$(window).trigger("resize");
+	});
+	$('#toggle-tools').on("click", function() {
+		console.log("toggle tools");
+		$(this).toggleClass("toggle-right").toggleClass("toggle-left");
+		$('#main-frame').toggleClass("no-tools");
+		$(window).trigger("resize");
+	});
+
+	// --------------- DOKUMENTEN-EINSTELLUNGEN: ---------------
+
+	// Nothing here yet...
+
+	// --------------- SEITEN EINSTELLUNGEN: ---------------
+
 	// MSO functionality:
 	$(".toolarea-mso select").on("change", event => {
 		const mso_title = event.target.parentElement.parentElement.querySelector("h4").textContent;
@@ -94,8 +119,11 @@ $(document).ready(() => {
 		$mso.children(`[data-idgenobjectstate="${event.target.value}"]`).removeClass("_idGenStateHide").addClass("_idGenCurrentState");
 	});
 
+	// --------------- BEARBEITEN: ---------------
 
+	// Nothing here yet...
 
+	// --------------- IMPORTIEREN / EXPORTIEREN: ---------------
 
 	// Import / Export:
 	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br><button type="button" id="import_btn">Import</button>');
@@ -122,6 +150,17 @@ $(document).ready(() => {
 		// 2. import JSON
 		// 2.1 change JSON to newer version
 		// 3. apply to document
+	});
+
+	// --------------- GENERELLE EINSTELLUNGEN: ---------------
+
+	// Nothing here yet...
+
+	// --------------- EXPERIMENTELLE EINSTELLUNGEN: ---------------
+
+	$("#toolarea-experimentalSettings").append('<button type="button" id="toggle_dark_mode">Dark Mode</button>');
+	$("#toggle_dark_mode").on("click",() => {
+		$('body').toggleClass("dark-mode");
 	});
 
 });
