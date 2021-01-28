@@ -64,6 +64,16 @@ $(document).ready(() => {
 		$("#toolarea-page_" + page_nbr).finish().delay(animation_time).animate({ opacity: 1 }, animation_time);
 	}
 
+	// Edit all equivalent edit-fields together on focus loss:
+	$('div[class^="Edit-"]').each(function() {
+		const editclassname = [...this.classList].find(el => el.startsWith("Edit-"));
+		if ($(`.${editclassname}`).length > 1) {
+			$(this).on("focusout" ,() => {
+				$(`.${editclassname}`).text(this.textContent);
+			});
+		}
+	});
+
 	// Scale the pages on resize:
 	$(window).on("resize", () => {
 		const box_width = document.getElementById("document-box").offsetWidth;
@@ -75,18 +85,6 @@ $(document).ready(() => {
 			$(".doc-page").css({ zoom: 1 });
 		}
 	}).trigger("resize");
-
-	// Reverse tab order:
-	const $edit_fields = $('div[class^="Edit-"]');
-	$edit_fields.each((index, item) => {
-		$(item).on('keydown', event => {
-			if (event.which === 9) {
-				event.preventDefault();
-				if (event.shiftKey) $edit_fields[Math.min(index + 1, $edit_fields.length - 1)].focus();
-				else 				$edit_fields[Math.max(index - 1, 0)].focus();
-			}
-		});
-	});
 
 	// ============================== TOOLBAR: ==============================
 

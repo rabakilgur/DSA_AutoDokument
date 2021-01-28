@@ -73,6 +73,18 @@ $(document).ready(() => {
 		mso.setAttribute("data-mso_title", mso_title);
 	});
 
+	// Reverse tab order:
+	const $edit_fields = $('div[class^="Edit-"]');
+	$edit_fields.each((index, item) => {
+		$(item).on('keydown', event => {
+			if (event.which === 9) {
+				event.preventDefault();
+				if (event.shiftKey) $edit_fields[Math.min(index + 1, $edit_fields.length - 1)].focus();
+				else 				$edit_fields[Math.max(index - 1, 0)].focus();
+			}
+		});
+	});
+
 	// Show the name of the active tool in the toolbar highlight:
 	const textbox = document.getElementById("toolbar-highlight-text");
 	textbox.textContent = document.querySelector(".toolbar-active").getAttribute("data-tool");
