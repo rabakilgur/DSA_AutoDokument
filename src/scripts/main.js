@@ -91,18 +91,30 @@ $(document).ready(() => {
 	// ============================== TOOLBAR: ==============================
 
 	// Add functionality to the toggle/hide buttons:
-	$('#document-box').prepend('<div id="toggle-thumbnails-hoverbox"></div><div id="toggle-thumbnails" class="toggle-left"></div><div id="toggle-tools-hoverbox"></div><div id="toggle-tools" class="toggle-right"></div>');
+	$('#document-box').prepend('<div id="toggle-thumbnails" class="toggle-left"></div><div id="toggle-tools" class="toggle-right"></div>');
 	$('#toggle-thumbnails').on("click", function() {
-		console.log("toggle thumbnails");
 		$(this).toggleClass("toggle-right").toggleClass("toggle-left");
 		$('#main-frame').toggleClass("no-thumbnails");
 		$(window).trigger("resize");
 	});
 	$('#toggle-tools').on("click", function() {
-		console.log("toggle tools");
 		$(this).toggleClass("toggle-right").toggleClass("toggle-left");
 		$('#main-frame').toggleClass("no-tools");
 		$(window).trigger("resize");
+	});
+
+	// Show the toogles when hovering over the corresponding area:
+	$('#thumbnail-box').on("mouseenter", () => {
+		$('#toggle-thumbnails').addClass("toggle-shown");
+	});
+	$('#thumbnail-box').on("mouseleave", () => {
+		$('#toggle-thumbnails').removeClass("toggle-shown");
+	});
+	$('#tool-box').on("mouseenter", () => {
+		$('#toggle-tools').addClass("toggle-shown");
+	});
+	$('#tool-box').on("mouseleave", () => {
+		$('#toggle-tools').removeClass("toggle-shown");
 	});
 
 	// --------------- DOKUMENTEN-EINSTELLUNGEN: ---------------
