@@ -15,6 +15,7 @@
 
 div[class^="Edit-"],
 div[class^="Calc-"] {
+	padding: 1px;
 	font-family: "Garamond";
 	font-size: calc(12px / 0.05);
 	font-size: 12px;
@@ -38,6 +39,15 @@ div[class^="Edit-"]:focus {
 div[class^="Calc-"] {
 	background: rgba(71, 137, 235, 0.2);
 }
+
+/* First line indentations: */
+.Edit-Titel::before {
+	content: "";
+	display: inline-block;
+	width: 38px;
+}
+
+/* Centering the text in the corresponding text fields: */
 /* Eigenschaften: */
 .Edit-Mut-Mod,
 .Edit-Mut-Start,
