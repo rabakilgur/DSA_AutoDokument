@@ -4,8 +4,8 @@
 */
 
 $(document).ready(() => {
-	// Rotate the landscape pages:
 	$("#document-box > div > section").each((index, section) => {
+		// Rotate the landscape pages:
 		if (!$(section).children("div:first-child").css("transform").startsWith("matrix(1,")) {
 			const width = $(section).width();
 			$(section).width($(section).height());
@@ -13,6 +13,11 @@ $(document).ready(() => {
 			section.classList.add("doc-page-rotated");
 			document.getElementById("thumbnail-" + (index + 1)).classList.add("thumbnail-rotated");
 		}
+		// Add everything from the sections to another div:
+		$(section)
+			.append(`<div id="doc-page-wrapper-${index + 1}" class="doc-page-wrapper"></div>`)
+			.children(":not(.doc-page-wrapper)")
+			.appendTo(`#doc-page-wrapper-${index + 1}`);
 	});
 
 	// Make the text boxes editable:

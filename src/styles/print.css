@@ -1,0 +1,48 @@
+@media print {
+	::-webkit-scrollbar {
+		width: 0px;
+		height: 0px;
+	}
+	body {
+		background: none;
+	}
+	#main-frame {
+		display: block;
+	}
+	#main-frame > div {
+		overflow: unset;
+	}
+	#thumbnail-box,
+	#tool-box {
+		display: none;
+	}
+	#document-box {
+		padding: 0;
+	}
+	#document-box > div {
+		page-break-inside : avoid;
+		page-break-before : avoid;
+		page-break-after : avoid;
+	}
+	#document-box > div:not(:last-child) {
+		margin-bottom: 0;
+		page-break-after : always;
+	}
+	#document-box > div > section {
+		zoom: 1.9975 !important;
+		overflow: hidden;
+		display: block;
+	}
+	div[class^="Edit-"],
+	div[class^="Calc-"] {
+		display: none;
+	}
+	.doc-page-rotated > * {
+		transform: rotate(-90deg) translateX(-842px);
+		transform-origin: 0 0;
+	}
+	.doc-page-rotated {
+		width: 595px !important;
+		height: 842px !important;
+	}
+}

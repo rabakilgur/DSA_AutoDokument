@@ -94,7 +94,7 @@ function sort_pages($a, $b) {
 <!--
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                                                    !!!
-!!!   Diese Datei wird (mithilfe von indem.php) kom-   !!!
+!!!   Diese Datei wird (mithilfe von index.php) kom-   !!!
 !!!   piliert und sollte daher nicht geändert werden!  !!!
 !!!                                                    !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -124,6 +124,7 @@ function sort_pages($a, $b) {
 	<link rel="stylesheet" href="./font/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="./src/styles/doc_fixes.css" type="text/css" />
 	<link rel="stylesheet" href="./src/styles/main.css" type="text/css" />
+	<link rel="stylesheet" href="./src/styles/print.css" type="text/css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js" integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE=" crossorigin="anonymous"></script>
