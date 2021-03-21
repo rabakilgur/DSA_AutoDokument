@@ -2,7 +2,7 @@ const export_version = "0.1";
 
 $(document).ready(() => {
 
-	// create_thumbnail(Array.from(document.querySelectorAll(".doc-page")));
+	$('body').addClass("edit-mode");
 
 	/*$(".doc-page").each((index, page) => {
 		console.log("creating thumbnail");
@@ -86,6 +86,8 @@ $(document).ready(() => {
 		}
 	}).trigger("resize");
 
+
+
 	// ============================== TOOLBAR: ==============================
 
 	// Add functionality to the toggle/hide buttons:
@@ -131,7 +133,11 @@ $(document).ready(() => {
 
 	// --------------- BEARBEITEN: ---------------
 
-	// Nothing here yet...
+	// Toggle edit mode:
+	$("#toolarea-edit").append('<button type="button" id="toggle_edit_mode">Bearbeitsmodus umschalten</button><br>');
+	$("#toggle_edit_mode").on("click",() => {
+		$('body').toggleClass("edit-mode");
+	});
 
 	// --------------- IMPORTIEREN / EXPORTIEREN: ---------------
 
@@ -168,16 +174,37 @@ $(document).ready(() => {
 
 	// --------------- EXPERIMENTELLE EINSTELLUNGEN: ---------------
 
-	$("#toolarea-experimentalSettings").append('<button type="button" id="toggle_dark_mode">Dark Mode</button>');
+	// Toggle dark mode:
+	$("#toolarea-experimentalSettings").append('<button type="button" id="toggle_dark_mode">Dark Mode</button><br>');
 	$("#toggle_dark_mode").on("click",() => {
 		$('body').toggleClass("dark-mode");
+	});
+	// Create thumbnail images:
+	$("#toolarea-experimentalSettings").append('<button type="button" id="create_thumbnails">Thumbnail erstellen</button>');
+	$("#create_thumbnails").on("click",() => {
+		create_all_thumbnails()
 	});
 
 });
 
+async function create_all_thumbnails() {
+	// ToDo: Show progress-bar
+	// ToDo: Make input field non-editable (transparent instead of yellow)
+	let edit_mode_active = $('body').hasClass("edit-mode");
+	// if (edit_mode_active) $('body').removeClass("edit-mode");
+	create_thumbnail(Array.from(document.querySelectorAll(".doc-page")));
+	// if (edit_mode_active) $('body').addClass("edit-mode");
+}
+
+function create_progress_bar({ steps: 100, enable_edit: false }) {
+
+}
+function increase_progress_bar(steps = 1) {
+
+}
+
 async function create_thumbnail(pages) {
 	console.log("creating thumbnail");
-	// ToDo: Make input field non-editable (transparent instead of yellow)
 	const page = pages.shift();
 	domtoimage.toJpeg(page, { quality: 0.5, bgcolor: "#6A5037", style: { "zoom": 1 } })
 		.then(function (dataUrl) {

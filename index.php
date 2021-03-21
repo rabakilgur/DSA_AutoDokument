@@ -122,8 +122,8 @@ function sort_pages($a, $b) {
 	<link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/design.css" />
 	<link rel="stylesheet" href="./css/idGeneratedStyles.css" type="text/css" />
 	<link rel="stylesheet" href="./font/stylesheet.css" type="text/css" />
-	<link rel="stylesheet" href="./src/styles/doc_fixes.css" type="text/css" />
-	<link rel="stylesheet" href="./src/styles/main.css" type="text/css" />
+	<link rel="stylesheet" href="./src/styles/doc_fixes.min.css" type="text/css" />
+	<link rel="stylesheet" href="./src/styles/main.min.css" type="text/css" />
 	<link rel="stylesheet" href="./src/styles/print.css" type="text/css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -12,7 +12,6 @@
 	display: block;
 	overflow: hidden;
 }
-
 div[class^="Edit-"],
 div[class^="Calc-"] {
 	padding: 1px;
@@ -23,21 +22,27 @@ div[class^="Calc-"] {
 	text-align: left;
 	word-break: break-all;
 	color: black;
-	pointer-events: all;
+	pointer-events: none;
 	overflow: hidden;
 }
-div[class^="Edit-"] {
-	background: rgba(235, 194, 71, 0.2);
-}
-div[class^="Edit-"]:hover,
-div[class^="Edit-"]:focus {
-	box-shadow: 0 0 0 2px rgba(235, 194, 71, 1);
-}
-div[class^="Edit-"]:focus {
-	background: rgba(235, 194, 71, 0.4);
-}
-div[class^="Calc-"] {
-	background: rgba(71, 137, 235, 0.2);
+body.edit-mode {
+	div[class^="Edit-"],
+	div[class^="Calc-"] {
+		pointer-events: all;
+	}
+	div[class^="Edit-"] {
+		background: rgba(235, 194, 71, 0.2);
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 0 2px rgba(235, 194, 71, 1);
+		}
+		&:focus {
+			background: rgba(235, 194, 71, 0.4);
+		}
+	}
+	div[class^="Calc-"] {
+		background: rgba(71, 137, 235, 0.2);
+	}
 }
 
 /* First line indentations: */
