@@ -35,7 +35,8 @@
 	}
 	div[class^="Edit-"],
 	div[class^="Calc-"] {
-		display: none;
+		background: none !important;
+		box-shadow: none !important;
 	}
 	.doc-page-rotated > * {
 		transform: rotate(-90deg) translateX(-842px);

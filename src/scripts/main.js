@@ -196,7 +196,7 @@ async function create_all_thumbnails() {
 	// if (edit_mode_active) $('body').addClass("edit-mode");
 }
 
-function create_progress_bar({ steps: 100, enable_edit: false }) {
+function create_progress_bar(steps = 100, enable_edit = false) {
 
 }
 function increase_progress_bar(steps = 1) {
