@@ -117,6 +117,7 @@ function sort_pages($a, $b) {
 
 	<!-- <link rel="stylesheet" href="./Heldendokument-web-resources/css/idGeneratedStyles.css" type="text/css" /> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/click.css" type="text/css" />
 	<link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/design-variables.css" />
 	<link rel="stylesheet" href="https://www.robin-garbe.de/include/css_library/design.css" />
@@ -127,6 +128,7 @@ function sort_pages($a, $b) {
 	<link rel="stylesheet" href="./src/styles/print.css" type="text/css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js" integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE=" crossorigin="anonymous"></script>
 	<script src="https://robin-garbe.de/include/js_library/design.js"></script>
 	<script src="https://robin-garbe.de/include/js_library/click.js"></script>

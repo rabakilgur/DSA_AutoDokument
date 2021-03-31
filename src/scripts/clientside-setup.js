@@ -78,6 +78,9 @@ $(document).ready(() => {
 		mso.setAttribute("data-mso_title", mso_title);
 	});
 
+	// Make all select dropdowns to jQueryUI selectmenus:
+	$('select').selectmenu();
+
 	// Reverse tab order:
 	const $edit_fields = $('div[class^="Edit-"]');
 	$edit_fields.each((index, item) => {

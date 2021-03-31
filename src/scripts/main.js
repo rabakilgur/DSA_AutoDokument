@@ -53,12 +53,11 @@ $(document).ready(() => {
 	});
 
 	// Show/Change the page-settings:
-	document.querySelector("#toolarea-pageSelection > select").addEventListener("change", event => {
+	$("#toolarea-pageSelection > select").on('selectmenuchange change', async (event) => {
 		const page_nbr = Number(event.target.value);
 		change_page_settings(page_nbr);
 	});
 	function change_page_settings(page_nbr) {
-
 		const animation_time = 300;
 		$('.toolarea-page').finish().animate({ opacity: 0 }, animation_time);
 		$("#toolarea-page_" + page_nbr).finish().delay(animation_time).animate({ opacity: 1 }, animation_time);
@@ -117,6 +116,18 @@ $(document).ready(() => {
 		$('#toggle-tools').removeClass("toggle-shown");
 	});
 
+	// Switch the toolarea when scrolling:
+	$('#document-box').on("scroll", async function() {
+		let section_scroll_positions = [];
+		$('#document-box > div > section').each((i, el) => {
+			if ($(el).offset().top > ($(window).height() / 4)) {
+				const $PAGE_SELECT = $('#toolarea-pageSelection > select');
+				if ($PAGE_SELECT[0].selectedIndex !== (i - 1)) $PAGE_SELECT.val(i).selectmenu('refresh').trigger("change");
+				return false;
+			}
+		});
+	});
+
 	// --------------- DOKUMENTEN-EINSTELLUNGEN: ---------------
 
 	// Nothing here yet...
@@ -124,7 +135,7 @@ $(document).ready(() => {
 	// --------------- SEITEN EINSTELLUNGEN: ---------------
 
 	// MSO functionality:
-	$(".toolarea-mso select").on("change", event => {
+	$(".toolarea-mso select").on('selectmenuchange change', async (event) => {
 		const mso_title = event.target.parentElement.parentElement.querySelector("h4").textContent;
 		const $mso = $(`._idGenMSO[data-mso_title="${mso_title}"]`);
 		$mso.children("._idGenCurrentState").removeClass("_idGenCurrentState");
