@@ -331,7 +331,7 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	&:not([style="opacity: 1;"]) {
+	&:not([style*="opacity: 1;"]) {
 		pointer-events: none;
 	}
 	>h3 {
@@ -347,7 +347,7 @@ body {
 		padding-left: 12px;
 	}
 }
-.toolare-mso_wrapper {
+.toolarea-mso_wrapper {
 	display: flex;
 	flex-direction: column-reverse;
 }
@@ -356,6 +356,21 @@ body {
 	margin: 0 auto;
 	>h4::after {
 		content: ":";
+	}
+}
+.toolarea-no_mso {
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 120%;
+	padding: 30px 14px;
+	background-color: transparent;
+	background-image: url("../assets/mso_background.png");
+	background-size: 100% 100%;
+	&::before {
+		content: "Es gibt keine Auswahlmöglich-\Akeiten für diese Seite";
+		opacity: 0.5;
+		white-space: pre;
 	}
 }
 
@@ -369,7 +384,7 @@ body {
 .select-dropdown {
 	position: relative;
 	background-color: transparent;
-	background-image: url("https://robin-garbe.de/p/dsa/doc/src/assets/mso_background.png");
+	background-image: url("../assets/mso_background.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	select + .ui-selectmenu-button {
@@ -410,9 +425,12 @@ body {
 		font-weight: bold;
 		color: var(--text-select);
 	}
+	.ui-selectmenu-icon {
+		transform: translateY(5px) scale(1.15);
+	}
 	&:not(:hover) {
 		background-image: unset;
-		&::after {
+		select + .ui-selectmenu-button > .ui-selectmenu-icon {
 			opacity: 0;
 		}
 	}
@@ -424,7 +442,7 @@ body {
 	bottom: 0;
 	left: 0;
 	opacity: 0;
-	&:not([style="opacity: 1;"]) {
+	&:not([style*="opacity: 1;"]) {
 		pointer-events: none;
 	}
 }

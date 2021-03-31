@@ -36,34 +36,41 @@ $(document).ready(() => {
 	// Scan for MSO:
 	$(".doc-page").each((page_i, page) => {
 		const mso_wrapper = document.createElement("div");
-		mso_wrapper.classList = "toolare-mso_wrapper";
-		$(page).find("._idGenMSO").each((mso_i, mso) => {
-			const mso_box = document.createElement("div");
-			mso_box.classList = "toolarea-mso";
-			const mso_name = document.createElement("h4");
-			const x_elem = $(mso).children('div[class*="MSO-"]')[0];
-			let mso_title = `[Unbenannt-${mso_i}]`;
-			if (x_elem !== undefined) mso_title = x_elem.classList.value.split(" ").filter(x => x.startsWith("MSO-"))[0].substr(4).replace(/_/g, " ");
-			const textnode = document.createTextNode(mso_title);
-			const select_box = document.createElement("div");
-			select_box.classList = "select-dropdown";
-			const select = document.createElement("select");
-			$(mso).children().each((state_i, state) => {
-				const option = document.createElement("option");
-				const option_text = state.getAttribute("data-idgenobjectstate");
-				if (option_text !== "X") {
-					option.setAttribute("value", option_text);
-					const textnode = document.createTextNode(option_text);
-					option.appendChild(textnode);
-					select.appendChild(option);
-				}
+		mso_wrapper.classList = "toolarea-mso_wrapper";
+		const $MSOs = $(page).find("._idGenMSO");
+		if ($MSOs.length > 0) {
+			$MSOs.each((mso_i, mso) => {
+				const mso_box = document.createElement("div");
+				mso_box.classList = "toolarea-mso";
+				const mso_name = document.createElement("h4");
+				const x_elem = $(mso).children('div[class*="MSO-"]')[0];
+				let mso_title = `[Unbenannt-${mso_i}]`;
+				if (x_elem !== undefined) mso_title = x_elem.classList.value.split(" ").filter(x => x.startsWith("MSO-"))[0].substr(4).replace(/_/g, " ");
+				const textnode = document.createTextNode(mso_title);
+				const select_box = document.createElement("div");
+				select_box.classList = "select-dropdown";
+				const select = document.createElement("select");
+				$(mso).children().each((state_i, state) => {
+					const option = document.createElement("option");
+					const option_text = state.getAttribute("data-idgenobjectstate");
+					if (option_text !== "X") {
+						option.setAttribute("value", option_text);
+						const textnode = document.createTextNode(option_text);
+						option.appendChild(textnode);
+						select.appendChild(option);
+					}
+				});
+				select_box.appendChild(select);
+				mso_name.appendChild(textnode);
+				mso_box.appendChild(mso_name);
+				mso_box.appendChild(select_box);
+				mso_wrapper.appendChild(mso_box);
 			});
-			select_box.appendChild(select);
-			mso_name.appendChild(textnode);
-			mso_box.appendChild(mso_name);
-			mso_box.appendChild(select_box);
-			mso_wrapper.appendChild(mso_box);
-		});
+		} else {
+			const no_mso_box = document.createElement("div");
+			no_mso_box.classList = "toolarea-no_mso";
+			mso_wrapper.appendChild(no_mso_box);
+		}
 		document.getElementById("toolarea-page_" + (page_i + 1)).appendChild(mso_wrapper);
 	});
 

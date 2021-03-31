@@ -53,14 +53,25 @@ $(document).ready(() => {
 	});
 
 	// Show/Change the page-settings:
+	let current_page_nbr = 1;
 	$("#toolarea-pageSelection > select").on('selectmenuchange change', async (event) => {
 		const page_nbr = Number(event.target.value);
 		change_page_settings(page_nbr);
 	});
-	function change_page_settings(page_nbr) {
+	async function change_page_settings(page_nbr) {
 		const animation_time = 300;
-		$('.toolarea-page').finish().animate({ opacity: 0 }, animation_time);
-		$("#toolarea-page_" + page_nbr).finish().delay(animation_time).animate({ opacity: 1 }, animation_time);
+		const default_top = 100;
+		let animation_travel = 25;
+		if (current_page_nbr > page_nbr) animation_travel = 0 - animation_travel;
+		$("#toolarea-page_" + current_page_nbr)
+				.finish()
+				.animate({ opacity: 0, top: default_top - animation_travel }, animation_time)
+		$("#toolarea-page_" + page_nbr)
+				.finish()
+				.css({ top: default_top + animation_travel })
+				.delay(0.67 * animation_time)
+				.animate({ opacity: 1, top: default_top }, animation_time);
+		current_page_nbr = page_nbr;
 	}
 
 	// Edit all equivalent edit-fields together on focus loss:
