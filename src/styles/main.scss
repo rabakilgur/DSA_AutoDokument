@@ -38,10 +38,31 @@ body {
 		background-position: 100% 50%;
 	}
 }
+
+/* ---------- jQuery UI Customisation: ---------- */
 .ui-widget {
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
+}
+.ui-selectmenu-menu > .ui-menu {
+	background: url("../assets/background_compressed.jpg") 50% 50% no-repeat;
+	border-radius: 240px 15px 100px/15px 200px 15px 185px;
+	background-size: 200% 200%;
+	border: 1px solid rgba(62, 34, 16, 0.1);
+	filter: brightness(0.935);
+	transform: translateY(-1px);
+	padding: 10px 5px;
+	.ui-menu-item-wrapper {
+		padding: 3px 1.5em 3px .9em;
+	}
+	.ui-state-active {
+		background-color: transparent;
+		background-image: url("../assets/mso_background.png");
+		background-size: 100% 100%;
+		border: none;
+		margin: 0;
+	}
 }
 
 /* ---------- Main Frame: ---------- */
@@ -368,7 +389,7 @@ body {
 	background-image: url("../assets/mso_background.png");
 	background-size: 100% 100%;
 	&::before {
-		content: "Es gibt keine Auswahlmöglich-\Akeiten für diese Seite";
+		content: "Es gibt keine Auswahlmög-\Alichkeiten für diese Seite";
 		opacity: 0.5;
 		white-space: pre;
 	}
@@ -515,10 +536,10 @@ body.dark-mode {
 		stroke: #f7d5b7;
 		fill: #f7d5b7;
 	}
-	.select-dropdown select {
-		color: white;
+	.ui-selectmenu-text {
+		color: rgba(255, 255, 255, 0.9);
 	}
-	.select-dropdown option {
-		color: black;
+	.ui-menu-item {
+		color: rgba(0, 0, 0, 0.9);
 	}
 }
