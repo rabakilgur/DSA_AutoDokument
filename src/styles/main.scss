@@ -50,9 +50,10 @@ body {
 	border-radius: 240px 15px 100px/15px 200px 15px 185px;
 	background-size: 200% 200%;
 	border: 1px solid rgba(62, 34, 16, 0.1);
-	filter: brightness(0.935);
 	transform: translateY(-1px);
 	padding: 10px 5px;
+	box-shadow: 10px 19px 17px -13px rgb(0 0 0 / 15%);
+	filter: brightness(0.935);
 	.ui-menu-item-wrapper {
 		padding: 3px 1.5em 3px .9em;
 	}
