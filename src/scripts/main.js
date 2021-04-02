@@ -156,16 +156,22 @@ $(document).ready(() => {
 	// --------------- BEARBEITEN: ---------------
 
 	// Toggle edit mode:
-	$("#toolarea-edit").append('<button type="button" id="toggle_edit_mode">Bearbeitsmodus umschalten</button><br>');
+	$("#toolarea-edit").append('<div><a class="btn" id="toggle_edit_mode">Bearbeitungsmodus umschalten</a></div>');
 	$("#toggle_edit_mode").on("click",() => {
 		$('body').toggleClass("edit-mode");
+	});
+
+	// Toggle edit-all mode:
+	$("#toolarea-edit").append('<div><a class="btn" id="toggle_edit_all_mode">Super-Bearbeitungsmodus umschalten</a></div>');
+	$("#toggle_edit_all_mode").on("click",() => {
+		$('body').toggleClass("edit-all-mode");
 	});
 
 	// --------------- IMPORTIEREN / EXPORTIEREN: ---------------
 
 	// Import / Export:
-	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br><button type="button" id="import_btn">Import</button>');
-	$("#export_btn").on("click",function () {
+	$("#toolarea-export").append('<div><a class="btn" id="export_btn">Export</a><a class="btn btn-primary" id="import_btn">Import</a></div>');
+	$("#export_btn").on("click", function () {
 		// set export version
 		let hero_json = {
 			"export_version": export_version
@@ -197,12 +203,12 @@ $(document).ready(() => {
 	// --------------- EXPERIMENTELLE EINSTELLUNGEN: ---------------
 
 	// Toggle dark mode:
-	$("#toolarea-experimentalSettings").append('<button type="button" id="toggle_dark_mode">Dark Mode</button><br>');
+	$("#toolarea-experimentalSettings").append('<div><a class="btn" id="toggle_dark_mode">Dark Mode</a></div>');
 	$("#toggle_dark_mode").on("click",() => {
 		$('body').toggleClass("dark-mode");
 	});
 	// Create thumbnail images:
-	$("#toolarea-experimentalSettings").append('<button type="button" id="create_thumbnails">Thumbnail erstellen</button>');
+	$("#toolarea-experimentalSettings").append('<div><a class="btn" id="create_thumbnails">Thumbnail erstellen</a></div>');
 	$("#create_thumbnails").on("click",() => {
 		create_all_thumbnails()
 	});
