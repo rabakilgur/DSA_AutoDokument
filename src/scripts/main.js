@@ -97,7 +97,6 @@ $(document).ready(() => {
 	}).trigger("resize");
 
 
-
 	// ============================== TOOLBAR: ==============================
 
 	// Add functionality to the toggle/hide buttons:
@@ -164,7 +163,9 @@ $(document).ready(() => {
 	// --------------- IMPORTIEREN / EXPORTIEREN: ---------------
 
 	// Import / Export:
-	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br><button type="button" id="import_btn">Import</button>');
+	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br>');
+	$("#toolarea-export").append('<input type="file" id="selectFiles" value="Import" accept="json" /><br>');
+	$("#toolarea-export").append('<button type="button" id="import_btn">Import</button>');
 	$("#export_btn").on("click",function () {
 		// set export version
 		let hero_json = {
@@ -184,10 +185,29 @@ $(document).ready(() => {
 	$("#import_btn").on("click", () => {
 		// ToDo: Import
 
-		// 1. version check
-		// 2. import JSON
-		// 2.1 change JSON to newer version
-		// 3. apply to document
+		// fetch file
+		let file = $('#selectFiles')[0].files;
+		if (file.length <= 0) return false;
+
+		// parse to JSON
+		let fr = new FileReader();
+		let result;
+		let hero_json;
+		fr.onload = (e) => {
+			result = JSON.parse(e.target.result);
+			hero_json = JSON.stringify(result, null, 2);
+			// document.getElementById('result').value = hero_json;
+		}
+		console.log(result);
+		console.log(hero_json);
+		// console.log(fr);
+		console.log(fr.readAsText(file.item(0)));
+
+		// version check
+		// import JSON
+		// change JSON to newer version
+		// apply to document
+
 	});
 
 	// --------------- GENERELLE EINSTELLUNGEN: ---------------
