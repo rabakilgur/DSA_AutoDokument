@@ -162,46 +162,57 @@ $(document).ready(() => {
 
 	// --------------- IMPORTIEREN / EXPORTIEREN: ---------------
 
-	// Import / Export:
+	function camelize(str) {
+		return str
+			.replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
+			.replace(/\s/g, '');
+	}
+
+	// Export:
 	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br>');
-	$("#toolarea-export").append('<input type="file" id="selectFiles" value="Import" accept="json" /><br>');
-	$("#toolarea-export").append('<button type="button" id="import_btn">Import</button>');
 	$("#export_btn").on("click",function () {
-		// set export version
+		// Set export version and date:
+		const export_time = new Date();
 		let hero_json = {
-			"export_version": export_version
+			"export_version": export_version,
+			"export_time": export_time,
+			"hero_name": $(".Edit-Name")[0].textContent,
+			"fields": {}
 		};
 
-		// generate json
+		// Generate JSON:
 		$('div[class^="Edit-"]').each(function() {
-			hero_json[[...this.classList].find(el => el.startsWith("Edit-"))] = $(this).text();
+			hero_json["fields"][[...this.classList].find(el => el.startsWith("Edit-"))] = $(this).text();
 		});
 		let data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(hero_json));
 
-		// make it downloadable
+		// Make it downloadable:
 		this.setAttribute("href", "data:"+data);
-		this.setAttribute("download", "hero_"+ export_version +".json");
+		let time_string = `${export_time.getFullYear()}${export_time.getMonth()}${export_time.getDate()}-${export_time.getHours()}${export_time.getMinutes()}${export_time.getSeconds()}`;
+		this.setAttribute("download", `Heldenexport_${camelize(hero_json["hero_name"])}_${time_string}.json`);
 	});
+
+	// Import:
+	$("#toolarea-export").append('<input type="file" id="selectFiles" value="Import" accept="json" /><br>');
+	$("#toolarea-export").append('<button type="button" id="import_btn">Import</button>');
 	$("#import_btn").on("click", () => {
 		// ToDo: Import
 
-		// fetch file
+		// Fetch file:
 		let file = $('#selectFiles')[0].files;
 		if (file.length <= 0) return false;
+		// ToDo: Show name of the hero and time of export
 
-		// parse to JSON
+		// Read and parse file to JSON:
 		let fr = new FileReader();
 		let result;
 		let hero_json;
 		fr.onload = (e) => {
-			result = JSON.parse(e.target.result);
-			hero_json = JSON.stringify(result, null, 2);
-			// document.getElementById('result').value = hero_json;
+			result = JSON.parse(fr.result);
+			console.log("result", result);
+
 		}
-		console.log(result);
-		console.log(hero_json);
-		// console.log(fr);
-		console.log(fr.readAsText(file.item(0)));
+		fr.readAsText(file.item(0));
 
 		// version check
 		// import JSON
