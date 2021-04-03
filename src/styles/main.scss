@@ -647,6 +647,14 @@ $startup-loader-height: 50vh;
 	right: calc(10px + var(--toolbox-width));
 }
 
+/* ---------- Document related stuff: ---------- */
+body.font-mode-mason {
+	div[class^="Edit-"],
+	div[class^="Calc-"] {
+		font-family: "Mason";
+	}
+}
+
 /* ---------- Dark Mode: ---------- */
 body.dark-mode {
 	--text-1: #FFFFFF;

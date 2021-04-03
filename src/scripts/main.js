@@ -154,7 +154,15 @@ $(document).ready(() => {
 
 	// --------------- DOKUMENTEN-EINSTELLUNGEN: ---------------
 
-	// Nothing here yet...
+	// Toggle mason mode:
+	$("#toolarea-documentSettings").append(`
+		<h4>Textfeld-Font ändern</h4>
+		<p><a class="btn" id="toggle_font_mode_mason">Mason-Font umschalten</a></p>
+		<p><i>Hiermit kann der Font der in den Textfeldern (den im Bearbeitsmodus farblich hervorgehobenen Feldern) auf dem Dokument benutzt wird, zu "Mason" geändert werden. Mason ist auch der Font, welcher für die Überschriften benutzt wird.</i></p>
+	`);
+	$("#toggle_font_mode_mason").on("click",() => {
+		$('body').toggleClass("font-mode-mason");
+	});
 
 	// --------------- SEITEN EINSTELLUNGEN: ---------------
 
