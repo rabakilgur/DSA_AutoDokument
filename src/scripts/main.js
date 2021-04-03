@@ -169,13 +169,21 @@ $(document).ready(() => {
 	// --------------- BEARBEITEN: ---------------
 
 	// Toggle edit mode:
-	$("#toolarea-edit").append('<div><a class="btn" id="toggle_edit_mode">Bearbeitungsmodus umschalten</a></div>');
+	$("#toolarea-edit").append(`
+		<h4>Bearbeitungsmodus</h4>
+		<p><a class="btn" id="toggle_edit_mode">Bearbeitungsmodus umschalten</a></p>
+		<p><i>Dieser Modus hebt alle ausfüllbaren Felder farblich hervor und macht sie bearbeitbar. Außerdem werden alle Felder, dessen Inhalt sich automatisch anhand von anderen Felder berechnet, ebenfalls farblich hervorgehoben.</i></p>
+	`);
 	$("#toggle_edit_mode").on("click",() => {
 		$('body').toggleClass("edit-mode");
 	});
 
 	// Toggle edit-all mode:
-	$("#toolarea-edit").append('<div><a class="btn" id="toggle_edit_all_mode">Super-Bearbeitungsmodus umschalten</a></div>');
+	$("#toolarea-edit").append(`
+		<br>
+		<p><a class="btn" id="toggle_edit_all_mode">Super-Bearbeitungsmodus umschalten</a></p>
+		<p><i>Der Super-Bearbeitungsmodus macht JEDEN Text auf dem Dokument bearbeitbar.<br><b>Vorsicht:</b> Änderungen außerhalb von den farbigen Textfeldern werden nicht abgespeichert/exportiert.</i></p>
+	`);
 	$("#toggle_edit_all_mode").on("click",() => {
 		$('body').toggleClass("edit-all-mode");
 	});
@@ -217,7 +225,8 @@ $(document).ready(() => {
 
 	// Import:
 	$("#toolarea-export").append(`
-		<h4 style="margin-top: 12px;">Import</h4>
+		<hr />
+		<h4>Import</h4>
 		<p><input class="btn" type="file" id="import_select_files" value="Import" accept="json" /></p>
 		<p id="import-info"></p>
 		<p><a class="btn d-none" id="import_btn">Import</a></p>
@@ -268,12 +277,21 @@ $(document).ready(() => {
 	// --------------- EXPERIMENTELLE EINSTELLUNGEN: ---------------
 
 	// Toggle dark mode:
-	$("#toolarea-experimentalSettings").append('<div><a class="btn" id="toggle_dark_mode">Dark Mode</a></div>');
+	$("#toolarea-experimentalSettings").append(`
+		<h4>Dark Mode</h4>
+		<p><a class="btn" id="toggle_dark_mode">Dark Mode umschalten</a></p>
+		<p><i>Der Dark Mode ist noch ziemlich simpel und nicht ausgereift. Außerdem wird er aktuell noch nicht abgespeichert.</i></p>
+	`);
 	$("#toggle_dark_mode").on("click",() => {
 		$('body').toggleClass("dark-mode");
 	});
 	// Create thumbnail images:
-	$("#toolarea-experimentalSettings").append('<div><a class="btn" id="create_thumbnails">Thumbnail erstellen</a></div>');
+	$("#toolarea-experimentalSettings").append(`
+		<hr />
+		<h4>Seiten-Thumbnails erstellen</h4>
+		<p><a class="btn" id="create_thumbnails">Thumbnail erstellen</a></p>
+		<p><i>Diese Funktion ist aktuell ausgelagert, da sie sehr lange dauert und so extrem viel Leistung zieht, dass sie die gesamte Seite praktisch unbenutzbar macht.</i></p>
+	`);
 	$("#create_thumbnails").on("click",() => {
 		create_all_thumbnails()
 	});

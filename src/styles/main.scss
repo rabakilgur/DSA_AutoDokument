@@ -450,9 +450,21 @@ $btn-border-radius: 3px;
 		font-size: 145%;
 		text-align: center;
 	}
+	>h4 {
+		margin-bottom: 0.3em;
+	}
 	h4,
 	p {
 		padding-left: 12px;
+	}
+	>hr {
+		height: 12px;
+		margin: 5px 0 5px 10px;
+		background-color: transparent;
+		background-image: url(../assets/vertical_divider.png);
+		background-repeat: repeat-x;
+		background-position: 0 50%;
+		background-size: 400%;
 	}
 }
 .toolarea-mso_wrapper {
