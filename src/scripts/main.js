@@ -1,8 +1,22 @@
-const export_version = "0.1";
+const export_version = "0.3";
+
+function set_startup_loader(value) {
+	document.querySelector('#startup-loader .startup-mask')?.style.setProperty('--app-loaded', value);
+}
+function inc_startup_loader() {
+	const MASK = document.querySelector('#startup-loader .startup-mask');
+	const cur_state = Number(MASK?.style.getPropertyValue('--app-loaded'));
+	const new_state = Math.min((cur_state + 1) / 2, cur_state + 0.2);
+	MASK?.style.setProperty('--app-loaded', new_state);
+}
+let startup_interval;
+
 
 $(document).ready(() => {
-
 	$('body').addClass("edit-mode");
+
+	setTimeout(() => inc_startup_loader(), 100);
+	startup_interval = setInterval(() => inc_startup_loader(), 800);
 
 	/*$(".doc-page").each((index, page) => {
 		console.log("creating thumbnail");
@@ -97,7 +111,6 @@ $(document).ready(() => {
 	}).trigger("resize");
 
 
-
 	// ============================== TOOLBAR: ==============================
 
 	// Add functionality to the toggle/hide buttons:
@@ -169,31 +182,79 @@ $(document).ready(() => {
 
 	// --------------- IMPORTIEREN / EXPORTIEREN: ---------------
 
-	// Import / Export:
-	$("#toolarea-export").append('<div><a class="btn" id="export_btn">Export</a><a class="btn btn-primary" id="import_btn">Import</a></div>');
-	$("#export_btn").on("click", function () {
-		// set export version
+	function camelize(str) {
+		return str
+			.replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
+			.replace(/\s/g, '');
+	}
+
+	// Export:
+	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br>');
+	$("#export_btn").on("click",function () {
+		// Set export version and date:
+		const export_time = new Date();
 		let hero_json = {
-			"export_version": export_version
+			"export_version": export_version,
+			"export_time": export_time,
+			"hero_name": $(".Edit-Name")[0].textContent,
+			"fields": {}
 		};
 
-		// generate json
+		// Generate JSON:
 		$('div[class^="Edit-"]').each(function() {
-			hero_json[[...this.classList].find(el => el.startsWith("Edit-"))] = $(this).text();
+			hero_json["fields"][[...this.classList].find(el => el.startsWith("Edit-")).substr(5)] = $(this).text();
 		});
 		let data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(hero_json));
 
-		// make it downloadable
+		// Make it downloadable:
 		this.setAttribute("href", "data:"+data);
-		this.setAttribute("download", "hero_"+ export_version +".json");
+		let time_string = `${export_time.getFullYear()}${export_time.getMonth()}${export_time.getDate()}-${export_time.getHours()}${export_time.getMinutes()}${export_time.getSeconds()}`;
+		this.setAttribute("download", `Heldenexport_${camelize(hero_json["hero_name"])}_${time_string}.json`);
+	});
+
+	// Import:
+	$("#toolarea-export").append(`
+		<input type="file" id="import_select_files" value="Import" accept="json" /><br>
+		<div id="import-info"></div>
+		<button type="button" class="d-none" id="import_btn">Import</button>
+	`);
+	let imported_json;
+	$("#import_select_files").on("change", function(e) {
+		if (this.files.length <= 0) return false;
+		// Read and parse file to JSON:
+		let fr = new FileReader();
+		fr.onload = (e) => {
+			const result = JSON.parse(fr.result);
+			console.log("result", result);
+			imported_json = result;
+			const $import_info = $('#import-info');
+			$import_info.empty();
+			if (result.hero_name) $import_info.append(`<div><b>Name des Helden:</b> ${result.hero_name}</div>`);
+			if (result.export_time) {
+				console.log(result.export_time);
+				export_time = new Date(result.export_time);
+				const time_string = `${export_time.getDate()}.${export_time.getMonth()}.${export_time.getFullYear()} ${export_time.getHours()}:${export_time.getMinutes()}:${export_time.getSeconds()}`;
+				$import_info.append(`<div><b>Zeit des Exportes:</b> ${time_string}</div>`);
+			}
+			if (result.export_version) $import_info.append(`<div><b>Export-Version:</b> ${result.export_version}</div>`);
+			$('#import_btn').removeClass("d-none");
+		}
+		fr.readAsText(this.files.item(0));
 	});
 	$("#import_btn").on("click", () => {
-		// ToDo: Import
+		if (imported_json) {
+			for (let key in imported_json.fields) {
+				$(`.Edit-${key}`).html(imported_json.fields[key]).trigger("recalc");
+			}
+		} else {
+			console.log("select a file first");
+		}
 
-		// 1. version check
-		// 2. import JSON
-		// 2.1 change JSON to newer version
-		// 3. apply to document
+		// version check
+		// import JSON
+		// change JSON to newer version
+		// apply to document
+
 	});
 
 	// --------------- GENERELLE EINSTELLUNGEN: ---------------
@@ -260,3 +321,11 @@ function fill_demo() {
 		$(this).trigger("input");
 	});
 }
+
+window.addEventListener('load', function () {
+	clearInterval(startup_interval);
+	set_startup_loader(1.1);
+	$('#main-frame').css({ opacity: 1 });
+	$('#startup-loader').addClass("startup-done");
+	console.log("%cStartup is done", "background: #D4EDDA; color: #155724; border: 1px solid #C3E6CB; border-radius: 4px; padding: .75rem 1.25rem; font-size: 150%;")
+});
