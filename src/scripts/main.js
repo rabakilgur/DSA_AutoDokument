@@ -1,4 +1,4 @@
-const export_version = "0.2";
+const export_version = "0.3";
 
 function set_startup_loader(value) {
 	document.querySelector('#startup-loader .startup-mask')?.style.setProperty('--app-loaded', value);
@@ -196,7 +196,7 @@ $(document).ready(() => {
 
 		// Generate JSON:
 		$('div[class^="Edit-"]').each(function() {
-			hero_json["fields"][[...this.classList].find(el => el.startsWith("Edit-"))] = $(this).text();
+			hero_json["fields"][[...this.classList].find(el => el.startsWith("Edit-")).substr(5)] = $(this).text();
 		});
 		let data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(hero_json));
 
@@ -207,29 +207,42 @@ $(document).ready(() => {
 	});
 
 	// Import:
-	$("#toolarea-export").append('<input type="file" id="selectFiles" value="Import" accept="json" /><br>');
-	$("#toolarea-export").append('<button type="button" id="import_btn">Import</button>');
-	$("#import_btn").on("click", () => {
-		// ToDo: Import
-
-		// Fetch file:
-		let file = $('#selectFiles')[0].files;
-		if (file.length <= 0) return false;
-		// ToDo: Show name of the hero and time of export
-
+	$("#toolarea-export").append(`
+		<input type="file" id="import_select_files" value="Import" accept="json" /><br>
+		<div id="import-info"></div>
+		<button type="button" class="d-none" id="import_btn">Import</button>
+	`);
+	let imported_json;
+	$("#import_select_files").on("change", function(e) {
+		if (this.files.length <= 0) return false;
 		// Read and parse file to JSON:
 		let fr = new FileReader();
-		let result;
-		let hero_json;
 		fr.onload = (e) => {
-			result = JSON.parse(fr.result);
-			// console.log("result", result);
-			for (let key in result.fields) {
-				console.log(key, result.fields[key]);
-				$(`.${key}`).html(result.fields[key]);
+			const result = JSON.parse(fr.result);
+			console.log("result", result);
+			imported_json = result;
+			const $import_info = $('#import-info');
+			$import_info.empty();
+			if (result.hero_name) $import_info.append(`<div><b>Name des Helden:</b> ${result.hero_name}</div>`);
+			if (result.export_time) {
+				console.log(result.export_time);
+				export_time = new Date(result.export_time);
+				const time_string = `${export_time.getDate()}.${export_time.getMonth()}.${export_time.getFullYear()} ${export_time.getHours()}:${export_time.getMinutes()}:${export_time.getSeconds()}`;
+				$import_info.append(`<div><b>Zeit des Exportes:</b> ${time_string}</div>`);
 			}
+			if (result.export_version) $import_info.append(`<div><b>Export-Version:</b> ${result.export_version}</div>`);
+			$('#import_btn').removeClass("d-none");
 		}
-		fr.readAsText(file.item(0));
+		fr.readAsText(this.files.item(0));
+	});
+	$("#import_btn").on("click", () => {
+		if (imported_json) {
+			for (let key in imported_json.fields) {
+				$(`.Edit-${key}`).html(imported_json.fields[key]).trigger("recalc");
+			}
+		} else {
+			console.log("select a file first");
+		}
 
 		// version check
 		// import JSON
