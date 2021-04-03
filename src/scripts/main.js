@@ -1,8 +1,22 @@
-const export_version = "0.1";
+const export_version = "0.2";
+
+function set_startup_loader(value) {
+	document.querySelector('#startup-loader .startup-mask')?.style.setProperty('--app-loaded', value);
+}
+function inc_startup_loader() {
+	const MASK = document.querySelector('#startup-loader .startup-mask');
+	const cur_state = Number(MASK?.style.getPropertyValue('--app-loaded'));
+	const new_state = Math.min((cur_state + 1) / 2, cur_state + 0.2);
+	MASK?.style.setProperty('--app-loaded', new_state);
+}
+let startup_interval;
+
 
 $(document).ready(() => {
-
 	$('body').addClass("edit-mode");
+
+	setTimeout(() => inc_startup_loader(), 100);
+	startup_interval = setInterval(() => inc_startup_loader(), 800);
 
 	/*$(".doc-page").each((index, page) => {
 		console.log("creating thumbnail");
@@ -209,8 +223,11 @@ $(document).ready(() => {
 		let hero_json;
 		fr.onload = (e) => {
 			result = JSON.parse(fr.result);
-			console.log("result", result);
-
+			// console.log("result", result);
+			for (let key in result.fields) {
+				console.log(key, result.fields[key]);
+				$(`.${key}`).html(result.fields[key]);
+			}
 		}
 		fr.readAsText(file.item(0));
 
@@ -285,3 +302,11 @@ function fill_demo() {
 		$(this).trigger("input");
 	});
 }
+
+window.addEventListener('load', function () {
+	clearInterval(startup_interval);
+	set_startup_loader(1.1);
+	$('#main-frame').css({ opacity: 1 });
+	$('#startup-loader').addClass("startup-done");
+	console.log("%cStartup is done", "background: #D4EDDA; color: #155724; border: 1px solid #C3E6CB; border-radius: 4px; padding: .75rem 1.25rem; font-size: 150%;")
+});

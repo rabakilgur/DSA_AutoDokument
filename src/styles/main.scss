@@ -9,6 +9,7 @@ body {
 	height: 100%;
 }
 body {
+	background-color: #F0E9D7;
 	background-image: url("../assets/background_compressed.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -452,6 +453,52 @@ body {
 	opacity: 0;
 	&:not([style*="opacity: 1;"]) {
 		pointer-events: none;
+	}
+}
+
+/* ---------- Startup Loader: ---------- */
+$startup-loader-height: 50vh;
+#startup-loader {
+	position: absolute;
+	z-index: 10000;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #F0E9D7;
+	background-image: url("../assets/background_compressed.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	overflow: hidden;
+	>* {
+		bottom: calc(50% - #{$startup-loader-height / 2});
+	}
+	.startup-sword {
+		position: absolute;
+		left: 50%;
+		height: #{$startup-loader-height};
+		transform: translateX(-50%);
+		&.startup-sword-fr {
+			bottom: 0;
+		}
+	}
+	.startup-mask {
+		--app-loaded: 0.0;
+		position: absolute;
+		height: calc(var(--app-loaded) * 0.92 * #{$startup-loader-height} + 0.04 * #{$startup-loader-height});
+		width: 100%;
+		overflow: hidden;
+		transition: height 0.5s ease-out;
+	}
+	&.startup-done {
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.4s ease 0.5s;
+		>* {
+			bottom: -#{$startup-loader-height};
+			transition: bottom 0.6s cubic-bezier(.68,-0.6,.52,.79);
+		}
 	}
 }
 
