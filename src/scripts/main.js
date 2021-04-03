@@ -1,4 +1,4 @@
-const export_version = "0.3";
+const export_version = "1.0";
 
 function set_startup_loader(value) {
 	document.querySelector('#startup-loader .startup-mask')?.style.setProperty('--app-loaded', value);
@@ -189,7 +189,10 @@ $(document).ready(() => {
 	}
 
 	// Export:
-	$("#toolarea-export").append('<a type="button" id="export_btn">Export</a><br>');
+	$("#toolarea-export").append(`
+		<h4>Export</h4>
+		<p><a class="btn" id="export_btn">Export</a></p>
+	`);
 	$("#export_btn").on("click",function () {
 		// Set export version and date:
 		const export_time = new Date();
@@ -214,9 +217,10 @@ $(document).ready(() => {
 
 	// Import:
 	$("#toolarea-export").append(`
-		<input type="file" id="import_select_files" value="Import" accept="json" /><br>
-		<div id="import-info"></div>
-		<button type="button" class="d-none" id="import_btn">Import</button>
+		<h4 style="margin-top: 12px;">Import</h4>
+		<p><input class="btn" type="file" id="import_select_files" value="Import" accept="json" /></p>
+		<p id="import-info"></p>
+		<p><a class="btn d-none" id="import_btn">Import</a></p>
 	`);
 	let imported_json;
 	$("#import_select_files").on("change", function(e) {
