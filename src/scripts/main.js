@@ -186,6 +186,11 @@ $(document).ready(() => {
 	`);
 	$("#toggle_edit_all_mode").on("click",() => {
 		$('body').toggleClass("edit-all-mode");
+		if ($('#document-box').attr("contenteditable")) {
+			$('#document-box').removeAttr("contenteditable")
+		} else {
+			$('#document-box').attr("contenteditable", "true")
+		}
 	});
 
 	// --------------- IMPORTIEREN / EXPORTIEREN: ---------------

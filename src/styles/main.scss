@@ -302,7 +302,7 @@ $btn-border-radius: 3px;
 	position: relative;
 	left: 123.5px;
 }*/
-.doc-page div:not([class^="Edit-"]) {
+body:not(.edit-all-mode) .doc-page div:not([class^="Edit-"]) {
 	pointer-events: none;
 }
 
