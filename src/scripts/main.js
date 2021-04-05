@@ -1,4 +1,4 @@
-const export_version = "1.0";
+const export_version = "1.1";
 
 function set_startup_loader(value) {
 	document.querySelector('#startup-loader .startup-mask')?.style.setProperty('--app-loaded', value);
@@ -93,12 +93,47 @@ $(document).ready(() => {
 		const editclassname = [...this.classList].find(el => el.startsWith("Edit-"));
 		if ($(`.${editclassname}`).length > 1) {
 			$(this).on("focusout" ,() => {
-				$(`.${editclassname}`).text(this.textContent);
+				// $(`.${editclassname}`).text(this.textContent);
+				$(`.${editclassname}`).html($(this).html());
 			});
 		}
 	});
 
+	// Activate the zoom functionality for the buttons:
+	const ZOOM_LEVELS = {
+		"25":  0.278,
+		"50":  0.5,
+		"75":  0.73,
+		"100": 1,
+		"125": 1.225,
+		"150": 1.445,
+		"175": 1.67,
+		"200": 2,
+		"225": 2.225,
+		"250": 2.445,
+		"275": 2.67,
+		"300": 3,
+		"325": 3.225,
+		"350": 3.445,
+		"375": 3.67,
+		"400": 4
+	};
+	let zoom_cur = 150;
+	function change_zoom(zoom_new, $label) {
+		$label.text(zoom_new);
+		$(".doc-page").css({ zoom: ZOOM_LEVELS[String(zoom_new)] });
+		zoom_cur = zoom_new;
+	}
+	change_zoom(150, $('#btns-zoom > .btn-group-label'));  // set the initial zoom level
+	$('#btns-zoom > .btn-minus').on("click", function() {
+		change_zoom(Math.max(zoom_cur - 25, 25), $(this).next());
+	});
+	$('#btns-zoom > .btn-plus').on("click", function() {
+		change_zoom(Math.min(zoom_cur + 25, 400), $(this).prev());
+	});
+
 	// Scale the pages on resize:
+	/*
 	$(window).on("resize", () => {
 		const box_width = document.getElementById("document-box").offsetWidth;
 		const page_width = document.querySelector(".doc-page-rotated").offsetWidth;
@@ -109,6 +144,8 @@ $(document).ready(() => {
 			$(".doc-page").css({ zoom: 1 });
 		}
 	}).trigger("resize");
+	*/
+
 
 
 	// ============================== TOOLBAR: ==============================
@@ -226,7 +263,7 @@ $(document).ready(() => {
 
 		// Generate JSON:
 		$('div[class^="Edit-"]').each(function() {
-			hero_json["fields"][[...this.classList].find(el => el.startsWith("Edit-")).substr(5)] = $(this).text();
+			hero_json["fields"][[...this.classList].find(el => el.startsWith("Edit-")).substr(5)] = $(this).html();
 		});
 		let data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(hero_json));
 
@@ -251,7 +288,6 @@ $(document).ready(() => {
 		let fr = new FileReader();
 		fr.onload = (e) => {
 			const result = JSON.parse(fr.result);
-			console.log("result", result);
 			imported_json = result;
 			const $import_info = $('#import-info');
 			$import_info.empty();
@@ -273,7 +309,8 @@ $(document).ready(() => {
 				$(`.Edit-${key}`).html(imported_json.fields[key]).trigger("recalc");
 			}
 		} else {
-			console.log("select a file first");
+			console.log("Select a file first");
+			// ToDo: Show an error popup
 		}
 
 		// version check

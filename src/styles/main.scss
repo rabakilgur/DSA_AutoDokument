@@ -151,6 +151,74 @@ $btn-border-radius: 3px;
 		background: #a46100;
 	}
 }
+/* Button Groups: */
+.btn-group {
+	position: relative;
+	display: inline-flex;
+	margin: 0.15rem;
+	&::before {
+		position: absolute;
+		content: "";
+		box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+		border-radius: 4px;
+		left: -2px;
+		top: -2px;
+		right: -2px;
+		bottom: -2px;
+		background: #6e5542;
+		z-index: -1;
+	}
+	.btn {
+		margin: 0;
+		border-radius: 0;
+		border: none;
+		&:active {
+			box-shadow: 1px 1px 15px rgb(0 0 0 / 40%) inset;
+		}
+		&::before {
+			display: none;
+		}
+		&:not(:last-child) {
+			box-sizing: content-box;
+			border-right: 2px solid #6e5542;
+		}
+	}
+	.btn-group-label {
+		pointer-events: none;
+		user-select: none;
+	}
+	.btn-minus,
+	.btn-plus {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: "Arial";
+		font-weight: bold;
+		padding: 0;
+		height: 2.05em;
+		width: 2.05em;
+		svg {
+			height: 1em;
+		}
+	}
+}
+.btn-plus-minus-percent {
+	.btn-group-label {
+		width: 3.8em;
+		padding: 0.4rem 0;
+		&::after {
+			content: "%";
+		}
+	}
+}
+
+#btns-zoom {
+	position: fixed;
+	z-index: 11;
+	right: calc(20px + var(--toolbox-width));
+	bottom: 6px;
+	box-shadow: 3px 6px 17px -4px rgb(0 0 0 / 75%);
+}
 
 /* ---------- Main Frame: ---------- */
 #main-frame {
