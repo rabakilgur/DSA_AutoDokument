@@ -119,10 +119,12 @@ $(document).ready(() => {
 		"400": 4
 	};
 	let zoom_cur = 150;
-	function change_zoom(zoom_new, $label) {
-		$label.text(zoom_new);
-		$(".doc-page").css({ zoom: ZOOM_LEVELS[String(zoom_new)] });
-		zoom_cur = zoom_new;
+	function change_zoom(zoom_new, $label = $('#btns-zoom > .btn-group-label')) {
+		if (zoom_cur !== zoom_new) {
+			$label.text(zoom_new);
+			$(".doc-page").css({ zoom: ZOOM_LEVELS[String(zoom_new)] });
+			zoom_cur = zoom_new;
+		}
 	}
 	change_zoom(150, $('#btns-zoom > .btn-group-label'));  // set the initial zoom level
 	$('#btns-zoom > .btn-minus').on("click", function() {
@@ -133,20 +135,29 @@ $(document).ready(() => {
 	});
 
 	// Scale the pages on resize:
-	/*
-	$(window).on("resize", () => {
+	function zoom_fit_page() {
 		const box_width = document.getElementById("document-box").offsetWidth;
 		const page_width = document.querySelector(".doc-page-rotated").offsetWidth;
-		if ((box_width / page_width) < 1.05) {
-			const zoom_factor = Math.round((box_width / page_width) * 100 - 5) / 100;
-			$(".doc-page").css({ zoom: zoom_factor });
+		if ((box_width / page_width) < 1.55) {
+			try {
+				const closest = Object.keys(ZOOM_LEVELS)
+					.map((key) => [key, ZOOM_LEVELS[key] - (box_width / page_width)])
+					.filter((x) => x[1] <= 0 )
+					.map(([a, b]) => [a, -b])
+					.sort((a, b) => a[1] - b[1])
+					[0][0];
+				change_zoom(Number(closest));
+			} catch (e) {
+				console.error(e);
+			}
 		} else {
-			$(".doc-page").css({ zoom: 1 });
+			change_zoom(150);
 		}
-	}).trigger("resize");
-	*/
-
-
+	}
+	zoom_fit_page(); // Fit the page on startup
+	/*$(window).on("resize", () => {
+		zoom_fit_page();
+	});*/
 
 	// ============================== TOOLBAR: ==============================
 
