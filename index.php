@@ -160,14 +160,27 @@ usort($pages, "sort_pages");
 		</div>
 	</div>
 	<div id="document-box">
-		<div class="btn-group btn-plus-minus-percent" id="btns-zoom" data-step="0.3r" data-min="0.3" data-max="5">
-			<a class="btn btn-minus" href="#">
-				<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" ><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
-			</a>
-			<a class="btn btn-group-label" href="#">100</a>
-			<a class="btn btn-plus" href="#">
-				<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+	<div id="btns-zoom">
+			<div class="btn-group btn-radio-group" data-optgroup="zoom">
+				<a class="btn btn-icon btn-icon-big btn-active" href="#" data-optname="fitLandscape">
+					<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M352,200V64H24C10.7,64,0,74.7,0,88v336c0,13.3,10.7,24,24,24h464c13.3,0,24-10.7,24-24V224H376 C362.8,224,352,213.2,352,200z M112,316c0-6.6,5.4-12,12-12h168c6.6,0,12,5.4,12,12v8c0,6.6-5.4,12-12,12H124c-6.6,0-12-5.4-12-12 V316z M112,252c0-6.6,5.4-12,12-12h168c6.6,0,12,5.4,12,12v8c0,6.6-5.4,12-12,12H124c-6.6,0-12-5.4-12-12V252z M124,176h168 c6.6,0,12,5.4,12,12v8c0,6.6-5.4,12-12,12H124c-6.6,0-12-5.4-12-12v-8C112,181.4,117.4,176,124,176z M407,71l98,97.9 c4.5,4.5,7,10.6,7,17v6.1H384V64h6.1C396.4,64,402.5,66.5,407,71z"/></svg>
 				</a>
+				<a class="btn btn-icon btn-icon-big" href="#" data-optname="fitPortrait">
+					<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>
+				</a>
+				<a class="btn btn-icon btn-icon-big" href="#" data-optname="free">
+					<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 256H152V152.9c0-39.6 31.7-72.5 71.3-72.9 40-.4 72.7 32.1 72.7 72v16c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24v-16C376 68 307.5-.3 223.5 0 139.5.3 72 69.5 72 153.5V256H48c-26.5 0-48 21.5-48 48v160c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zM264 408c0 22.1-17.9 40-40 40s-40-17.9-40-40v-48c0-22.1 17.9-40 40-40s40 17.9 40 40v48z"></path></svg>
+				</a>
+			</div>
+			<div class="btn-group btn-plus-minus-percent" data-step="0.3r" data-min="0.3" data-max="5">
+				<a class="btn btn-minus" href="#">
+					<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" ><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+				</a>
+				<a class="btn btn-group-label" href="#">100</a>
+				<a class="btn btn-plus" href="#">
+					<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+				</a>
+			</div>
 		</div>
 		<?php
 		$page_counter = 1;

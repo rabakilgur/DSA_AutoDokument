@@ -119,25 +119,40 @@ $(document).ready(() => {
 		"400": 4
 	};
 	let zoom_cur = 150;
-	function change_zoom(zoom_new, $label = $('#btns-zoom > .btn-group-label')) {
+	async function change_zoom(zoom_new, $label = $('#btns-zoom .btn-group-label')) {
 		if (zoom_cur !== zoom_new) {
 			$label.text(zoom_new);
 			$(".doc-page").css({ zoom: ZOOM_LEVELS[String(zoom_new)] });
 			zoom_cur = zoom_new;
 		}
 	}
-	change_zoom(150, $('#btns-zoom > .btn-group-label'));  // set the initial zoom level
-	$('#btns-zoom > .btn-minus').on("click", function() {
-		change_zoom(Math.max(zoom_cur - 25, 25), $(this).next());
+	change_zoom(150, $('#btns-zoom .btn-group-label'));  // set the initial zoom level
+
+	$('.btn-radio-group > .btn').on("click", function() {
+		$(this).addClass("btn-active").siblings().removeClass("btn-active");
+		$(document.body)
+				.removeClass((index, className) => (className.match(RegExp(String.raw`(^|\s)rg-${$(this).parent().attr("data-optgroup")}-\S+`, 'g')) || []).join(' '))
+				.addClass(`rg-${$(this).parent().attr("data-optgroup")}-${$(this).attr("data-optname")}`);
+		if ($(this).attr("data-optname") !== "free") $(window).trigger("resize");
 	});
-	$('#btns-zoom > .btn-plus').on("click", function() {
+	$('.btn-radio-group > .btn-active').trigger("click");
+
+	$('#btns-zoom .btn-minus').on("click", function() {
+		change_zoom(Math.max(zoom_cur - 25, 25), $(this).next());
+		if (!$(document.body).hasClass("rg-zoom-free")) $('.btn[data-optname="free"]').click();
+	});
+	$('#btns-zoom .btn-plus').on("click", function() {
 		change_zoom(Math.min(zoom_cur + 25, 400), $(this).prev());
+		if (!$(document.body).hasClass("rg-zoom-free")) $('.btn[data-optname="free"]').click();
 	});
 
+
 	// Scale the pages on resize:
-	function zoom_fit_page() {
+	async function zoom_fit_page(mode = "landscape") {
 		const box_width = document.getElementById("document-box").offsetWidth;
-		const page_width = document.querySelector(".doc-page-rotated").offsetWidth;
+		const page_width = (mode === "landscape") ?
+				document.querySelector(".doc-page-rotated").offsetWidth :
+				document.querySelector(".doc-page").offsetWidth;
 		if ((box_width / page_width) < 1.55) {
 			try {
 				const closest = Object.keys(ZOOM_LEVELS)
@@ -155,9 +170,10 @@ $(document).ready(() => {
 		}
 	}
 	zoom_fit_page(); // Fit the page on startup
-	/*$(window).on("resize", () => {
-		zoom_fit_page();
-	});*/
+	$(window).on("resize", () => {
+		if ($(document.body).hasClass("rg-zoom-fitLandscape")) zoom_fit_page();
+		else if ($(document.body).hasClass("rg-zoom-fitPortrait")) zoom_fit_page("portrait");
+	});
 
 	// ============================== TOOLBAR: ==============================
 
