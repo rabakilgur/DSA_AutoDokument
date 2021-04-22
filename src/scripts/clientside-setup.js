@@ -12,7 +12,7 @@ $(document).ready(() => {
 	let page_selection_html = "";
 	let toolarea_pages = "";
 	for (let i = 1; i <= PAGES; i++) {
-		thumnails_html += `<a id='thumbnail-${i}' onclick="scroll_to_page('#Heldendokument-${i}')"></a>`;
+		thumnails_html += `<a id='thumbnail-${i}' onclick="scroll_to_page('#doc-wrapper-${i}')"></a>`;
 		pages_html += `
 			<div id="doc-wrapper-${i}">
 				<section id="Heldendokument-${i}" class="doc-page" style="width:595px;height:842px">

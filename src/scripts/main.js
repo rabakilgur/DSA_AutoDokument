@@ -378,7 +378,7 @@ async function create_thumbnail(pages) {
 async function scroll_to_page(id) {
 	$("#document-box").animate({
 		scrollTop: $("#document-box").scrollTop() + $(id).offset().top - 8
-	}, 600);
+	}, 600, "easeOutQuint");
 }
 
 function fill_demo() {
