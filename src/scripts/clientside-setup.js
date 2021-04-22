@@ -16,7 +16,7 @@ $(document).ready(() => {
 		pages_html += `
 			<div id="doc-wrapper-${i}">
 				<section id="Heldendokument-${i}" class="doc-page" style="width:595px;height:842px">
-					<div id="doc-page-wrapper-${i}" class="doc-page-wrapper" data-include="Heldendokument-${i}.xhtml"></div>
+					<div id="doc-page-wrapper-${i}" class="doc-page-wrapper" data-include-page="Heldendokument-${i}.xhtml"></div>
 				</section>
 			</div>
 		`;
@@ -29,9 +29,8 @@ $(document).ready(() => {
 	$("#toolarea-pageSettings").append(toolarea_pages);
 
 	// Get the page contents and put them into the page-containers:
-	let includes = $('[data-include]')
-	$.each(includes, function () {
-		let file = '/' + $(this).data('include');
+	$.each($('[data-include-page]'), function () {
+		let file = '/' + $(this).data('include-page');
 		$.ajax({
 			url: file,
 			type: "get",
@@ -40,6 +39,17 @@ $(document).ready(() => {
 				let $parsed_html = $.parseHTML(html);
 				$(this).html($($parsed_html).filter('div[id^="_idContainer"]'));
 				$(document).trigger("page_loaded");
+			}
+		});
+	});
+	$.each($('[data-include]'), function () {
+		let file = '/' + $(this).data('include');
+		$.ajax({
+			url: file,
+			type: "get",
+			async: false,
+			success: (html) => {
+				$(this).html(html);
 			}
 		});
 	});

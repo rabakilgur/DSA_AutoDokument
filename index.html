@@ -50,6 +50,8 @@
 		</div>
 	</div>
 	<div id="document-box">
+		<div id="toggle-thumbnails" class="toggle-left"></div>
+		<div id="toggle-tools" class="toggle-right"></div>
 		<div id="btns-zoom">
 			<div class="btn-group btn-radio-group" data-optgroup="zoom">
 				<a class="btn btn-icon btn-icon-big btn-active" href="#" data-optname="fitLandscape">
@@ -334,9 +336,15 @@
 		<div id="toolarea-box">
 			<div class="toolarea" id="toolarea-documentSettings">
 				<h3>Dokumenten-Einstellungen</h3>
+				<div data-include="src/toolareas/_documentSettings.html">
+					<!-- insert: toolarea for document settings -->
+				</div>
 			</div>
 			<div class="toolarea" id="toolarea-pageSettings">
 				<h3>Seiten Einstellungen</h3>
+				<div data-include="src/toolareas/_pageSettings.html">
+					<!-- insert: toolarea for page settings -->
+				</div>
 				<div id="toolarea-pageSelection" class="select-dropdown">
 					<select>
 						<!-- insert: options for every page -->
@@ -346,15 +354,27 @@
 			</div>
 			<div class="toolarea" id="toolarea-edit">
 				<h3>Bearbeiten</h3>
+				<div data-include="src/toolareas/_edit.html">
+					<!-- insert: toolarea for edit settings -->
+				</div>
 			</div>
 			<div class="toolarea" id="toolarea-export">
 				<h3>Importieren / Exportieren</h3>
+				<div data-include="src/toolareas/_export.html">
+					<!-- insert: toolarea for export settings -->
+				</div>
 			</div>
 			<div class="toolarea" id="toolarea-generalSettings">
 				<h3>Generelle Einstellungen</h3>
+				<div data-include="src/toolareas/_generalSettings.html">
+					<!-- insert: toolarea for general settings -->
+				</div>
 			</div>
 			<div class="toolarea" id="toolarea-experimentalSettings">
 				<h3>Experimentelle Einstellungen</h3>
+				<div data-include="src/toolareas/_experimentalSettings.html">
+					<!-- insert: toolarea for experimental settings -->
+				</div>
 			</div>
 		</div>
 	</div>

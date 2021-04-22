@@ -187,7 +187,6 @@ $(document).on("all_pages_loaded", () => {
 	// ============================== TOOLBAR: ==============================
 
 	// Add functionality to the toggle/hide buttons:
-	$('#document-box').prepend('<div id="toggle-thumbnails" class="toggle-left"></div><div id="toggle-tools" class="toggle-right"></div>');
 	$('#toggle-thumbnails').on("click", function() {
 		$(this).toggleClass("toggle-right").toggleClass("toggle-left");
 		$('#main-frame').toggleClass("no-thumbnails");
@@ -228,11 +227,6 @@ $(document).on("all_pages_loaded", () => {
 	// --------------- DOKUMENTEN-EINSTELLUNGEN: ---------------
 
 	// Toggle mason mode:
-	$("#toolarea-documentSettings").append(`
-		<h4>Textfeld-Font ändern</h4>
-		<p><a class="btn" id="toggle_font_mode_mason">Mason-Font umschalten</a></p>
-		<p><i>Hiermit kann der Font der in den Textfeldern (den im Bearbeitsmodus farblich hervorgehobenen Feldern) auf dem Dokument benutzt wird, zu "Mason" geändert werden. Mason ist auch der Font, welcher für die Überschriften benutzt wird.</i></p>
-	`);
 	$("#toggle_font_mode_mason").on("click",() => {
 		$('body').toggleClass("font-mode-mason");
 	});
@@ -250,21 +244,11 @@ $(document).on("all_pages_loaded", () => {
 	// --------------- BEARBEITEN: ---------------
 
 	// Toggle edit mode:
-	$("#toolarea-edit").append(`
-		<h4>Bearbeitungsmodus</h4>
-		<p><a class="btn" id="toggle_edit_mode">Bearbeitungsmodus umschalten</a></p>
-		<p><i>Dieser Modus hebt alle ausfüllbaren Felder farblich hervor und macht sie bearbeitbar. Außerdem werden alle Felder, dessen Inhalt sich automatisch anhand von anderen Felder berechnet, ebenfalls farblich hervorgehoben.</i></p>
-	`);
 	$("#toggle_edit_mode").on("click",() => {
 		$('body').toggleClass("edit-mode");
 	});
 
 	// Toggle edit-all mode:
-	$("#toolarea-edit").append(`
-		<br>
-		<p><a class="btn" id="toggle_edit_all_mode">Super-Bearbeitungsmodus umschalten</a></p>
-		<p><i>Der Super-Bearbeitungsmodus macht JEDEN Text auf dem Dokument bearbeitbar.<br><b>Vorsicht:</b> Änderungen außerhalb von den farbigen Textfeldern werden nicht abgespeichert/exportiert.</i></p>
-	`);
 	$("#toggle_edit_all_mode").on("click",() => {
 		$('body').toggleClass("edit-all-mode");
 		if ($('#document-box').attr("contenteditable")) {
@@ -283,10 +267,6 @@ $(document).on("all_pages_loaded", () => {
 	}
 
 	// Export:
-	$("#toolarea-export").append(`
-		<h4>Export</h4>
-		<p><a class="btn" id="export_btn">Export</a></p>
-	`);
 	$("#export_btn").on("click",function () {
 		// Set export version and date:
 		const export_time = new Date();
@@ -310,13 +290,6 @@ $(document).on("all_pages_loaded", () => {
 	});
 
 	// Import:
-	$("#toolarea-export").append(`
-		<hr />
-		<h4>Import</h4>
-		<p><input class="btn" type="file" id="import_select_files" value="Import" accept="json" /></p>
-		<p id="import-info"></p>
-		<p><a class="btn d-none" id="import_btn">Import</a></p>
-	`);
 	let imported_json;
 	$("#import_select_files").on("change", function(e) {
 		if (this.files.length <= 0) return false;
@@ -363,21 +336,10 @@ $(document).on("all_pages_loaded", () => {
 	// --------------- EXPERIMENTELLE EINSTELLUNGEN: ---------------
 
 	// Toggle dark mode:
-	$("#toolarea-experimentalSettings").append(`
-		<h4>Dark Mode</h4>
-		<p><a class="btn" id="toggle_dark_mode">Dark Mode umschalten</a></p>
-		<p><i>Der Dark Mode ist noch ziemlich simpel und nicht ausgereift. Außerdem wird er aktuell noch nicht abgespeichert.</i></p>
-	`);
 	$("#toggle_dark_mode").on("click",() => {
 		$('body').toggleClass("dark-mode");
 	});
 	// Create thumbnail images:
-	$("#toolarea-experimentalSettings").append(`
-		<hr />
-		<h4>Seiten-Thumbnails erstellen</h4>
-		<p><a class="btn" id="create_thumbnails">Thumbnail erstellen</a></p>
-		<p><i>Diese Funktion ist aktuell ausgelagert, da sie sehr lange dauert und so extrem viel Leistung zieht, dass sie die gesamte Seite praktisch unbenutzbar macht.</i></p>
-	`);
 	$("#create_thumbnails").on("click",() => {
 		create_all_thumbnails()
 	});
@@ -394,10 +356,10 @@ async function create_all_thumbnails() {
 }
 
 function create_progress_bar(steps = 100, enable_edit = false) {
-
+	// ToDo: show a progress bar
 }
 function increase_progress_bar(steps = 1) {
-
+	// ToDo increment the progress bar
 }
 
 async function create_thumbnail(pages) {
