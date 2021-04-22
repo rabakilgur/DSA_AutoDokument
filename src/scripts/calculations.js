@@ -35,7 +35,7 @@ function calc_dependency(target_name, calc_string) {
 	*/
 }
 
-$(document).ready(() => {
+$(document).on("all_pages_loaded", () => {
 	/***********************************/
 	/**********  BASIS-WERTE  **********/
 	/***********************************/

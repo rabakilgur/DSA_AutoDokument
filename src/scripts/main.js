@@ -13,10 +13,15 @@ let startup_interval;
 
 
 $(document).ready(() => {
-	$('body').addClass("edit-mode");
-
+	// Fake loading progress:
 	setTimeout(() => inc_startup_loader(), 100);
 	startup_interval = setInterval(() => inc_startup_loader(), 800);
+
+	// Start in edit-mode:
+	$('body').addClass("edit-mode");
+});
+
+$(document).on("all_pages_loaded", () => {
 
 	/*$(".doc-page").each((index, page) => {
 		console.log("creating thumbnail");
@@ -41,139 +46,143 @@ $(document).ready(() => {
 
 	// ============================== ALGEMEINES SETUP: ==============================
 
-	// Toolbar:
-	const tooltip_textbox = document.getElementById("toolbar-highlight-text");
-	$(".toolbar-item").on("mouseover", event => {
-		const old_text = tooltip_textbox.textContent;
-		const new_text = event.target.getAttribute("data-tool");
-		tooltip_textbox.textContent = new_text;
-		document.getElementById("toolbar-highlight").style.width = (tooltip_textbox.offsetWidth + 1) + "px";
-		tooltip_textbox.textContent = old_text;
-		setTimeout(() => {
+	try {
+		// Toolbar:
+		const tooltip_textbox = document.getElementById("toolbar-highlight-text");
+		$(".toolbar-item").on("mouseover", event => {
+			const old_text = tooltip_textbox.textContent;
+			const new_text = event.target.getAttribute("data-tool");
 			tooltip_textbox.textContent = new_text;
-		}, 150);
-		$(tooltip_textbox).finish().animate({ color: "transparent" }, 150).animate({ color: "black" }, 200);
-	});
-	$("#toolbar").on("mouseleave", () => {
-		tooltip_textbox.textContent = document.querySelector(".toolbar-active").getAttribute("data-tool");
-		document.getElementById("toolbar-highlight").style.width = (tooltip_textbox.offsetWidth + 1) + "px";
-	});
-	$(".toolbar-item").on("click", event => {
-		$(".toolbar-active").removeClass("toolbar-active");
-		event.target.classList.add("toolbar-active");
-		const animation_time = 300;
-		$('.toolarea').finish().animate({ opacity: 0 }, animation_time);
-		$("#toolarea-" + event.target.getAttribute("data-tool-short")).finish().delay(animation_time).animate({ opacity: 1 }, animation_time);
-	});
+			document.getElementById("toolbar-highlight").style.width = (tooltip_textbox.offsetWidth + 1) + "px";
+			tooltip_textbox.textContent = old_text;
+			setTimeout(() => {
+				tooltip_textbox.textContent = new_text;
+			}, 150);
+			$(tooltip_textbox).finish().animate({ color: "transparent" }, 150).animate({ color: "black" }, 200);
+		});
+		$("#toolbar").on("mouseleave", () => {
+			tooltip_textbox.textContent = document.querySelector(".toolbar-active").getAttribute("data-tool");
+			document.getElementById("toolbar-highlight").style.width = (tooltip_textbox.offsetWidth + 1) + "px";
+		});
+		$(".toolbar-item").on("click", event => {
+			$(".toolbar-active").removeClass("toolbar-active");
+			event.target.classList.add("toolbar-active");
+			const animation_time = 300;
+			$('.toolarea').finish().animate({ opacity: 0 }, animation_time);
+			$("#toolarea-" + event.target.getAttribute("data-tool-short")).finish().delay(animation_time).animate({ opacity: 1 }, animation_time);
+		});
 
-	// Show/Change the page-settings:
-	let current_page_nbr = 1;
-	$("#toolarea-pageSelection > select").on('selectmenuchange change', async (event) => {
-		const page_nbr = Number(event.target.value);
-		change_page_settings(page_nbr);
-	});
-	async function change_page_settings(page_nbr) {
-		const animation_time = 300;
-		const default_top = 100;
-		let animation_travel = 25;
-		if (current_page_nbr > page_nbr) animation_travel = 0 - animation_travel;
-		$("#toolarea-page_" + current_page_nbr)
-				.finish()
-				.animate({ opacity: 0, top: default_top - animation_travel }, animation_time)
-		$("#toolarea-page_" + page_nbr)
-				.finish()
-				.css({ top: default_top + animation_travel })
-				.delay(0.67 * animation_time)
-				.animate({ opacity: 1, top: default_top }, animation_time);
-		current_page_nbr = page_nbr;
-	}
-
-	// Edit all equivalent edit-fields together on focus loss:
-	$('div[class^="Edit-"]').each(function() {
-		const editclassname = [...this.classList].find(el => el.startsWith("Edit-"));
-		if ($(`.${editclassname}`).length > 1) {
-			$(this).on("focusout" ,() => {
-				// $(`.${editclassname}`).text(this.textContent);
-				$(`.${editclassname}`).html($(this).html());
-			});
+		// Show/Change the page-settings:
+		let current_page_nbr = 1;
+		$("#toolarea-pageSelection > select").on('selectmenuchange change', async (event) => {
+			const page_nbr = Number(event.target.value);
+			change_page_settings(page_nbr);
+		});
+		async function change_page_settings(page_nbr) {
+			const animation_time = 300;
+			const default_top = 100;
+			let animation_travel = 25;
+			if (current_page_nbr > page_nbr) animation_travel = 0 - animation_travel;
+			$("#toolarea-page_" + current_page_nbr)
+					.finish()
+					.animate({ opacity: 0, top: default_top - animation_travel }, animation_time)
+			$("#toolarea-page_" + page_nbr)
+					.finish()
+					.css({ top: default_top + animation_travel })
+					.delay(0.67 * animation_time)
+					.animate({ opacity: 1, top: default_top }, animation_time);
+			current_page_nbr = page_nbr;
 		}
-	});
 
-	// Activate the zoom functionality for the buttons:
-	const ZOOM_LEVELS = {
-		"25":  0.278,
-		"50":  0.5,
-		"75":  0.73,
-		"100": 1,
-		"125": 1.225,
-		"150": 1.445,
-		"175": 1.67,
-		"200": 2,
-		"225": 2.225,
-		"250": 2.445,
-		"275": 2.67,
-		"300": 3,
-		"325": 3.225,
-		"350": 3.445,
-		"375": 3.67,
-		"400": 4
-	};
-	let zoom_cur = 150;
-	async function change_zoom(zoom_new, $label = $('#btns-zoom .btn-group-label')) {
-		if (zoom_cur !== zoom_new) {
-			$label.text(zoom_new);
-			$(".doc-page").css({ zoom: ZOOM_LEVELS[String(zoom_new)] });
-			zoom_cur = zoom_new;
-		}
-	}
-	change_zoom(150, $('#btns-zoom .btn-group-label'));  // set the initial zoom level
-
-	$('.btn-radio-group > .btn').on("click", function() {
-		$(this).addClass("btn-active").siblings().removeClass("btn-active");
-		$(document.body)
-				.removeClass((index, className) => (className.match(RegExp(String.raw`(^|\s)rg-${$(this).parent().attr("data-optgroup")}-\S+`, 'g')) || []).join(' '))
-				.addClass(`rg-${$(this).parent().attr("data-optgroup")}-${$(this).attr("data-optname")}`);
-		if ($(this).attr("data-optname") !== "free") $(window).trigger("resize");
-	});
-	$('.btn-radio-group > .btn-active').trigger("click");
-
-	$('#btns-zoom .btn-minus').on("click", function() {
-		change_zoom(Math.max(zoom_cur - 25, 25), $(this).next());
-		if (!$(document.body).hasClass("rg-zoom-free")) $('.btn[data-optname="free"]').click();
-	});
-	$('#btns-zoom .btn-plus').on("click", function() {
-		change_zoom(Math.min(zoom_cur + 25, 400), $(this).prev());
-		if (!$(document.body).hasClass("rg-zoom-free")) $('.btn[data-optname="free"]').click();
-	});
-
-
-	// Scale the pages on resize:
-	async function zoom_fit_page(mode = "landscape") {
-		const box_width = document.getElementById("document-box").offsetWidth;
-		const page_width = (mode === "landscape") ?
-				document.querySelector(".doc-page-rotated").offsetWidth :
-				document.querySelector(".doc-page").offsetWidth;
-		if ((box_width / page_width) < 1.55) {
-			try {
-				const closest = Object.keys(ZOOM_LEVELS)
-					.map((key) => [key, ZOOM_LEVELS[key] - (box_width / page_width)])
-					.filter((x) => x[1] <= 0 )
-					.map(([a, b]) => [a, -b])
-					.sort((a, b) => a[1] - b[1])
-					[0][0];
-				change_zoom(Number(closest));
-			} catch (e) {
-				console.error(e);
+		// Edit all equivalent edit-fields together on focus loss:
+		$('div[class^="Edit-"]').each(function() {
+			const editclassname = [...this.classList].find(el => el.startsWith("Edit-"));
+			if ($(`.${editclassname}`).length > 1) {
+				$(this).on("focusout" ,() => {
+					// $(`.${editclassname}`).text(this.textContent);
+					$(`.${editclassname}`).html($(this).html());
+				});
 			}
-		} else {
-			change_zoom(150);
+		});
+
+		// Activate the zoom functionality for the buttons:
+		const ZOOM_LEVELS = {
+			"25":  0.278,
+			"50":  0.5,
+			"75":  0.73,
+			"100": 1,
+			"125": 1.225,
+			"150": 1.445,
+			"175": 1.67,
+			"200": 2,
+			"225": 2.225,
+			"250": 2.445,
+			"275": 2.67,
+			"300": 3,
+			"325": 3.225,
+			"350": 3.445,
+			"375": 3.67,
+			"400": 4
+		};
+		let zoom_cur = 150;
+		async function change_zoom(zoom_new, $label = $('#btns-zoom .btn-group-label')) {
+			if (zoom_cur !== zoom_new) {
+				$label.text(zoom_new);
+				$(".doc-page").css({ zoom: ZOOM_LEVELS[String(zoom_new)] });
+				zoom_cur = zoom_new;
+			}
 		}
+		change_zoom(150, $('#btns-zoom .btn-group-label'));  // set the initial zoom level
+
+		$('.btn-radio-group > .btn').on("click", function() {
+			$(this).addClass("btn-active").siblings().removeClass("btn-active");
+			$(document.body)
+					.removeClass((index, className) => (className.match(RegExp(String.raw`(^|\s)rg-${$(this).parent().attr("data-optgroup")}-\S+`, 'g')) || []).join(' '))
+					.addClass(`rg-${$(this).parent().attr("data-optgroup")}-${$(this).attr("data-optname")}`);
+			if ($(this).attr("data-optname") !== "free") $(window).trigger("resize");
+		});
+		$('.btn-radio-group > .btn-active').trigger("click");
+
+		$('#btns-zoom .btn-minus').on("click", function() {
+			change_zoom(Math.max(zoom_cur - 25, 25), $(this).next());
+			if (!$(document.body).hasClass("rg-zoom-free")) $('.btn[data-optname="free"]').click();
+		});
+		$('#btns-zoom .btn-plus').on("click", function() {
+			change_zoom(Math.min(zoom_cur + 25, 400), $(this).prev());
+			if (!$(document.body).hasClass("rg-zoom-free")) $('.btn[data-optname="free"]').click();
+		});
+
+
+		// Scale the pages on resize:
+		async function zoom_fit_page(mode = "landscape") {
+			const box_width = document.getElementById("document-box").offsetWidth;
+			const page_width = (mode === "landscape") ?
+					document.querySelector(".doc-page-rotated").offsetWidth :
+					document.querySelector(".doc-page").offsetWidth;
+			if ((box_width / page_width) < 1.55) {
+				try {
+					const closest = Object.keys(ZOOM_LEVELS)
+						.map((key) => [key, ZOOM_LEVELS[key] - (box_width / page_width)])
+						.filter((x) => x[1] <= 0 )
+						.map(([a, b]) => [a, -b])
+						.sort((a, b) => a[1] - b[1])
+						[0][0];
+					change_zoom(Number(closest));
+				} catch (e) {
+					console.error(e);
+				}
+			} else {
+				change_zoom(150);
+			}
+		}
+		zoom_fit_page(); // Fit the page on startup
+		$(window).on("resize", () => {
+			if ($(document.body).hasClass("rg-zoom-fitLandscape")) zoom_fit_page();
+			else if ($(document.body).hasClass("rg-zoom-fitPortrait")) zoom_fit_page("portrait");
+		});
+	} catch (err) {
+		console.log(err);
 	}
-	zoom_fit_page(); // Fit the page on startup
-	$(window).on("resize", () => {
-		if ($(document.body).hasClass("rg-zoom-fitLandscape")) zoom_fit_page();
-		else if ($(document.body).hasClass("rg-zoom-fitPortrait")) zoom_fit_page("portrait");
-	});
 
 	// ============================== TOOLBAR: ==============================
 

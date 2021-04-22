@@ -446,7 +446,7 @@ $btn-border-radius: 3px;
 #document-box {
 	position: relative;
 	grid-column: 2 / 2;
-	padding: 12px 0;
+	padding: 12px 0 50px 0;
 	>div {
 		text-align: center;
 		&:not(:last-child) {

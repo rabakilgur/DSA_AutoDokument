@@ -3,21 +3,65 @@
 *  the other functions.
 */
 
+let pages_laoded = 0;
+
 $(document).ready(() => {
-	$("#document-box > div > section").each((index, section) => {
-		// Rotate the landscape pages:
-		if (!$(section).children("div:first-child").css("transform").startsWith("matrix(1,")) {
-			const width = $(section).width();
-			$(section).width($(section).height());
-			$(section).height(width);
-			section.classList.add("doc-page-rotated");
+	// Create the thumbnails and the page-containers and insert them into the document:
+	let thumnails_html = "";
+	let pages_html = "";
+	let page_selection_html = "";
+	let toolarea_pages = "";
+	for (let i = 1; i <= PAGES; i++) {
+		thumnails_html += `<a id='thumbnail-${i}' onclick="scroll_to_page('#Heldendokument-${i}')"></a>`;
+		pages_html += `
+			<div id="doc-wrapper-${i}">
+				<section id="Heldendokument-${i}" class="doc-page" style="width:595px;height:842px">
+					<div id="doc-page-wrapper-${i}" class="doc-page-wrapper" data-include="Heldendokument-${i}.xhtml"></div>
+				</section>
+			</div>
+		`;
+		page_selection_html += `<option value='${i}'>Seite ${i}</option>`;
+		toolarea_pages += `<div class='toolarea-page' id='toolarea-page_${i}'></div>`;
+	}
+	$("#thumbnail-innerbox").append(thumnails_html);
+	$("#document-box").append(pages_html);
+	$("#toolarea-pageSelection select").append(page_selection_html);
+	$("#toolarea-pageSettings").append(toolarea_pages);
+
+	// Get the page contents and put them into the page-containers:
+	let includes = $('[data-include]')
+	$.each(includes, function () {
+		let file = '/' + $(this).data('include');
+		$.ajax({
+			url: file,
+			type: "get",
+			async: false,
+			success: (html) => {
+				let $parsed_html = $.parseHTML(html);
+				$(this).html($($parsed_html).filter('div[id^="_idContainer"]'));
+				$(document).trigger("page_loaded");
+			}
+		});
+	});
+});
+
+$(document).on("page_loaded", () => {
+	pages_laoded++;
+	if (pages_laoded >= PAGES) $(document).trigger("all_pages_loaded");
+});
+
+$(document).on("all_pages_loaded", () => {
+	// Rotate the landscape pages:
+	$("#document-box > div > section > .doc-page-wrapper").each((index, wrapper) => {
+		$section = $(wrapper).parent();
+		if (!$(wrapper).children("div:first-child").css("transform").startsWith("matrix(1,")) {
+			const width = $section.width();
+			$section.width($section.height());
+			$section.height(width);
+			$section[0].classList.add("doc-page-rotated");
+			// Also rotate the thumbnail:
 			document.getElementById("thumbnail-" + (index + 1)).classList.add("thumbnail-rotated");
 		}
-		// Add everything from the sections to another div:
-		$(section)
-			.append(`<div id="doc-page-wrapper-${index + 1}" class="doc-page-wrapper"></div>`)
-			.children(":not(.doc-page-wrapper)")
-			.appendTo(`#doc-page-wrapper-${index + 1}`);
 	});
 
 	// Make the text boxes editable:
