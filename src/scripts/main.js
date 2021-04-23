@@ -267,7 +267,8 @@ $(document).on("all_pages_loaded", () => {
 	}
 
 	// Export:
-	$("#export_btn").on("click",function () {
+	$("#export_btn").on("click", function () {
+		console.log("starting export...");
 		// Set export version and date:
 		const export_time = new Date();
 		let hero_json = {

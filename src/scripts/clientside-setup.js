@@ -28,6 +28,18 @@ $(document).ready(() => {
 	$("#toolarea-pageSelection select").append(page_selection_html);
 	$("#toolarea-pageSettings").append(toolarea_pages);
 
+	// Get the (regular) included file contents and put them into their containers:
+	$.each($('[data-include]'), function () {
+		let file = '/' + $(this).data('include');
+		$.ajax({
+			url: file,
+			type: "get",
+			async: false,
+			success: (html) => {
+				$(this).html(html);
+			}
+		});
+	});
 	// Get the page contents and put them into the page-containers:
 	$.each($('[data-include-page]'), function () {
 		let file = '/' + $(this).data('include-page');
@@ -39,18 +51,6 @@ $(document).ready(() => {
 				let $parsed_html = $.parseHTML(html);
 				$(this).html($($parsed_html).filter('div[id^="_idContainer"]'));
 				$(document).trigger("page_loaded");
-			}
-		});
-	});
-	// Get the other included file contents and put them into their containers:
-	$.each($('[data-include]'), function () {
-		let file = '/' + $(this).data('include');
-		$.ajax({
-			url: file,
-			type: "get",
-			async: false,
-			success: (html) => {
-				$(this).html(html);
 			}
 		});
 	});
