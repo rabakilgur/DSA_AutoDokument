@@ -1,4 +1,4 @@
-const export_version = "1.1";
+const export_version = "1.2";
 
 function set_startup_loader(value) {
 	document.querySelector('#startup-loader .startup-mask')?.style.setProperty('--app-loaded', value);
@@ -268,19 +268,22 @@ $(document).on("all_pages_loaded", () => {
 
 	// Export:
 	$("#export_btn").on("click", function () {
-		console.log("starting export...");
 		// Set export version and date:
 		const export_time = new Date();
 		let hero_json = {
 			"export_version": export_version,
 			"export_time": export_time,
 			"hero_name": $(".Edit-Name")[0].textContent,
-			"fields": {}
+			"fields": {},
+			"msos": {}
 		};
 
 		// Generate JSON:
 		$('div[class^="Edit-"]').each(function() {
 			hero_json["fields"][[...this.classList].find(el => el.startsWith("Edit-")).substr(5)] = $(this).html();
+		});
+		$(".toolarea-mso select").each(function () {
+			hero_json["msos"][$(this).attr("id").substr(6)] = this.selectedIndex;
 		});
 		let data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(hero_json));
 
@@ -315,8 +318,13 @@ $(document).on("all_pages_loaded", () => {
 	});
 	$("#import_btn").on("click", () => {
 		if (imported_json) {
-			for (let key in imported_json.fields) {
-				$(`.Edit-${key}`).html(imported_json.fields[key]).trigger("recalc");
+			for (let field in imported_json.fields) {
+				$(`.Edit-${field}`).html(imported_json.fields[field]).trigger("recalc");
+			}
+			for (let mso in imported_json.msos) {
+				let $menu = $(`#ui-id-${mso}`);
+				$menu[0].selectedIndex = imported_json.msos[mso];
+				$menu.selectmenu("refresh").trigger("change");
 			}
 		} else {
 			console.log("Select a file first");
