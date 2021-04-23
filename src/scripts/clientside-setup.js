@@ -42,6 +42,7 @@ $(document).ready(() => {
 			}
 		});
 	});
+	// Get the other included file contents and put them into their containers:
 	$.each($('[data-include]'), function () {
 		let file = '/' + $(this).data('include');
 		$.ajax({
@@ -53,6 +54,12 @@ $(document).ready(() => {
 			}
 		});
 	});
+
+	// Preload the red arrows by simulating a hover:
+	$('#toggle-tools').addClass("hover");
+	setTimeout(() => {
+		$('#toggle-tools').removeClass("hover");
+	}, 100);
 });
 
 $(document).on("page_loaded", () => {

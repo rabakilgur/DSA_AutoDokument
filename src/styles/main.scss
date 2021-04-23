@@ -779,7 +779,7 @@ $startup-loader-height: 50vh;
 		transition: none;
 	}
 	&:hover,
-	&:hover {
+	&.hover {
 		opacity: 1;
 		background-image: url("../assets/Rauten-Pfeil_rechts_rot.png");
 		transition: opacity 0.2s ease-in-out;
